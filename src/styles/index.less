@@ -1,0 +1,42 @@
+@import (once) "~antd/dist/antd.less";
+@import (once) "./variables.less";
+@import (once) "./fonts/fonts.less";
+
+.react-portifolio {
+  /* Global */
+  font-family: @fontFamily;
+  font-weight: 200;
+
+  @import (once) "../react/pages/HomePage/HomePage.less";
+  @import (once) "../react/components/Components.style.less";
+
+  //////////////////////////////////////////////////////
+  // MIXINS
+
+  @numberOfThemes: 2;
+
+  //Theme Definitions by parametric mixin numbers (1), (2), etc.
+  .themeDefs(1) {
+    @primaryColor: @primaryColorDark;
+  }
+
+  .themeDefs(2) {
+    @primaryColor: @primaryColorLight;
+  }
+
+  //////////////////////////////////////////////////////
+  // THEME BUILDING
+
+  .buildThemes(@index) when (@index < @numberOfThemes + 1) {
+    .theme-@{index} {
+      .themeDefs(@index);
+      background-color: @primaryColor;
+    }
+    .buildThemes(@index + 1);
+  }
+  //stop loop
+  .buildThemes(@index) {
+  }
+  //start theme building loop
+  .buildThemes(1);
+}

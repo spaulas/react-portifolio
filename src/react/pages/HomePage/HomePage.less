@@ -1,0 +1,26 @@
+.homePage {
+  .overBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: @limitVertical @limitHorizontal;
+    height: calc(100vh - @limitVertical * 2);
+    width: calc(100% - @limitHorizontal * 2);
+
+    .topRow {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .middleRow {
+      height: calc(100% - 30px - 50px);
+      width: 100%;
+    }
+
+    .bottomRow {
+      height: 50px;
+      width: 100%;
+    }
+  }
+}

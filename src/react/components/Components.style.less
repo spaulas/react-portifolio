@@ -1,0 +1,75 @@
+.backgroundInitials {
+  height: 100vh;
+  width: 100%;
+
+  .initials {
+    width: fit-content;
+    font-size: 700px;
+    line-height: 700px;
+    color: @darkSecondaryColor;
+    padding-top: calc((100vh - 800px) / 4);
+    padding-left: calc(100vh - 710px);
+    margin: 0 !important;
+  }
+}
+
+.lightMode {
+  height: 30px;
+  cursor: pointer;
+  opacity: 0.6;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.developerTitleContainer {
+  width: fit-content;
+  padding-top: calc((100vh - 130px) / 2);
+  padding-left: calc((100vh - 430px) / 4);
+
+  .developerName {
+    font-size: 75px;
+    line-height: 50px;
+    color: @buttonActiveColor;
+  }
+  .developerJob {
+    font-size: 40px;
+    line-height: 40px;
+    color: @buttonActiveColor;
+  }
+}
+
+.connectionsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .connectionIcon {
+    width: 60%;
+    margin: 40px 0;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    cursor: pointer;
+  }
+}
+
+.projectsArrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .arrowIcon {
+    width: 30px;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    cursor: pointer;
+  }
+  .arrowTitle {
+    font-size: 25px;
+    color: @buttonActiveColor;
+  }
+}
