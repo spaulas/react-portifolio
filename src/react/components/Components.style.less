@@ -3,10 +3,20 @@
   width: 100%;
 
   .initials {
-    font-size: 100px;
-    opacity: 0.2;
+    width: fit-content;
+    font-size: 300px;
+    line-height: 300px;
     color: @darkSecondaryColor;
-    padding-top: calc((100vh - 100px) / 2);
-    padding-right: 50px;
+    padding-top: calc((100vh - 300px) / 2);
+    padding-left: calc((100vh - 350px) / 2);
   }
+}
+
+.lightMode {
+  position: absolute;
+  top: @limitVertical;
+  right: @limitHorizontal;
+  height: 30px;
+  color: @buttonActiveColor;
+  cursor: pointer;
 }

@@ -9,7 +9,7 @@ import WorksArrow from "../../components/WorksArrow.component";
 
 function HomePage() {
   return (
-    <div className="pageContainer homePage">
+    <div className="homePage">
       <BackgroundInitials />
       <Row>
         <LightMode />
