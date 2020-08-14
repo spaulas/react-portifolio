@@ -8,29 +8,29 @@ import React from "react";
 import WorksArrow from "../../components/WorksArrow.component";
 
 function HomePage() {
+  const theme = localStorage.getItem("theme") || "theme-1";
   return (
-    <div className="homePage">
+    <div className={`homePage ${theme}`}>
       <BackgroundInitials />
-      <Row>
-        <LightMode />
-      </Row>
-      <Row>
-        <Col>
-          <AboutModal />
-        </Col>
-        <Col>
-          <DeveloperTitle />
-        </Col>
-        <Col>
-          <DeveloperTitle />
-        </Col>
-        <Col>
-          <Connections />
-        </Col>
-      </Row>
-      <Row>
-        <WorksArrow />
-      </Row>
+      <div className="overBackground">
+        <Row className="topRow">
+          <LightMode />
+        </Row>
+        <Row className="middleRow">
+          <Col span={2}>
+            <AboutModal />
+          </Col>
+          <Col span={20}>
+            <DeveloperTitle />
+          </Col>
+          <Col span={2}>
+            <Connections />
+          </Col>
+        </Row>
+        <Row className="bottomRow">
+          <WorksArrow />
+        </Row>
+      </div>
     </div>
   );
 }
