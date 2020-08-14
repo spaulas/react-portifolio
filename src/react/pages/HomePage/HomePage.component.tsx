@@ -1,5 +1,5 @@
 import { Col, Row } from "antd";
-import AboutModal from "../../components/AboutModal.component";
+import AboutTitle from "../../components/AboutTitle.component.tsx";
 import BackgroundInitials from "../../components/BackgroundInitials.component";
 import Connections from "../../components/Connections.component";
 import DeveloperTitle from "../../components/DeveloperTitle.component";
@@ -22,10 +22,10 @@ function HomePage() {
           <LightMode />
         </Row>
         <Row className="middleRow">
-          <Col span={2}>
-            <AboutModal />
+          <Col span={1}>
+            <AboutTitle />
           </Col>
-          <Col span={20}>
+          <Col span={21}>
             <DeveloperTitle />
           </Col>
           <Col span={2}>
