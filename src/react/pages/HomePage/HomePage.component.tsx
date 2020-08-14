@@ -5,10 +5,15 @@ import Connections from "../../components/Connections.component";
 import DeveloperTitle from "../../components/DeveloperTitle.component";
 import LightMode from "../../components/LightMode.component";
 import React from "react";
+import { RootReducerState } from "../../../global";
 import WorksArrow from "../../components/WorksArrow.component";
+import { useSelector } from "react-redux";
 
 function HomePage() {
-  const theme = localStorage.getItem("theme") || "theme-1";
+  const { theme } = useSelector(({ Website }: RootReducerState) => ({
+    theme: Website.theme
+  }));
+  
   return (
     <div className={`homePage ${theme}`}>
       <BackgroundInitials />

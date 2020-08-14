@@ -1,20 +1,14 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import websiteActions from "../../redux/website/website.actions";
 
 function LightMode() {
+  const dispatch = useDispatch();
+
   const toggleTheme = () => {
-    const currentTheme = localStorage.getItem("theme") || "theme-1";
-    console.log("current theme = ", currentTheme);
-    let newTheme;
-
-    if (currentTheme === "theme-1") {
-      newTheme = "theme-2";
-    } else {
-      newTheme = "theme-1";
-    }
-    console.log("new theme = ", newTheme);
-
-    localStorage.setItem("theme", newTheme);
+    dispatch(websiteActions.toggleLightMode());
   };
+
   return (
     <img
       className="lightMode"

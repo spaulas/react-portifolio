@@ -7,7 +7,9 @@ function Connections() {
         className="connectionIcon"
         src={require("../../images/icons/linkedin.svg")}
         alt="Linkedin"
-        onClick={() => window.open("https://www.linkedin.com/in/spaulas/?locale=en_US")}
+        onClick={() =>
+          window.open("https://www.linkedin.com/in/spaulas/?locale=en_US")
+        }
       />
 
       <img
