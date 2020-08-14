@@ -61,6 +61,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   .arrowIcon {
     width: 30px;
     opacity: 0.6;
@@ -68,8 +69,30 @@
     -webkit-filter: grayscale(100%);
     cursor: pointer;
   }
+
   .arrowTitle {
     font-size: 25px;
     color: @buttonActiveColor;
+  }
+}
+
+.aboutContainer {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .aboutTitle {
+    font-size: 25px;
+    color: @buttonActiveColor;
+    width: max-content;
+    cursor: pointer;
   }
 }
