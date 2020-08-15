@@ -13,11 +13,19 @@ function ProjectsPage() {
       title: "React Solitaire",
       description:
         "In this project, it is possible to not only play solitaire (with drag and drop or by double clicking), but also visualize the previous scores and statistics of either an online player (subscribed by Firebase) or a local player. The main differences between these two types of players are the possibility for the online player to save their data through different devices or sessions and access to the top 10 highscores of every registered user. It also has support for english, portuguese, spanish and german.",
-      tech: ["React", "Redux", "Typescript", "Javascript", "HTML", "CSS"],
+      techs: [
+        { source: "react.png", title: "React" },
+        { source: "redux.svg", title: "Redux" },
+        { source: "typescript.png", title: "Typescript" },
+        { source: "javascript.png", title: "Javascript" },
+        { source: "html.png", title: "HTML" },
+        { source: "css.png", title: "CSS" },
+        { source: "firebase.png", title: "Firebase" }
+      ],
       link: "https://spaulas.github.io/react-solitaire/#/",
       github: "https://github.com/spaulas/react-solitaire",
-      mainImage: "",
-      sideImage: ""
+      mainImage: "reactSolitaire_main.png",
+      sideImage: "reactSolitaire_side.png"
     }
   ];
 
