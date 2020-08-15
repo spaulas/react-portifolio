@@ -13,6 +13,29 @@
   .ant-modal {
     .ant-modal-body {
       padding: 0 !important;
+
+      .ant-spin-nested-loading {
+        div {
+          .ant-spin-spinning {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+
+            .ant-spin-dot {
+              font-size: 40px;
+              margin-top: 40px;
+
+              .ant-spin-dot-item {
+                width: 20px;
+                height: 20px;
+                background-color: white;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -39,7 +62,7 @@
       background-color: @themePrimaryColor;
 
       .contactMeCol {
-        background-color:  lighten(@themePrimaryColor, 20%);
+        background-color: lighten(@themePrimaryColor, 20%);
       }
     }
     .buildThemes(@index + 1);

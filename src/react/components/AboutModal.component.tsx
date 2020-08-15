@@ -30,7 +30,7 @@ function AboutModal() {
       wrapClassName="react-portifolio"
       maskClosable={false}
     >
-      <Spin spinning={pageLoading} /* className={theme} */>
+      <Spin spinning={pageLoading}>
         <Row className={`aboutModalContainer ${theme}`}>
           <Col className="aboutMeCol" span={14}>
             <AboutMe />
