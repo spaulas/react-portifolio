@@ -3,6 +3,7 @@ import { persistor, store } from "../../redux/store";
 import HomePage from "../pages/HomePage/HomePage.component";
 import { Layout } from "antd";
 import { PersistGate } from "redux-persist/integration/react";
+import ProjectsPage from "../pages/ProjectsPage/ProjectsPage.component";
 import { Provider } from "react-redux";
 import React from "react";
 
@@ -16,6 +17,7 @@ function App() {
           <Layout className="appLayout">
             <Content className="appContent">
               <HomePage />
+              <ProjectsPage />
             </Content>
           </Layout>
         </div>
