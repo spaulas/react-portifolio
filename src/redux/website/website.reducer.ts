@@ -5,11 +5,13 @@ import WebsiteActionTypes from "./website.types";
 interface InitialWebsite {
   theme: "theme-1" | "theme-2";
   aboutModalVisible: boolean;
+  pageLoading: boolean;
 }
 
 const INITIAL_WEBSITE: InitialWebsite = {
   theme: "theme-1",
-  aboutModalVisible: false
+  aboutModalVisible: false,
+  pageLoading: false
 };
 
 const websiteReducer = (state = INITIAL_WEBSITE, action: ActionsCreators) => {
@@ -21,10 +23,21 @@ const websiteReducer = (state = INITIAL_WEBSITE, action: ActionsCreators) => {
       };
 
     case WebsiteActionTypes.TOGGLE_ABOUT_MODAL_VISIBLE:
-      console.log("state = ", state);
       return {
         ...state,
         aboutModalVisible: !state.aboutModalVisible
+      };
+
+    case WebsiteActionTypes.SET_PAGE_LOADING:
+      return {
+        ...state,
+        pageLoading: true
+      };
+
+    case WebsiteActionTypes.REMOVE_PAGE_LOADING:
+      return {
+        ...state,
+        pageLoading: false
       };
 
     default:

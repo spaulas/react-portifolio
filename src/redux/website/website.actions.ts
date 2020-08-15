@@ -9,11 +9,21 @@ const toggleAboutModalVisible = () => ({
   type: WebsiteActionTypes.TOGGLE_ABOUT_MODAL_VISIBLE
 });
 
+const setPageLoading = () => ({
+  type: WebsiteActionTypes.SET_PAGE_LOADING
+});
+
+const removePageLoading = () => ({
+  type: WebsiteActionTypes.REMOVE_PAGE_LOADING
+});
+
 // ********************************************************
 
 const actionsCreators = Object.freeze({
   toggleLightMode,
-  toggleAboutModalVisible
+  toggleAboutModalVisible,
+  setPageLoading,
+  removePageLoading
 });
 
 export type ActionsCreators = ReturnType<ValueOf<typeof actionsCreators>>;

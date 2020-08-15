@@ -1,15 +1,25 @@
-import { Input, Form, Row } from "antd";
+import { Input, Form, Row, notification } from "antd";
 import { checkName, checkEmail, checkMessage } from "./helpers";
 import MenuButton from "./MenuButton.component";
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import websiteActions from "../../redux/website/website.actions";
 
 const { Item } = Form;
 
 function ContactMe() {
+  const dispatch = useDispatch();
   const [form] = Form.useForm();
 
-  const onSubmit = (values: object) => {
-    console.log("subtmie values = ", values);
+  const mountComponent = () => {
+    form.resetFields();
+    dispatch(websiteActions.removePageLoading());
+  };
+  useEffect(mountComponent, []);
+
+  const onSubmit = (values: any) => {
+    dispatch(websiteActions.setPageLoading());
+    sendFeedback(values);
   };
 
   const onChange = (
@@ -17,6 +27,28 @@ function ContactMe() {
     field: string
   ) => {
     form.setFieldsValue({ [field]: value });
+  };
+
+  const sendFeedback = (variables: any) => {
+    (window as any).emailjs
+      .send("outlook", "portfolio", variables)
+      .then((res: any) => {
+        notification.success({
+          message: "Message successfully sent.",
+          duration: 5
+        });
+        dispatch(websiteActions.toggleAboutModalVisible());
+        dispatch(websiteActions.removePageLoading());
+      })
+      // Handle errors here however you like, or use a React error boundary
+      .catch((err: any) => {
+        notification.error({
+          message: "Something happened.",
+          description: err.status ? `Error code: ${err.status}` : null,
+          duration: 5
+        });
+        dispatch(websiteActions.removePageLoading());
+      });
   };
 
   return (
@@ -46,7 +78,6 @@ function ContactMe() {
           <Input
             className="formInputAnimated formInput"
             onChange={(e: any) => onChange(e, "name")}
-            onPressEnter={() => form.submit()}
           />
           <label className="labelPlaceholder">Name</label>
         </Item>
@@ -71,7 +102,6 @@ function ContactMe() {
           <Input
             className="formInputAnimated formInput"
             onChange={(e: any) => onChange(e, "email")}
-            onPressEnter={() => form.submit()}
           />
           <label className="labelPlaceholder">Email</label>
         </Item>
@@ -97,7 +127,6 @@ function ContactMe() {
             rows={4}
             className="formInputAnimated formInput formMessage"
             onChange={(e: any) => onChange(e, "message")}
-            onPressEnter={() => form.submit()}
           />
           <label className="labelPlaceholder">Message</label>
         </Item>
