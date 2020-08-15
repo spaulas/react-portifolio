@@ -11,6 +11,7 @@
   @import (once) "../react/components/Components.style.less";
 
   .ant-modal {
+    min-width: 1200px;
     .ant-modal-body {
       padding: 0 !important;
 
@@ -36,6 +37,17 @@
           }
         }
       }
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1025px) {
+    .ant-modal {
+      min-width: 990px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .ant-modal {
+      min-width: 300px;
     }
   }
 

@@ -1,6 +1,7 @@
 .backgroundInitials {
   height: 100vh;
   width: 100%;
+  overflow-x: hidden;
 
   .initials {
     width: fit-content;
@@ -121,6 +122,28 @@
   .contactMeCol {
     padding: 20px;
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1025px) {
+    .aboutMeCol {
+      .developer {
+        height: 530px;
+        margin-top: 12px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .aboutMeCol {
+      .developer {
+        height: 410px;
+      }
+      .aboutTextContainer {
+        margin-top: 35px;
+        height: unset;
+        overflow: unset;
+      }
+    }
+  }
 }
 
 .contactMe {
@@ -212,6 +235,15 @@
     opacity: 0;
     animation: buttonDrop 1s 1;
     animation-fill-mode: forwards;
+  }
+
+  @media screen and (max-width: 767px) {
+    .formInput {
+      width: 270px;
+    }
+    .submitButtonAnimated {
+      width: 270px;
+    }
   }
 }
 

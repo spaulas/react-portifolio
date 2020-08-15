@@ -32,11 +32,11 @@ function AboutModal() {
     >
       <Spin spinning={pageLoading}>
         <Row className={`aboutModalContainer ${theme}`}>
-          <Col className="aboutMeCol" span={14}>
+          <Col className="aboutMeCol" xs={24} sm={24} md={14}>
             <AboutMe />
           </Col>
 
-          <Col className="contactMeCol" span={10}>
+          <Col className="contactMeCol" xs={24} sm={24} md={10}>
             <ContactMe />
           </Col>
         </Row>

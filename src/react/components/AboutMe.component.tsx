@@ -6,14 +6,14 @@ function AboutMe() {
   var age = moment().diff("1995-01-12", "years");
   return (
     <Row>
-      <Col span={10}>
+      <Col xs={24} sm={24} md={10}>
         <img
           className="developer"
           src={require("../../images/developer.png")}
           alt=""
         />
       </Col>
-      <Col span={14} className="aboutTextContainer">
+      <Col xs={24} sm={24} md={14} className="aboutTextContainer">
         <p>I am Paula Santos, a {age}-year-old front-end developer.</p>
         <p>
           I am currently working at{" "}
