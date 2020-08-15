@@ -12,6 +12,20 @@
     padding-left: calc(100vh - 710px);
     margin: 0 !important;
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1025px) {
+    .initials {
+      padding-left: 80px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .initials {
+      padding-left: 45px;
+      font-size: 300px;
+      line-height: 300px;
+      padding-top: 30%;
+    }
+  }
 }
 
 .lightMode {
@@ -20,6 +34,10 @@
   opacity: 0.6;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
+
+  @media screen and (max-width: 767px) {
+    height: 20px;
+  }
 }
 
 .developerTitleContainer {
@@ -36,6 +54,21 @@
     font-size: 40px;
     line-height: 40px;
     color: @buttonActiveColor;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1025px) {
+    padding-left: calc((100vh - 430px) / 7);
+  }
+  @media screen and (max-width: 767px) {
+    padding-left: calc((100vh - 430px) / 8);
+    .developerName {
+      font-size: 36px;
+      line-height: 30px;
+    }
+    .developerJob {
+      font-size: 22px;
+      line-height: 22px;
+    }
   }
 }
 
@@ -54,6 +87,11 @@
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     cursor: pointer;
+  }
+  @media screen and (max-width: 1025px) {
+    .connectionIcon {
+      width: 100%;
+    }
   }
 }
 
@@ -75,6 +113,15 @@
     font-size: 25px;
     color: @buttonActiveColor;
   }
+
+  @media screen and (max-width: 767px) {
+    .arrowTitle {
+      font-size: 16px;
+    }
+    .arrowIcon {
+      width: 20px;
+    }
+  }
 }
 
 .aboutContainer {
@@ -95,6 +142,13 @@
     color: @buttonActiveColor;
     width: max-content;
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 767px) {
+    .aboutTitle {
+      font-size: 16px;
+      margin-top: -30px;
+    }
   }
 }
 
