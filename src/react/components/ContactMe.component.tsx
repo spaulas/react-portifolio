@@ -1,6 +1,5 @@
 import { Input, Form, Row } from "antd";
 import { checkName, checkEmail, checkMessage } from "./helpers";
-import Axios from "axios";
 import MenuButton from "./MenuButton.component";
 import React from "react";
 
@@ -109,7 +108,7 @@ function ContactMe() {
           onClick={() => form.submit()}
           className="submitButtonAnimated"
         >
-          Submit
+          <span>Submit</span>
         </MenuButton>
       </Row>
     </Form>

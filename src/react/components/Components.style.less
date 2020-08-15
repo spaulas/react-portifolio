@@ -102,7 +102,7 @@
     padding: 20px;
 
     .developer {
-      height: 600px;
+      height: 640px;
       margin-top: -57px;
       margin-left: -20px;
       margin-bottom: -20px;
@@ -142,12 +142,12 @@
   }
 
   .formInput {
-    border-bottom: 1px solid @fontColor !important;
+    border-bottom: 1px solid @buttonActiveColor !important;
     font-size: 17px;
     text-align: center;
     background: transparent;
     border: none;
-    color: @fontColor;
+    color: @buttonActiveColor;
     outline: 0;
     box-shadow: none;
     z-index: 1;
@@ -159,24 +159,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: lightgrey;
+    color: @hoverElemColor;
     font-size: 17px;
     transition: @smallTransitionTime;
     z-index: 0;
   }
 
-  .formInput:focus ~ label,
-  .formInput > .ant-input-focused ~ label {
+  .formInput:focus ~ label {
     transform: unset;
-    color: @fontColor;
+    color: @buttonActiveColor;
     top: 0;
     left: 0;
     font-size: 15px;
-  }
-
-  .formInput:focus ~ .formPwd,
-  .formInput > .ant-input-focused ~ .formPwd {
-    color: white;
   }
 
   .formInput:not([value=""]) ~ label {
@@ -184,11 +178,7 @@
     top: 0;
     left: 0;
     font-size: 15px;
-    color: @fontColor;
-  }
-
-  .formInput:not([value=""]) ~ .formPwd {
-    color: @fontColor;
+    color: @buttonActiveColor;
   }
 
   .ant-form-item-has-error {
@@ -213,7 +203,7 @@
 
   .formMessage {
     height: 200px !important;
-    border: 1px solid white;
+    border: 1px solid @buttonActiveColor;
     margin-top: 30px;
   }
 
@@ -229,12 +219,16 @@
   margin-top: 10px;
 
   .animatedButton {
-    color: #fff;
+    color: @buttonActiveColor;
     transition: all 0.3s;
     position: relative;
+    text-align: center;
   }
   .animatedButton span {
     transition: all 0.3s;
+    font-size: 17px;
+    position: relative;
+    top: calc((100% - 17px) / 2);
   }
   .animatedButton::before {
     content: "";
@@ -275,11 +269,5 @@
   .animatedButton:hover::after {
     opacity: 0;
     transform: scale(0.1, 1);
-  }
-
-  .adjustToGameOptions {
-    top: unset !important;
-    bottom: -60px !important;
-    height: 100vh;
   }
 }
