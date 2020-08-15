@@ -10,6 +10,47 @@
   @import (once) "../react/pages/HomePage/HomePage.less";
   @import (once) "../react/components/Components.style.less";
 
+  .ant-modal {
+    min-width: 1200px;
+    .ant-modal-body {
+      padding: 0 !important;
+
+      .ant-spin-nested-loading {
+        div {
+          .ant-spin-spinning {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+
+            .ant-spin-dot {
+              font-size: 40px;
+              margin-top: 40px;
+
+              .ant-spin-dot-item {
+                width: 20px;
+                height: 20px;
+                background-color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1025px) {
+    .ant-modal {
+      min-width: 990px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .ant-modal {
+      min-width: 300px;
+    }
+  }
+
   //////////////////////////////////////////////////////
   // MIXINS
 
@@ -17,11 +58,11 @@
 
   //Theme Definitions by parametric mixin numbers (1), (2), etc.
   .themeDefs(1) {
-    @primaryColor: @primaryColorDark;
+    @themePrimaryColor: @primaryColorDark;
   }
 
   .themeDefs(2) {
-    @primaryColor: @primaryColorLight;
+    @themePrimaryColor: @primaryColorLight;
   }
 
   //////////////////////////////////////////////////////
@@ -30,7 +71,11 @@
   .buildThemes(@index) when (@index < @numberOfThemes + 1) {
     .theme-@{index} {
       .themeDefs(@index);
-      background-color: @primaryColor;
+      background-color: @themePrimaryColor;
+
+      .contactMeCol {
+        background-color: lighten(@themePrimaryColor, 20%);
+      }
     }
     .buildThemes(@index + 1);
   }

@@ -1,6 +1,7 @@
 .backgroundInitials {
   height: 100vh;
   width: 100%;
+  overflow-x: hidden;
 
   .initials {
     width: fit-content;
@@ -11,6 +12,20 @@
     padding-left: calc(100vh - 710px);
     margin: 0 !important;
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1025px) {
+    .initials {
+      padding-left: 80px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .initials {
+      padding-left: 45px;
+      font-size: 300px;
+      line-height: 300px;
+      padding-top: 30%;
+    }
+  }
 }
 
 .lightMode {
@@ -19,6 +34,10 @@
   opacity: 0.6;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
+
+  @media screen and (max-width: 767px) {
+    height: 20px;
+  }
 }
 
 .developerTitleContainer {
@@ -35,6 +54,21 @@
     font-size: 40px;
     line-height: 40px;
     color: @buttonActiveColor;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1025px) {
+    padding-left: calc((100vh - 430px) / 7);
+  }
+  @media screen and (max-width: 767px) {
+    padding-left: calc((100vh - 430px) / 8);
+    .developerName {
+      font-size: 36px;
+      line-height: 30px;
+    }
+    .developerJob {
+      font-size: 22px;
+      line-height: 22px;
+    }
   }
 }
 
@@ -53,6 +87,11 @@
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     cursor: pointer;
+  }
+  @media screen and (max-width: 1025px) {
+    .connectionIcon {
+      width: 100%;
+    }
   }
 }
 
@@ -74,6 +113,15 @@
     font-size: 25px;
     color: @buttonActiveColor;
   }
+
+  @media screen and (max-width: 767px) {
+    .arrowTitle {
+      font-size: 16px;
+    }
+    .arrowIcon {
+      width: 20px;
+    }
+  }
 }
 
 .aboutContainer {
@@ -94,5 +142,226 @@
     color: @buttonActiveColor;
     width: max-content;
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 767px) {
+    .aboutTitle {
+      font-size: 16px;
+      margin-top: -30px;
+    }
+  }
+}
+
+.aboutModalContainer {
+  .aboutMeCol {
+    padding: 20px;
+
+    .developer {
+      height: 640px;
+      margin-top: -57px;
+      margin-left: -20px;
+      margin-bottom: -20px;
+      filter: saturate(1.1) sepia(0.3);
+    }
+
+    .aboutTextContainer {
+      padding-right: 20px;
+      font-size: 17px;
+      color: @buttonActiveColor;
+      height: 460px;
+      overflow: auto;
+
+      a {
+        color: @hoverElemColor;
+      }
+      a:hover,
+      a:active {
+        color: @buttonActiveColor;
+      }
+    }
+  }
+
+  .contactMeCol {
+    padding: 20px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1025px) {
+    .aboutMeCol {
+      .developer {
+        height: 530px;
+        margin-top: 12px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .aboutMeCol {
+      .developer {
+        height: 410px;
+      }
+      .aboutTextContainer {
+        margin-top: 35px;
+        height: unset;
+        overflow: unset;
+      }
+    }
+  }
+}
+
+.contactMe {
+  .formInputAnimated {
+    opacity: 0;
+    animation: buttonDrop 1s 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes buttonDrop {
+    0% {
+      height: 0;
+      opacity: 0;
+    }
+    100% {
+      height: 70px;
+      opacity: 1;
+    }
+  }
+
+  .formInput {
+    border-bottom: 1px solid @buttonActiveColor !important;
+    font-size: 17px;
+    text-align: center;
+    background: transparent;
+    border: none;
+    color: @buttonActiveColor;
+    outline: 0;
+    box-shadow: none;
+    z-index: 1;
+    width: 350px;
+  }
+
+  .labelPlaceholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: @hoverElemColor;
+    font-size: 17px;
+    transition: @smallTransitionTime;
+    z-index: 0;
+  }
+
+  .formInput:focus ~ label {
+    transform: unset;
+    color: @buttonActiveColor;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+  }
+
+  .formInput:not([value=""]) ~ label {
+    transform: unset;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    color: @buttonActiveColor;
+  }
+
+  .ant-form-item-has-error {
+    .formInput {
+      border-bottom: 1px solid red !important;
+
+      .anticon {
+        color: red;
+      }
+    }
+    .formInput ~ label {
+      color: red;
+    }
+    .formInput:focus ~ label {
+      top: 0;
+      left: 0;
+      font-size: 15px;
+      transform: unset;
+      color: red;
+    }
+  }
+
+  .formMessage {
+    height: 200px !important;
+    border: 1px solid @buttonActiveColor;
+    margin-top: 30px;
+  }
+
+  .submitButtonAnimated {
+    width: 350px;
+    opacity: 0;
+    animation: buttonDrop 1s 1;
+    animation-fill-mode: forwards;
+  }
+
+  @media screen and (max-width: 767px) {
+    .formInput {
+      width: 270px;
+    }
+    .submitButtonAnimated {
+      width: 270px;
+    }
+  }
+}
+
+.buttonSpaceRow {
+  margin-top: 10px;
+
+  .animatedButton {
+    color: @buttonActiveColor;
+    transition: all 0.3s;
+    position: relative;
+    text-align: center;
+  }
+  .animatedButton span {
+    transition: all 0.3s;
+    font-size: 17px;
+    position: relative;
+    top: calc((100% - 17px) / 2);
+  }
+  .animatedButton::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255, 255, 255, 0.5);
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+    transform: scale(0.1, 1);
+  }
+  .animatedButton:hover span {
+    letter-spacing: 2px;
+  }
+  .animatedButton:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  .animatedButton::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .animatedButton:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
   }
 }

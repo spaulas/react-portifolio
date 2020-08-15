@@ -1,5 +1,6 @@
 import { Col, Row } from "antd";
-import AboutTitle from "../../components/AboutTitle.component.tsx";
+import AboutModal from "../../components/AboutModal.component";
+import AboutTitle from "../../components/AboutTitle.component";
 import BackgroundInitials from "../../components/BackgroundInitials.component";
 import Connections from "../../components/Connections.component";
 import DeveloperTitle from "../../components/DeveloperTitle.component";
@@ -36,6 +37,7 @@ function HomePage() {
           <ProjectsArrow />
         </Row>
       </div>
+      <AboutModal />
     </div>
   );
 }
