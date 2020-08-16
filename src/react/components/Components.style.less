@@ -366,12 +366,26 @@
   }
 }
 
+.mainProjectDisplayFirstAnimation {
+  opacity: 0;
+  width: 0;
+  animation: showProjectContainer 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.mainProjectDisplayHideAnimation {
+  animation: hideProjectContainer 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
 .mainProjectDisplay {
-  height: 50vh;
   position: absolute;
   top: 25vh;
-  width: 80vw;
   left: 10vw;
+  height: 50vh;
+  width: 80vw;
 
   .mainProjectImage {
     width: 100%;
@@ -389,6 +403,42 @@
     left: -5vw;
     font-size: 75px;
     color: @buttonActiveColor;
+    z-index: 2;
+  }
+
+  .mainProjectTitleFirstAnimation {
+    top: 34vh;
+    opacity: 0;
+    animation: titleDrop 1s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  .mainProjectTitleAnimation {
+    animation: projectTitleSlide 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes titleDrop {
+    0% {
+      opacity: 0;
+      top: 34vh;
+    }
+    100% {
+      opacity: 1;
+      top: 38vh;
+    }
+  }
+
+  @keyframes projectTitleSlide {
+    0% {
+      top: 38vw;
+    }
+    100% {
+      top: -2vh;
+    }
   }
 
   .showMore {
@@ -407,6 +457,56 @@
     -o-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+    z-index: 2;
+  }
+
+  .showMoreFirstAnimation {
+    top: 48vh;
+    opacity: 0;
+    animation: showMoreDrop 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes showMoreDrop {
+    0% {
+      top: 48vh;
+      opacity: 0;
+    }
+    100% {
+      top: 52vh;
+      opacity: 1;
+    }
+  }
+
+  .showMoreAnimation {
+    animation: showMoreSlide 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes showMoreSlide {
+    0% {
+      left: 65vw;
+    }
+    100% {
+      left: 0;
+    }
+  }
+}
+
+.infoProjectDisplayShowAnimation {
+  width: 0;
+  animation: showProjectInfoContainer 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showProjectInfoContainer {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80vw;
   }
 }
 
@@ -446,12 +546,52 @@
     margin-top: 8vh;
   }
 
+  .infoProjectDescriptionShowAnimation {
+    margin-top: 4vh;
+    opacity: 0;
+    animation: showInfoProjectDescription 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes showInfoProjectDescription {
+    0% {
+      margin-top: 4vh;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 8vh;
+      opacity: 1;
+    }
+  }
+
   .infoProjectImage {
     width: 110%;
     height: 75vh;
     margin-top: -12.5vh;
     border-radius: 5px;
     object-fit: cover;
+  }
+
+  .infoProjectImageShowAnimation {
+    margin-top: -25vh;
+    opacity: 0;
+    animation: showInfoProjectImage 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes showInfoProjectImage {
+    0% {
+      margin-top: -25vh;
+      opacity: 0;
+    }
+    100% {
+      margin-top: -12.5vh;
+      opacity: 1;
+    }
   }
 
   .infoProjectTechRow {
@@ -463,6 +603,26 @@
     }
   }
 
+  .infoProjectTechRowShowAnimation {
+    margin-top: 0;
+    opacity: 0;
+    animation: showInfoProjectTechRow 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes showInfoProjectTechRow {
+    0% {
+      margin-top: 0;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 10px;
+      opacity: 1;
+    }
+  }
+
   .infoProjectLink {
     color: @hoverElemColor;
     font-size: 24px;
@@ -471,6 +631,26 @@
   .infoProjectLink:hover,
   .infoProjectLink:active {
     color: @buttonActiveColor;
+  }
+
+  .infoProjectLinkShowAnimation {
+    margin-top: -5px;
+    opacity: 0;
+    animation: showInfoProjectLink 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes showInfoProjectLink {
+    0% {
+      margin-top: -5px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 5px;
+      opacity: 1;
+    }
   }
 
   .showLess {
@@ -489,5 +669,27 @@
     -o-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+  }
+}
+
+@keyframes showProjectContainer {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 80vw;
+    opacity: 1;
+  }
+}
+
+@keyframes hideProjectContainer {
+  0% {
+    width: 80vw;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
   }
 }

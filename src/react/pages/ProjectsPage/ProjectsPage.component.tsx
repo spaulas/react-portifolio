@@ -31,8 +31,8 @@ function ProjectsPage() {
 
   return (
     <div className={`projectsPage ${theme}`}>
-      {projectsInfo.map(project => (
-        <ProjectContainer {...project} />
+      {projectsInfo.map((project, index) => (
+        <ProjectContainer key={`project_${index}`} {...project} />
       ))}
     </div>
   );
