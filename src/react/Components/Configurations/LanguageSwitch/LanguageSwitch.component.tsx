@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import React from "react";
 import ReactCountryFlag from "react-country-flag";
-import { RootReducerState } from "../../global";
+import { RootReducerState } from "../../../../global";
 import { Select } from "antd";
-import websiteActions from "../../redux/website/website.actions";
+import websiteActions from "../../../../redux/website/website.actions";
 
 const { Option } = Select;
 

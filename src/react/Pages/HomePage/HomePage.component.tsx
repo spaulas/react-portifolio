@@ -1,13 +1,13 @@
 import { Col, Row } from "antd";
 import React, { useEffect, useState } from "react";
-import AboutModal from "../../components/AboutModal.component";
-import AboutTitle from "../../components/AboutTitle.component";
-import BackgroundInitials from "../../components/BackgroundInitials.component";
-import Connections from "../../components/Connections.component";
-import DeveloperTitle from "../../components/DeveloperTitle.component";
-import LanguageSwitch from "../../components/LanguageSwitch.component";
-import LightMode from "../../components/LightMode.component";
-import ProjectsArrow from "../../components/ProjectsArrow.component";
+import AboutModal from "../../Components/AboutMeContainer/AboutModal/AboutModal.component";
+import AboutTitle from "../../Components/AboutMeContainer/AboutTitle/AboutTitle.component";
+import BackgroundInitials from "../../Components/Titles/BackgroundInitials/BackgroundInitials.component";
+import Connections from "../../Components/Links/Connections.component";
+import DeveloperTitle from "../../Components/Titles/DeveloperTitle/DeveloperTitle.component";
+import LanguageSwitch from "../../Components/Configurations/LanguageSwitch/LanguageSwitch.component";
+import LightMode from "../../Components/Configurations/LightMode/LightMode.component";
+import ProjectsArrow from "../../Components/Projects/ProjectsArrow/ProjectsArrow.component";
 import { RootReducerState } from "../../../global";
 import { useSelector } from "react-redux";
 

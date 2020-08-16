@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import { ExplicitAny } from "../../global";
+import { ExplicitAny } from "../../../global";
 import { Row } from "antd";
 
 /**

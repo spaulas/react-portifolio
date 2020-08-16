@@ -5,7 +5,7 @@ function Connections() {
     <div className="connectionsContainer">
       <img
         className="connectionIcon"
-        src={require("../../images/icons/linkedin.svg")}
+        src={require("../../../images/icons/linkedin.svg")}
         alt="Linkedin"
         onClick={() =>
           window.open("https://www.linkedin.com/in/spaulas/?locale=en_US")
@@ -14,7 +14,7 @@ function Connections() {
 
       <img
         className="connectionIcon"
-        src={require("../../images/icons/github.svg")}
+        src={require("../../../images/icons/github.svg")}
         alt="Github"
         onClick={() => window.open("https://github.com/spaulas")}
       />

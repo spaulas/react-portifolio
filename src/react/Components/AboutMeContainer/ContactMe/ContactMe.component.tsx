@@ -1,10 +1,10 @@
 import { FormattedMessage, useIntl } from "react-intl";
 import { Input, Form, Row, notification } from "antd";
-import { checkName, checkEmail, checkMessage } from "./helpers";
-import MenuButton from "./MenuButton.component";
+import { checkName, checkEmail, checkMessage } from "../../helpers";
+import MenuButton from "../../Buttons/MenuButton.component";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import websiteActions from "../../redux/website/website.actions";
+import websiteActions from "../../../../redux/website/website.actions";
 
 const { Item } = Form;
 

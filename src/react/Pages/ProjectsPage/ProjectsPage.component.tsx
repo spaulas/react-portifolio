@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import ProjectContainer from "../../components/ProjectContainer.component";
+import ProjectContainer from "../../Components/Projects/ProjectContainer/ProjectContainer.component";
 import { RootReducerState } from "../../../global";
 import { useSelector } from "react-redux";
 

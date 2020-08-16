@@ -58,7 +58,7 @@ function ProjectContainer({
       >
         <img
           className="mainProjectImage"
-          src={require(`../../images/projects/${mainImage}`)}
+          src={require(`../../../../images/projects/${mainImage}`)}
           alt=""
         />
         <span
@@ -123,7 +123,7 @@ function ProjectContainer({
                     <Tooltip title={tech.title}>
                       <img
                         className="infoProjectTech"
-                        src={require(`../../images/techs/${tech.source}`)}
+                        src={require(`../../../../images/techs/${tech.source}`)}
                         alt=""
                       />
                     </Tooltip>
@@ -160,7 +160,7 @@ function ProjectContainer({
                 className={`infoProjectImage ${
                   animateShowMore ? "infoProjectImageShowAnimation" : ""
                 } ${animateShowLess ? "infoProjectImageHideAnimation" : ""}`}
-                src={require(`../../images/projects/${sideImage}`)}
+                src={require(`../../../../images/projects/${sideImage}`)}
                 alt=""
               />
             </Col>
