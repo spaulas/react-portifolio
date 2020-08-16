@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/react-portifolio/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/react-portifolio/static/js/main.33b57c0f.chunk.js",
-    "main.js.map": "/react-portifolio/static/js/main.33b57c0f.chunk.js.map",
-    "runtime-main.js": "/react-portifolio/static/js/runtime-main.198a7f7a.js",
-    "runtime-main.js.map": "/react-portifolio/static/js/runtime-main.198a7f7a.js.map",
+    "main.js": "/react-portifolio/static/js/main.afb8a380.chunk.js",
+    "main.js.map": "/react-portifolio/static/js/main.afb8a380.chunk.js.map",
+    "runtime-main.js": "/react-portifolio/static/js/runtime-main.0050bc63.js",
+    "runtime-main.js.map": "/react-portifolio/static/js/runtime-main.0050bc63.js.map",
     "static/js/2.a3b5c2c3.chunk.js": "/react-portifolio/static/js/2.a3b5c2c3.chunk.js",
     "static/js/2.a3b5c2c3.chunk.js.map": "/react-portifolio/static/js/2.a3b5c2c3.chunk.js.map",
     "static/js/3.148087dc.chunk.js": "/react-portifolio/static/js/3.148087dc.chunk.js",
     "static/js/3.148087dc.chunk.js.map": "/react-portifolio/static/js/3.148087dc.chunk.js.map",
-    "static/js/4.0344b2d8.chunk.js": "/react-portifolio/static/js/4.0344b2d8.chunk.js",
-    "static/js/4.0344b2d8.chunk.js.map": "/react-portifolio/static/js/4.0344b2d8.chunk.js.map",
+    "static/js/4.50c09ca6.chunk.js": "/react-portifolio/static/js/4.50c09ca6.chunk.js",
+    "static/js/4.50c09ca6.chunk.js.map": "/react-portifolio/static/js/4.50c09ca6.chunk.js.map",
     "index.html": "/react-portifolio/index.html",
-    "precache-manifest.f4dab3b30fcc0508b6e8b2212b005ba9.js": "/react-portifolio/precache-manifest.f4dab3b30fcc0508b6e8b2212b005ba9.js",
+    "precache-manifest.e612e53e248c356d672cedaa705a49c7.js": "/react-portifolio/precache-manifest.e612e53e248c356d672cedaa705a49c7.js",
     "service-worker.js": "/react-portifolio/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/react-portifolio/static/css/main.5ecd60fb.chunk.css.map",
     "static/js/3.148087dc.chunk.js.LICENSE.txt": "/react-portifolio/static/js/3.148087dc.chunk.js.LICENSE.txt",
@@ -30,9 +30,9 @@
     "static/media/redux.svg": "/react-portifolio/static/media/redux.aa0a3376.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.198a7f7a.js",
+    "static/js/runtime-main.0050bc63.js",
     "static/js/3.148087dc.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.33b57c0f.chunk.js"
+    "static/js/main.afb8a380.chunk.js"
   ]
 }
