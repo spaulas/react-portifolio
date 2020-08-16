@@ -44,12 +44,30 @@
   100% {
     padding-left: calc(100vh - 710px);
     opacity: 1;
+  }
+}
 
-    @media screen and (min-width: 768px) and (max-width: 1025px) {
-      padding-left: 80px;
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+  @keyframes showInitialsAnimation {
+    0% {
+      padding-left: 0;
+      opacity: 0;
     }
-    @media screen and (max-width: 767px) {
+    100% {
+      padding-left: 80px;
+      opacity: 1;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  @keyframes showInitialsAnimation {
+    0% {
+      padding-left: 0;
+      opacity: 0;
+    }
+    100% {
       padding-left: 45px;
+      opacity: 1;
     }
   }
 }
@@ -566,12 +584,12 @@
       left: 65vw;
     }
     100% {
-      left: 0;
+      left: -10vw;
     }
   }
 
   .showMoreBackAnimation {
-    left: 0;
+    left: -10vw;
     animation: showMoreSlideBack 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -579,7 +597,7 @@
   }
   @keyframes showMoreSlideBack {
     0% {
-      left: 0;
+      left: -10vw;
     }
     100% {
       left: 65vw;
@@ -703,6 +721,15 @@
   margin-top: -12.5vh;
   border-radius: 5px;
   object-fit: cover;
+
+  @media screen and (min-width: 768px) and (max-width: 1025px) {
+    height: 60vh;
+    margin-top: -5vh;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 60vh;
+  }
 }
 
 .infoProjectImageShowAnimation {
@@ -725,6 +752,40 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+  .infoProjectImageShowAnimation {
+    margin-top: -10vh;
+  }
+
+  @keyframes showInfoProjectImage {
+    0% {
+      margin-top: -10vh;
+      opacity: 0;
+    }
+    100% {
+      margin-top: -5vh;
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .infoProjectImageShowAnimation {
+    margin-top: -10vh;
+  }
+
+  @keyframes showInfoProjectImage {
+    0% {
+      margin-top: -10vh;
+      opacity: 0;
+    }
+    100% {
+      margin-top: -5vh;
+      opacity: 1;
+    }
+  }
+}
+
 .infoProjectImageHideAnimation {
   margin-top: -12.5vh;
   opacity: 1;
@@ -741,6 +802,41 @@
   100% {
     margin-top: -25vh;
     opacity: 0;
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+  .infoProjectImageHideAnimation {
+    margin-top: -5vh;
+  }
+
+  @keyframes hideInfoProjectImage {
+    0% {
+      margin-top: -5vh;
+      opacity: 1;
+    }
+    100% {
+      margin-top: -10vh;;
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .infoProjectImageHideAnimation {
+    margin-top: -5vh;
+  }
+
+  @keyframes hideInfoProjectImage {
+    0% {
+      margin-top: -5vh;
+      opacity: 1;
+    }
+    100% {
+      margin-top: -10vh;
+      opacity: 0;
+    }
   }
 }
 
