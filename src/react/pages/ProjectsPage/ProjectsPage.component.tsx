@@ -13,14 +13,21 @@ function ProjectsPage() {
     {
       rendered: false,
       title: "React Solitaire",
-      description: <FormattedMessage id="project.reactSolitaire.description" />,
+      description: (
+        <FormattedMessage
+          id="project.reactSolitaire.description"
+          defaultMessage="Project Description"
+        />
+      ),
       techs: [
-        { source: "react.png", title: "React" },
-        { source: "redux.svg", title: "Redux" },
-        { source: "typescript.png", title: "Typescript" },
-        { source: "javascript.png", title: "Javascript" },
         { source: "html.png", title: "HTML" },
         { source: "css.png", title: "CSS" },
+        { source: "javascript.png", title: "Javascript" },
+        { source: "typescript.png", title: "Typescript" },
+        { source: "react.png", title: "React" },
+        { source: "redux.svg", title: "Redux" },
+        { source: "antd.svg", title: "Antd" },
+        { source: "less.png", title: "less" },
         { source: "firebase.png", title: "Firebase" }
       ],
       link: "https://spaulas.github.io/react-solitaire/#/",
@@ -35,12 +42,16 @@ function ProjectsPage() {
     const pageYOffset = window.pageYOffset;
     // if the first project is not rendered yet
     // and the page y offset has reached the half of the project page
-    if (!projectsInfo[0].rendered && pageYOffset > windowHeight * 1.5) {
-      // then it should be rendered
-      const copyProjectInfo = [...projectsInfo];
-      copyProjectInfo[0] = { ...copyProjectInfo[0], rendered: true };
-      setProjectsInfo(copyProjectInfo);
-    }
+
+    const copyProjectInfo = [...projectsInfo];
+
+    projectsInfo.forEach((project, index) => {
+      if (!project.rendered && pageYOffset > windowHeight * (index + 1.5)) {
+        // then it should be rendered
+        copyProjectInfo[index] = { ...copyProjectInfo[index], rendered: true };
+      }
+    });
+    setProjectsInfo(copyProjectInfo);
   };
 
   useEffect(() => {
