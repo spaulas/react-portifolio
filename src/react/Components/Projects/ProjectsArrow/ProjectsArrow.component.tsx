@@ -14,7 +14,7 @@ function ProjectsArrow() {
       </span>
       <img
         className="arrowIcon"
-        src={require("../../images/icons/arrowDown.svg")}
+        src={require("../../../../images/icons/arrowDown.svg")}
         alt=""
         onClick={goDown}
       />

@@ -10,7 +10,7 @@ function AboutMe() {
       <Col xs={24} sm={24} md={10}>
         <img
           className="developer"
-          src={require("../../images/developer.png")}
+          src={require("../../../../images/developer.png")}
           alt=""
         />
       </Col>

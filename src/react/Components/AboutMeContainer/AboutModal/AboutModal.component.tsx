@@ -1,10 +1,10 @@
 import { Col, Modal, Row, Spin } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import AboutMe from "./AboutMe.component";
-import ContactMe from "./ContactMe.component";
+import AboutMe from "../AboutMe/AboutMe.component";
+import ContactMe from "../ContactMe/ContactMe.component";
 import React from "react";
-import { RootReducerState } from "../../global";
-import websiteAction from "../../redux/website/website.actions";
+import { RootReducerState } from "../../../../global";
+import websiteAction from "../../../../redux/website/website.actions";
 
 function AboutModal() {
   const dispatch = useDispatch();
