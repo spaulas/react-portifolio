@@ -1,8 +1,12 @@
 import React from "react";
 
-function DeveloperTitle() {
+interface DeveloperTitleProps {
+  className?: string;
+}
+
+function DeveloperTitle({ className = "" }: DeveloperTitleProps) {
   return (
-    <div className="developerTitleContainer">
+    <div className={`developerTitleContainer ${className}`}>
       <h1 className="developerName">Paula Santos</h1>
       <h3 className="developerJob">Front-End Developer</h3>
     </div>
