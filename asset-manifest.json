@@ -1,17 +1,21 @@
 {
   "files": {
     "main.css": "/react-portifolio/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/react-portifolio/static/js/main.cde80026.chunk.js",
-    "main.js.map": "/react-portifolio/static/js/main.cde80026.chunk.js.map",
-    "runtime-main.js": "/react-portifolio/static/js/runtime-main.35090879.js",
-    "runtime-main.js.map": "/react-portifolio/static/js/runtime-main.35090879.js.map",
-    "static/js/2.01bc3ffa.chunk.js": "/react-portifolio/static/js/2.01bc3ffa.chunk.js",
-    "static/js/2.01bc3ffa.chunk.js.map": "/react-portifolio/static/js/2.01bc3ffa.chunk.js.map",
+    "main.js": "/react-portifolio/static/js/main.e3430506.chunk.js",
+    "main.js.map": "/react-portifolio/static/js/main.e3430506.chunk.js.map",
+    "runtime-main.js": "/react-portifolio/static/js/runtime-main.2223dc83.js",
+    "runtime-main.js.map": "/react-portifolio/static/js/runtime-main.2223dc83.js.map",
+    "static/js/2.af586dfd.chunk.js": "/react-portifolio/static/js/2.af586dfd.chunk.js",
+    "static/js/2.af586dfd.chunk.js.map": "/react-portifolio/static/js/2.af586dfd.chunk.js.map",
+    "static/js/3.7ffc64d9.chunk.js": "/react-portifolio/static/js/3.7ffc64d9.chunk.js",
+    "static/js/3.7ffc64d9.chunk.js.map": "/react-portifolio/static/js/3.7ffc64d9.chunk.js.map",
+    "static/js/4.8e5e09d6.chunk.js": "/react-portifolio/static/js/4.8e5e09d6.chunk.js",
+    "static/js/4.8e5e09d6.chunk.js.map": "/react-portifolio/static/js/4.8e5e09d6.chunk.js.map",
     "index.html": "/react-portifolio/index.html",
-    "precache-manifest.e65434d1fc166426a48659c953c3df08.js": "/react-portifolio/precache-manifest.e65434d1fc166426a48659c953c3df08.js",
+    "precache-manifest.46ec585351ad5d4bfe4674175fe2b4ae.js": "/react-portifolio/precache-manifest.46ec585351ad5d4bfe4674175fe2b4ae.js",
     "service-worker.js": "/react-portifolio/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/react-portifolio/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.01bc3ffa.chunk.js.LICENSE.txt": "/react-portifolio/static/js/2.01bc3ffa.chunk.js.LICENSE.txt",
+    "static/js/3.7ffc64d9.chunk.js.LICENSE.txt": "/react-portifolio/static/js/3.7ffc64d9.chunk.js.LICENSE.txt",
     "static/media/Manrope-ExtraLight.ttf": "/react-portifolio/static/media/Manrope-ExtraLight.a4b068ee.ttf",
     "static/media/arrowDown.svg": "/react-portifolio/static/media/arrowDown.ae427edb.svg",
     "static/media/css.png": "/react-portifolio/static/media/css.c3ce0c15.png",
@@ -27,9 +31,9 @@
     "static/media/typescript.png": "/react-portifolio/static/media/typescript.e7098e64.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.35090879.js",
-    "static/js/2.01bc3ffa.chunk.js",
+    "static/js/runtime-main.2223dc83.js",
+    "static/js/3.7ffc64d9.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.cde80026.chunk.js"
+    "static/js/main.e3430506.chunk.js"
   ]
 }
