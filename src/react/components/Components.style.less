@@ -247,7 +247,7 @@
       font-size: 17px;
       color: @buttonActiveColor;
       height: 460px;
-      overflow: auto;
+      overflow-y: auto;
 
       a {
         color: @hoverElemColor;
@@ -749,8 +749,39 @@
 
   .descriptionContainer {
     height: 40vh;
-    overflow-y: auto;
+    overflow: hidden;
     margin-top: 10vh;
+  }
+
+  .descriptionContainerShowAnimation {
+    animation: showDescriptionContainer 1.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes showDescriptionContainer {
+    0% {
+      overflow: hidden;
+    }
+    100% {
+      overflow-y: auto;
+    }
+  }
+
+
+  .descriptionContainerHideAnimation {
+    animation: hideDescriptionContainer 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes hideDescriptionContainer {
+    0% {
+      overflow: hidden;
+    }
+    100% {
+      overflow: hidden;
+    }
   }
 
   .infoProjectTitle {
@@ -788,7 +819,7 @@
   }
 
   .infoProjectDescriptionHideAnimation {
-    margin-top: 8vh;
+    margin-top: 0;
     opacity: 1;
     animation: hideInfoProjectDescription 0.5s;
     animation-iteration-count: 1;
@@ -798,11 +829,11 @@
 
   @keyframes hideInfoProjectDescription {
     0% {
-      margin-top: 8vh;
+      margin-top: 0;
       opacity: 1;
     }
     100% {
-      margin-top: 4vh;
+      margin-top: -4vh;
       opacity: 0;
     }
   }

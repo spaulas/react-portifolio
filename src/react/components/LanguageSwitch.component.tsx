@@ -20,6 +20,7 @@ function LanguageSwitch() {
 
   return (
     <Select
+      defaultValue="en-US"
       className="languageSwitch"
       value={language}
       onChange={changeLanguage}
