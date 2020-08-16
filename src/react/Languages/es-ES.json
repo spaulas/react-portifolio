@@ -1,1 +1,25 @@
-{}
+{
+    "about.text01":"Soy Paula Santos, una desarrolladora front-end de",
+    "about.text02": "años.",
+    "about.text03": "Actualmente trabajo en",
+    "about.text04":", una empresa portuguesa de ingeniería de comunicaciones fundada en 2000. Allí desarrollé mis habilidades como programador, comenzando con React y Redux-Saga y luego comenzando a implementar pruebas con Jest y Cypress. Todo el tiempo trabajando en un equipo multifuncional apoyado en la metodología Agile.",
+    "about.text05": "He estado trabajando en mi página de Github, creando nuevos proyectos para permitir que otras empresas se hagan una idea de mis habilidades como desarrollador. Y el propósito de este sitio es agrupar todos los proyectos.",
+    "about.text06": "Actualmente estoy buscando un trabajo remoto como desarrollador web o front-end. ¡Me he encontrado con tantas oportunidades laborales, todas repartidas por Europa con una mezcla de culturas que no puedo esperar para comenzar esta aventura!",
+    "contact.email": "Correo Electronico",
+    "contact.invalid.email":"Correo electronico inválido",
+    "contact.invalid.name": "Nombre inválido",
+    "contact.message": "Mensaje",
+    "contact.name": "Nombre",
+    "contact.required.email": "Correo electronico es requerido",
+    "contact.required.name": "Nombre es requerido",
+    "contact.required.message":"Mensaje es requerida",
+    "contact.submit":"Enviar",
+    "contact.success": "Mensaje enviado correctamente.",
+    "developer.title": "Desarrollador Front-End",
+    "project.arrow": "Proyectos",
+    "project.close": "Cerca",
+    "project.github": "Repositorio de Github",
+    "project.reactSolitaire.description": "En este proyecto, es posible no solo jugar al solitario (arrastrando y soltando o haciendo doble clic), sino también ver los puntajes y estadísticas anteriores de un jugador en línea (registrado en Firebase) o un jugador local. Las principales diferencias entre estos dos tipos de jugadores son la posibilidad que tiene el jugador online de guardar sus datos a través de diferentes dispositivos o sesiones y acceder a los 10 mejores puntajes de cada usuario registrado. También admite inglés, portugués, español y alemán.",
+    "project.showMore": "Mostrar Más",
+    "project.website": "Sitio Web"
+}
