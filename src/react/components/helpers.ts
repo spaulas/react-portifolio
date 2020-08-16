@@ -1,13 +1,14 @@
 export const checkName = (
   rule: object,
   value: any,
-  callback: (message?: string) => void
+  callback: (message?: string) => void,
+  intl: any
 ) => {
   if (value.lenght < 3) {
-    callback("Min length Error");
+    callback(intl.formatMessage({ id: "contact.invalid.length" }));
   }
   if (value && validadeName(value)) {
-    callback("Name Error");
+    callback(intl.formatMessage({ id: "contact.invalid.name" }));
   } else {
     callback();
   }
@@ -38,10 +39,11 @@ export const validateEmail = (email: any) => {
 export const checkEmail = (
   rule: object,
   value: string,
-  callback: (message?: string) => void
+  callback: (message?: string) => void,
+  intl: any
 ) => {
   if (value && validateEmail(value)) {
-    callback("Email Error");
+    callback(intl.formatMessage({ id: "contact.invalid.email" }));
   } else {
     callback();
   }
@@ -50,10 +52,11 @@ export const checkEmail = (
 export const checkMessage = (
   rule: object,
   value: any,
-  callback: (message?: string) => void
+  callback: (message?: string) => void,
+  intl: any
 ) => {
   if (value.lenght < 3) {
-    callback("Min length Error");
+    callback(intl.formatMessage({ id: "contact.invalid.length" }));
   } else {
     callback();
   }
