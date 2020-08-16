@@ -8,6 +8,7 @@
   font-weight: 200;
 
   @import (once) "../react/pages/HomePage/HomePage.less";
+  @import (once) "../react/pages/ProjectsPage/ProjectsPage.styles.less";
   @import (once) "../react/components/Components.style.less";
 
   .ant-modal {
@@ -73,7 +74,8 @@
       .themeDefs(@index);
       background-color: @themePrimaryColor;
 
-      .contactMeCol {
+      .contactMeCol,
+      .infoProjectDisplay {
         background-color: lighten(@themePrimaryColor, 20%);
       }
     }

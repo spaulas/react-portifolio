@@ -2,7 +2,8 @@ import React from "react";
 
 function ProjectsArrow() {
   const goDown = () => {
-    console.log("add functionality");
+    const innerHeight = window.innerHeight;
+    window.scroll(0, innerHeight);
   };
 
   return (

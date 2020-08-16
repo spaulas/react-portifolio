@@ -1,9 +1,13 @@
 import React from "react";
 
-function BackgroundInitials() {
+interface BackgroundInitialsProps {
+  className?: string;
+}
+
+function BackgroundInitials({ className = "" }: BackgroundInitialsProps) {
   return (
     <div className="backgroundInitials">
-      <h1 className="initials">PS</h1>
+      <h1 className={`initials ${className}`}>PS</h1>
     </div>
   );
 }

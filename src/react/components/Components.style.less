@@ -28,6 +28,50 @@
   }
 }
 
+.showInitials {
+  padding-left: 0;
+  opacity: 0;
+  animation: showInitialsAnimation 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showInitialsAnimation {
+  0% {
+    padding-left: 0;
+    opacity: 0;
+  }
+  100% {
+    padding-left: calc(100vh - 710px);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+  @keyframes showInitialsAnimation {
+    0% {
+      padding-left: 0;
+      opacity: 0;
+    }
+    100% {
+      padding-left: 80px;
+      opacity: 1;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  @keyframes showInitialsAnimation {
+    0% {
+      padding-left: 0;
+      opacity: 0;
+    }
+    100% {
+      padding-left: 45px;
+      opacity: 1;
+    }
+  }
+}
+
 .lightMode {
   height: 30px;
   cursor: pointer;
@@ -72,6 +116,26 @@
   }
 }
 
+.showDeveloperName {
+  padding-top: calc(((100vh - 130px) / 2) - 130px);
+  opacity: 0;
+  animation: showDeveloperNameAnimation 0.5s;
+  animation-iteration-count: 1;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showDeveloperNameAnimation {
+  0% {
+    padding-top: calc(((100vh - 130px) / 2) - 130px);
+    opacity: 0;
+  }
+  100% {
+    padding-top: calc((100vh - 130px) / 2);
+    opacity: 1;
+  }
+}
+
 .connectionsContainer {
   width: 100%;
   display: flex;
@@ -100,6 +164,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation: arrowUpDown 1s;
+  animation-iteration-count: infinite;
 
   .arrowIcon {
     width: 30px;
@@ -121,6 +187,18 @@
     .arrowIcon {
       width: 20px;
     }
+  }
+}
+
+@keyframes arrowUpDown {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -20px;
+  }
+  100% {
+    margin-top: 0;
   }
 }
 
@@ -363,5 +441,751 @@
   .animatedButton:hover::after {
     opacity: 0;
     transform: scale(0.1, 1);
+  }
+}
+
+.mainProjectDisplayFirstAnimation {
+  opacity: 0;
+  width: 0;
+  animation: showProjectContainer 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.mainProjectDisplayHideAnimation {
+  animation: hideProjectContainer 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.mainProjectDisplay {
+  position: absolute;
+  top: 25vh;
+  left: 10vw;
+  height: 50vh;
+  width: 80vw;
+
+  .mainProjectImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.59);
+    -moz-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.59);
+    box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.59);
+  }
+
+  .mainProjectTitle {
+    position: absolute;
+    top: 38vh;
+    left: -5vw;
+    font-size: 75px;
+    color: @buttonActiveColor;
+    z-index: 2;
+  }
+
+  .mainProjectTitleFirstAnimation {
+    top: 34vh;
+    opacity: 0;
+    animation: titleDrop 1s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  .mainProjectTitleAnimation {
+    animation: projectTitleSlide 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes titleDrop {
+    0% {
+      opacity: 0;
+      top: 34vh;
+    }
+    100% {
+      opacity: 1;
+      top: 38vh;
+    }
+  }
+
+  @keyframes projectTitleSlide {
+    0% {
+      top: 38vw;
+    }
+    100% {
+      top: -2vh;
+    }
+  }
+
+  .mainProjectTitleBackAnimation {
+    top: -2vh;
+    animation: projectTitleSlideBack 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+  }
+
+  @keyframes projectTitleSlideBack {
+    0% {
+      top: -2vh;
+    }
+    100% {
+      top: 38vh;
+    }
+  }
+
+  .showMore {
+    position: absolute;
+    font-size: 30px;
+    width: 300px;
+    border-bottom: 1px solid @buttonActiveColor;
+    color: @buttonActiveColor;
+    text-align: end;
+    text-align: end;
+    top: 52vh;
+    left: 65vw;
+    cursor: pointer;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    z-index: 2;
+  }
+
+  .showMoreFirstAnimation {
+    top: 48vh;
+    opacity: 0;
+    animation: showMoreDrop 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes showMoreDrop {
+    0% {
+      top: 48vh;
+      opacity: 0;
+    }
+    100% {
+      top: 52vh;
+      opacity: 1;
+    }
+  }
+
+  .showMoreAnimation {
+    animation: showMoreSlide 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes showMoreSlide {
+    0% {
+      left: 65vw;
+    }
+    100% {
+      left: 0;
+    }
+  }
+
+  .showMoreBackAnimation {
+    left: 0;
+    animation: showMoreSlideBack 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+  }
+  @keyframes showMoreSlideBack {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 65vw;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    top: 5vh;
+    left: 5vw;
+    height: 80vh;
+    width: 90vw;
+
+    .mainProjectTitle {
+      top: 70vh;
+      left: -5vw;
+      font-size: 36px;
+    }
+
+    @keyframes titleDrop {
+      0% {
+        opacity: 0;
+        top: 66vh;
+      }
+      100% {
+        opacity: 1;
+        top: 70vh;
+      }
+    }
+
+    .mainProjectTitleBackAnimation {
+      top: -2vh;
+      animation-delay: 0.9s;
+    }
+
+    @keyframes projectTitleSlideBack {
+      0% {
+        top: -2vh;
+      }
+      100% {
+        top: 70vh;
+      }
+    }
+
+    .showMore {
+      font-size: 14px;
+      width: 120px;
+      top: 82vh;
+      left: 65vw;
+    }
+
+    .showMoreFirstAnimation {
+      top: 78vh;
+    }
+    @keyframes showMoreDrop {
+      0% {
+        top: 78vh;
+        opacity: 0;
+      }
+      100% {
+        top: 82vh;
+        opacity: 1;
+      }
+    }
+
+    .showMoreBackAnimation {
+      left: 0;
+      animation-delay: 0.9s;
+    }
+  }
+}
+
+.infoProjectDisplayShowAnimation {
+  width: 0;
+  animation: showProjectInfoContainer 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showProjectInfoContainer {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80vw;
+  }
+}
+
+.infoProjectDisplayHideAnimation {
+  width: 80vw;
+  animation: hideProjectInfoContainer 1s;
+  animation-iteration-count: 1;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideProjectInfoContainer {
+  0% {
+    width: 80vw;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .infoProjectDisplayHideAnimation {
+    width: 90vw;
+    animation-delay: 0.6s;
+  }
+
+  @keyframes showProjectInfoContainer {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 90vw;
+    }
+  }
+  @keyframes hideProjectInfoContainer {
+    0% {
+      width: 90vw;
+    }
+    100% {
+      width: 0;
+    }
+  }
+}
+
+.infoProjectDisplay {
+  height: 50vh;
+  position: absolute;
+  top: 25vh;
+  width: 80vw;
+  left: 10vw;
+  border-radius: 5px;
+
+  .closeRow {
+    width: 100%;
+
+    .closeProjectInfo {
+      height: 20px;
+      margin: 10px;
+      cursor: pointer;
+      opacity: 0.6;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+    }
+  }
+
+  .infoProjectTitle {
+    position: absolute;
+    top: -2vh;
+    left: -5vw;
+    font-size: 75px;
+    color: @buttonActiveColor;
+  }
+
+  .infoProjectDescription {
+    font-size: 16px;
+    color: @buttonActiveColor;
+    padding: 10px;
+    margin-top: 8vh;
+  }
+
+  .infoProjectDescriptionShowAnimation {
+    margin-top: 4vh;
+    opacity: 0;
+    animation: showInfoProjectDescription 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes showInfoProjectDescription {
+    0% {
+      margin-top: 4vh;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 8vh;
+      opacity: 1;
+    }
+  }
+
+  .infoProjectDescriptionHideAnimation {
+    margin-top: 8vh;
+    opacity: 1;
+    animation: hideInfoProjectDescription 0.5s;
+    animation-iteration-count: 1;
+    animation-delay: 0.9s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes hideInfoProjectDescription {
+    0% {
+      margin-top: 8vh;
+      opacity: 1;
+    }
+    100% {
+      margin-top: 4vh;
+      opacity: 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 80vh;
+    top: 5vh;
+    width: 90vw;
+    left: 5vw;
+
+    .descriptionContainer {
+      height: 50vh;
+      overflow-y: auto;
+      margin-top: 6vh;
+      .descriptionRow {
+        margin-top: -2vh;
+        .infoProjectDescription {
+          font-size: 12px;
+          margin-top: 0;
+        }
+      }
+    }
+
+    .infoProjectDescriptionShowAnimation {
+      animation: none;
+      opacity: 1;
+    }
+    .infoProjectDescriptionHideAnimation {
+      animation: none;
+    }
+
+    .descriptionContainerShowAnimation {
+      margin-top: 2vh;
+      opacity: 0;
+      animation: showDescriptionContainer 0.5s;
+      animation-iteration-count: 1;
+      animation-delay: 0.7s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes showDescriptionContainer {
+      0% {
+        margin-top: 2vh;
+        opacity: 0;
+      }
+      100% {
+        margin-top: 6vh;
+        opacity: 1;
+      }
+    }
+
+    .descriptionContainerHideAnimation {
+      margin-top: 6vh;
+      animation: hideDescriptionContainer 0.5s;
+      animation-iteration-count: 1;
+      animation-delay: 0.3s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes hideDescriptionContainer {
+      0% {
+        margin-top: 6vh;
+        opacity: 1;
+      }
+      100% {
+        margin-top: 2vh;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.infoProjectImage {
+  width: 110%;
+  height: 75vh;
+  margin-top: -12.5vh;
+  border-radius: 5px;
+  object-fit: cover;
+
+  @media screen and (min-width: 768px) and (max-width: 1025px) {
+    height: 60vh;
+    margin-top: -5vh;
+  }
+
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 5vh;
+    width: 94vw;
+    height: 30vh;
+    left: -2vw;
+  }
+}
+
+.infoProjectImageShowAnimation {
+  margin-top: -25vh;
+  opacity: 0;
+  animation: showInfoProjectImage 0.5s;
+  animation-iteration-count: 1;
+  animation-delay: 1.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showInfoProjectImage {
+  0% {
+    margin-top: -25vh;
+    opacity: 0;
+  }
+  100% {
+    margin-top: -12.5vh;
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+  .infoProjectImageShowAnimation {
+    margin-top: -10vh;
+  }
+
+  @keyframes showInfoProjectImage {
+    0% {
+      margin-top: -10vh;
+      opacity: 0;
+    }
+    100% {
+      margin-top: -5vh;
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .infoProjectImageShowAnimation {
+    margin-top: -10vh;
+    animation-delay: 1s;
+  }
+
+  @keyframes showInfoProjectImage {
+    0% {
+      margin-top: -10vh;
+      opacity: 0;
+    }
+    100% {
+      margin-top: -5vh;
+      opacity: 1;
+    }
+  }
+}
+
+.infoProjectImageHideAnimation {
+  margin-top: -12.5vh;
+  opacity: 1;
+  animation: hideInfoProjectImage 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideInfoProjectImage {
+  0% {
+    margin-top: -12.5vh;
+    opacity: 1;
+  }
+  100% {
+    margin-top: -25vh;
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+  .infoProjectImageHideAnimation {
+    margin-top: -5vh;
+  }
+
+  @keyframes hideInfoProjectImage {
+    0% {
+      margin-top: -5vh;
+      opacity: 1;
+    }
+    100% {
+      margin-top: -10vh;
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .infoProjectImageHideAnimation {
+    margin-top: -5vh;
+  }
+
+  @keyframes hideInfoProjectImage {
+    0% {
+      margin-top: -5vh;
+      opacity: 1;
+    }
+    100% {
+      margin-top: -10vh;
+      opacity: 0;
+    }
+  }
+}
+
+.infoProjectTechRow {
+  margin-top: 10px;
+
+  .infoProjectTech {
+    height: 40px;
+    margin: 5px;
+  }
+}
+
+.infoProjectTechRowShowAnimation {
+  margin-top: 0;
+  opacity: 0;
+  animation: showInfoProjectTechRow 0.5s;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showInfoProjectTechRow {
+  0% {
+    margin-top: 0;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 10px;
+    opacity: 1;
+  }
+}
+
+.infoProjectTechRowHideAnimation {
+  margin-top: 10px;
+  opacity: 1;
+  animation: hideInfoProjectTechRow 0.5s;
+  animation-iteration-count: 1;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideInfoProjectTechRow {
+  0% {
+    margin-top: 10px;
+    opacity: 1;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .infoProjectTechRow {
+    .infoProjectTech {
+      height: 25px;
+    }
+  }
+  .infoProjectTechRowShowAnimation {
+    animation: none;
+    opacity: 1;
+  }
+  .hideInfoProjectTechRow {
+    animation: none;
+  }
+}
+
+.infoProjectLink {
+  color: @hoverElemColor;
+  font-size: 24px;
+  margin: 5px;
+}
+.infoProjectLink:hover,
+.infoProjectLink:active {
+  color: @buttonActiveColor;
+}
+
+.infoProjectLinkShowAnimation {
+  margin-top: -5px;
+  opacity: 0;
+  animation: showInfoProjectLink 0.5s;
+  animation-iteration-count: 1;
+  animation-delay: 1.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showInfoProjectLink {
+  0% {
+    margin-top: -5px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 5px;
+    opacity: 1;
+  }
+}
+
+.infoProjectLinkHideAnimation {
+  margin-top: 5px;
+  opacity: 1;
+  animation: hideInfoProjectLink 0.5s;
+  animation-iteration-count: 1;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideInfoProjectLink {
+  0% {
+    margin-top: 5px;
+    opacity: 1;
+  }
+  100% {
+    margin-top: -5px;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .infoProjectLink {
+    font-size: 14px;
+  }
+  .infoProjectLinkShowAnimation {
+    opacity: 1;
+    animation: none;
+  }
+  .infoProjectLinkHideAnimation {
+    animation: none;
+  }
+}
+
+.showLess {
+  position: absolute;
+  font-size: 30px;
+  width: 300px;
+  border-bottom: 1px solid @buttonActiveColor;
+  color: @buttonActiveColor;
+  text-align: end;
+  text-align: end;
+  top: 52vh;
+  left: 0;
+  cursor: pointer;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+@keyframes showProjectContainer {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 80vw;
+    opacity: 1;
+  }
+}
+
+@keyframes hideProjectContainer {
+  0% {
+    width: 80vw;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  @keyframes showProjectContainer {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+    100% {
+      width: 90vw;
+      opacity: 1;
+    }
+  }
+
+  @keyframes hideProjectContainer {
+    0% {
+      width: 90vw;
+      opacity: 1;
+    }
+    100% {
+      width: 0;
+      opacity: 0;
+    }
   }
 }

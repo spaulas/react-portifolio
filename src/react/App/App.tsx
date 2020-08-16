@@ -1,12 +1,16 @@
 import "../../styles/index.less";
+import React, { Suspense } from "react";
 import { persistor, store } from "../../redux/store";
-import HomePage from "../pages/HomePage/HomePage.component";
 import { Layout } from "antd";
 import { PersistGate } from "redux-persist/integration/react";
+import ProjectsPage from "../pages/ProjectsPage/ProjectsPage.component";
 import { Provider } from "react-redux";
-import React from "react";
 
 const { Content } = Layout;
+
+const HomePage = React.lazy(() =>
+  import("../pages/HomePage/HomePage.component")
+);
 
 function App() {
   return (
@@ -15,7 +19,10 @@ function App() {
         <div className="react-portifolio">
           <Layout className="appLayout">
             <Content className="appContent">
-              <HomePage />
+              <Suspense fallback={<div>Loading...</div>}>
+                <HomePage />
+              </Suspense>
+              <ProjectsPage />
             </Content>
           </Layout>
         </div>
