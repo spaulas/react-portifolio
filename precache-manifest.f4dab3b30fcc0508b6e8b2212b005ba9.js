@@ -1,39 +1,43 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ba872329b2593ba5648ec8d748da490a",
+    "revision": "4377e61445d982328ede59fe043d57ea",
     "url": "/react-portifolio/index.html"
   },
   {
-    "revision": "fc77d6f3193e313bb98b",
+    "revision": "180b1baf4463b11845ec",
     "url": "/react-portifolio/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "3f0ee458dc4d4f3bedc9",
-    "url": "/react-portifolio/static/js/2.8691f409.chunk.js"
+    "revision": "13a69eba95b89f900da2",
+    "url": "/react-portifolio/static/js/2.a3b5c2c3.chunk.js"
   },
   {
-    "revision": "776ccb41693af50068a5",
-    "url": "/react-portifolio/static/js/3.a0643e4c.chunk.js"
+    "revision": "6c35f6efa93ae0410236",
+    "url": "/react-portifolio/static/js/3.148087dc.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/react-portifolio/static/js/3.a0643e4c.chunk.js.LICENSE.txt"
+    "url": "/react-portifolio/static/js/3.148087dc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "46637ec3d3d6ff167fd9",
-    "url": "/react-portifolio/static/js/4.19a0f958.chunk.js"
+    "revision": "256d21f10e242e08cd9c",
+    "url": "/react-portifolio/static/js/4.0344b2d8.chunk.js"
   },
   {
-    "revision": "fc77d6f3193e313bb98b",
-    "url": "/react-portifolio/static/js/main.53a7190a.chunk.js"
+    "revision": "180b1baf4463b11845ec",
+    "url": "/react-portifolio/static/js/main.33b57c0f.chunk.js"
   },
   {
-    "revision": "810e1cb3e3304045ee40",
-    "url": "/react-portifolio/static/js/runtime-main.9ad4375d.js"
+    "revision": "be5cfd86bb45bc3bbd6f",
+    "url": "/react-portifolio/static/js/runtime-main.198a7f7a.js"
   },
   {
     "revision": "a4b068ee8a8bdb4d976648992bb1db90",
     "url": "/react-portifolio/static/media/Manrope-ExtraLight.a4b068ee.ttf"
+  },
+  {
+    "revision": "b29324c45ced02ca418e097ae8f52c77",
+    "url": "/react-portifolio/static/media/antd.b29324c4.svg"
   },
   {
     "revision": "ae427edb9414023b7458031f6c5b5bb5",
