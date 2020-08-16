@@ -28,7 +28,7 @@ function HomePage() {
     <div className={`homePage ${theme}`}>
       <BackgroundInitials className={animation ? "showInitials" : ""} />
       <div className="overBackground">
-        <Row className="topRow">
+        <Row className="topRow" align="middle">
           <LanguageSwitch />
           <LightMode />
         </Row>
