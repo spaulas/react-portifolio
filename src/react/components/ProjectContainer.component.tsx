@@ -1,10 +1,11 @@
 import { Col, Row, Tooltip } from "antd";
-import React, { useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl";
 import LazyLoad from "react-lazyload";
 
 interface ProjectContainerProps {
   title: string;
-  description: string;
+  description: ReactNode;
   techs: Array<{ source: string; title: string }>;
   link: string;
   github: string;
@@ -75,7 +76,13 @@ function ProjectContainer({
           } ${animateShowLess ? "showMoreBackAnimation" : ""}`}
           onClick={handleClick}
         >
-          <span>{showInfo ? "Close" : "Show More"}</span>
+          <span>
+            {showInfo ? (
+              <FormattedMessage id="project.close" />
+            ) : (
+              <FormattedMessage id="project.showMore" />
+            )}
+          </span>
         </div>
       </div>
 
@@ -132,7 +139,7 @@ function ProjectContainer({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Website
+                  <FormattedMessage id="project.website" />
                 </a>
               </Row>
               <Row justify="center">
@@ -144,7 +151,7 @@ function ProjectContainer({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Github Repository
+                  <FormattedMessage id="project.github" />
                 </a>
               </Row>
             </Col>

@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 import React from "react";
 
 function ProjectsArrow() {
@@ -8,7 +9,9 @@ function ProjectsArrow() {
 
   return (
     <div className="projectsArrow">
-      <span className="arrowTitle">Projects</span>
+      <span className="arrowTitle">
+        <FormattedMessage id="project.arrow" />
+      </span>
       <img
         className="arrowIcon"
         src={require("../../images/icons/arrowDown.svg")}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl";
 import ProjectContainer from "../../components/ProjectContainer.component";
 import { RootReducerState } from "../../../global";
 import { useSelector } from "react-redux";
@@ -12,8 +13,7 @@ function ProjectsPage() {
     {
       rendered: false,
       title: "React Solitaire",
-      description:
-        "In this project, it is possible to not only play solitaire (with drag and drop or by double clicking), but also visualize the previous scores and statistics of either an online player (subscribed by Firebase) or a local player. The main differences between these two types of players are the possibility for the online player to save their data through different devices or sessions and access to the top 10 highscores of every registered user. It also has support for english, portuguese, spanish and german.",
+      description: <FormattedMessage id="project.reactSolitaire.description" />,
       techs: [
         { source: "react.png", title: "React" },
         { source: "redux.svg", title: "Redux" },

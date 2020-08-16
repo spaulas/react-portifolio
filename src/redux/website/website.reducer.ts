@@ -6,12 +6,14 @@ interface InitialWebsite {
   theme: "theme-1" | "theme-2";
   aboutModalVisible: boolean;
   pageLoading: boolean;
+  language: string;
 }
 
 const INITIAL_WEBSITE: InitialWebsite = {
   theme: "theme-1",
   aboutModalVisible: false,
-  pageLoading: false
+  pageLoading: false,
+  language: "en-US"
 };
 
 const websiteReducer = (state = INITIAL_WEBSITE, action: ActionsCreators) => {
@@ -38,6 +40,12 @@ const websiteReducer = (state = INITIAL_WEBSITE, action: ActionsCreators) => {
       return {
         ...state,
         pageLoading: false
+      };
+
+    case WebsiteActionTypes.CHANGE_LANGUAGE:
+      return {
+        ...state,
+        language: action.language
       };
 
     default:

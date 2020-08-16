@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 import React from "react";
 import { useDispatch } from "react-redux";
 import websiteActions from "../../redux/website/website.actions";
@@ -12,7 +13,7 @@ function AboutTitle() {
   return (
     <div className="aboutContainer">
       <span className="aboutTitle" onClick={showModal}>
-        About Me
+        <FormattedMessage id="about.title" />
       </span>
     </div>
   );

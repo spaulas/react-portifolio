@@ -17,13 +17,19 @@ const removePageLoading = () => ({
   type: WebsiteActionTypes.REMOVE_PAGE_LOADING
 });
 
+const changeLanguage = (language: string) => ({
+  type: WebsiteActionTypes.CHANGE_LANGUAGE,
+  language
+});
+
 // ********************************************************
 
 const actionsCreators = Object.freeze({
   toggleLightMode,
   toggleAboutModalVisible,
   setPageLoading,
-  removePageLoading
+  removePageLoading,
+  changeLanguage
 });
 
 export type ActionsCreators = ReturnType<ValueOf<typeof actionsCreators>>;
