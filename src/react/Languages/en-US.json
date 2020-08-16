@@ -1,4 +1,5 @@
 {
+    "about.title": "About Me",
     "about.text01":"I am Paula Santos, a",
     "about.text02": "-year-old front-end developer.",
     "about.text03": "I am currently working at ",
@@ -6,6 +7,8 @@
     "about.text05": "I have been working on my Github page, creating new projects to enable other companies to have an idea of my skills as a developer. And this website's goal is to group every project.",
     "about.text06": "I am currently looking for a remote job as a web or front-end developer. I have stumbled across so many job opportunities, all scattered around Europe with such a mixture of cultures that I can not wait to start this adventure!",
     "contact.email": "Email",
+    "contact.error.message1":"Something happened.",
+    "contact.error.message2":"Error code: ",
     "contact.message": "Message",
     "contact.name": "Name",
     "contact.invalid.email":"Invalid email",

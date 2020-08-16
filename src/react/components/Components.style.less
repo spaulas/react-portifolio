@@ -747,6 +747,12 @@
     }
   }
 
+  .descriptionContainer {
+    height: 40vh;
+    overflow-y: auto;
+    margin-top: 10vh;
+  }
+
   .infoProjectTitle {
     position: absolute;
     top: -2vh;
@@ -759,11 +765,10 @@
     font-size: 16px;
     color: @buttonActiveColor;
     padding: 10px;
-    margin-top: 8vh;
   }
 
   .infoProjectDescriptionShowAnimation {
-    margin-top: 4vh;
+    margin-top: -4vh;
     opacity: 0;
     animation: showInfoProjectDescription 0.5s;
     animation-iteration-count: 1;
@@ -773,11 +778,11 @@
 
   @keyframes showInfoProjectDescription {
     0% {
-      margin-top: 4vh;
+      margin-top: -4vh;
       opacity: 0;
     }
     100% {
-      margin-top: 8vh;
+      margin-top: 0vh;
       opacity: 1;
     }
   }
