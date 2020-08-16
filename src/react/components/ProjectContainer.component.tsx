@@ -86,8 +86,15 @@ function ProjectContainer({
           } ${animateShowLess ? "infoProjectDisplayHideAnimation" : ""}`}
         >
           <Row>
-            <Col span={14}>
-              <Row>
+            <Col
+              xs={24}
+              sm={24}
+              md={14}
+              className={`descriptionContainer ${
+                animateShowMore ? "descriptionContainerShowAnimation" : ""
+              } ${animateShowLess ? "descriptionContainerHideAnimation" : ""}`}
+            >
+              <Row className="descriptionRow">
                 <span
                   className={`infoProjectDescription ${
                     animateShowMore ? "infoProjectDescriptionShowAnimation" : ""
@@ -141,7 +148,7 @@ function ProjectContainer({
                 </a>
               </Row>
             </Col>
-            <Col span={10}>
+            <Col xs={24} sm={24} md={10}>
               <img
                 className={`infoProjectImage ${
                   animateShowMore ? "infoProjectImageShowAnimation" : ""
