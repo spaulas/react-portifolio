@@ -5,6 +5,7 @@ import AboutTitle from "../../components/AboutTitle.component";
 import BackgroundInitials from "../../components/BackgroundInitials.component";
 import Connections from "../../components/Connections.component";
 import DeveloperTitle from "../../components/DeveloperTitle.component";
+import LanguageSwitch from "../../components/LanguageSwitch.component";
 import LightMode from "../../components/LightMode.component";
 import ProjectsArrow from "../../components/ProjectsArrow.component";
 import { RootReducerState } from "../../../global";
@@ -28,6 +29,7 @@ function HomePage() {
       <BackgroundInitials className={animation ? "showInitials" : ""} />
       <div className="overBackground">
         <Row className="topRow">
+          <LanguageSwitch />
           <LightMode />
         </Row>
         <Row className="middleRow">
