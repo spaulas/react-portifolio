@@ -4,7 +4,6 @@ import AboutTitle from "../../components/AboutTitle.component";
 import BackgroundInitials from "../../components/BackgroundInitials.component";
 import Connections from "../../components/Connections.component";
 import DeveloperTitle from "../../components/DeveloperTitle.component";
-import LazyLoad from "react-lazyload";
 import LightMode from "../../components/LightMode.component";
 import ProjectsArrow from "../../components/ProjectsArrow.component";
 import React from "react";
@@ -17,31 +16,29 @@ function HomePage() {
   }));
 
   return (
-    <LazyLoad height={0} once>
-      <div className={`homePage ${theme}`}>
-        <BackgroundInitials />
-        <div className="overBackground">
-          <Row className="topRow">
-            <LightMode />
-          </Row>
-          <Row className="middleRow">
-            <Col span={1}>
-              <AboutTitle />
-            </Col>
-            <Col span={21}>
-              <DeveloperTitle />
-            </Col>
-            <Col span={2}>
-              <Connections />
-            </Col>
-          </Row>
-          <Row className="bottomRow" justify="center">
-            <ProjectsArrow />
-          </Row>
-        </div>
-        <AboutModal />
+    <div className={`homePage ${theme}`}>
+      <BackgroundInitials />
+      <div className="overBackground">
+        <Row className="topRow">
+          <LightMode />
+        </Row>
+        <Row className="middleRow">
+          <Col span={1}>
+            <AboutTitle />
+          </Col>
+          <Col span={21}>
+            <DeveloperTitle />
+          </Col>
+          <Col span={2}>
+            <Connections />
+          </Col>
+        </Row>
+        <Row className="bottomRow" justify="center">
+          <ProjectsArrow />
+        </Row>
       </div>
-    </LazyLoad>
+      <AboutModal />
+    </div>
   );
 }
 

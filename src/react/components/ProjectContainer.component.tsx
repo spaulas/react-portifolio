@@ -24,13 +24,7 @@ function ProjectContainer({
   const [firstAnimation, setFirstAnimation] = useState(true);
   const [showInfo, setShowInfo] = useState(false);
   const [animateShowMore, setAnimateShowMore] = useState(false);
-
-  const showMore = () => {
-    setAnimateShowMore(true);
-    setTimeout(() => {
-      setShowInfo(true);
-    }, 400);
-  };
+  const [animateShowLess, setAnimateShowLess] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -40,9 +34,17 @@ function ProjectContainer({
 
   const handleClick = () => {
     if (showInfo) {
-      setShowInfo(false);
+      setAnimateShowMore(false);
+      setAnimateShowLess(true);
+      setTimeout(() => {
+        setShowInfo(false);
+      }, 2000);
     } else {
-      showMore();
+      setAnimateShowLess(false);
+      setAnimateShowMore(true);
+      setTimeout(() => {
+        setShowInfo(true);
+      }, 400);
     }
   };
 
@@ -61,14 +63,16 @@ function ProjectContainer({
         <span
           className={`mainProjectTitle ${
             animateShowMore ? "mainProjectTitleAnimation" : ""
-          } ${firstAnimation ? "mainProjectTitleFirstAnimation" : ""}`}
+          } ${firstAnimation ? "mainProjectTitleFirstAnimation" : ""} ${
+            animateShowLess ? "mainProjectTitleBackAnimation" : ""
+          }`}
         >
           {title}
         </span>
         <div
           className={`showMore ${animateShowMore ? "showMoreAnimation" : ""} ${
             firstAnimation ? "showMoreFirstAnimation" : ""
-          }`}
+          } ${animateShowLess ? "showMoreBackAnimation" : ""}`}
           onClick={handleClick}
         >
           <span>{showInfo ? "Close" : "Show More"}</span>
@@ -79,7 +83,7 @@ function ProjectContainer({
         <div
           className={`infoProjectDisplay ${
             animateShowMore ? "infoProjectDisplayShowAnimation" : ""
-          }`}
+          } ${animateShowLess ? "infoProjectDisplayHideAnimation" : ""}`}
         >
           <Row>
             <Col span={14}>
@@ -87,6 +91,8 @@ function ProjectContainer({
                 <span
                   className={`infoProjectDescription ${
                     animateShowMore ? "infoProjectDescriptionShowAnimation" : ""
+                  } ${
+                    animateShowLess ? "infoProjectDescriptionHideAnimation" : ""
                   }`}
                 >
                   {description}
@@ -95,7 +101,7 @@ function ProjectContainer({
               <Row
                 className={`infoProjectTechRow ${
                   animateShowMore ? "infoProjectTechRowShowAnimation" : ""
-                }`}
+                } ${animateShowLess ? "infoProjectTechRowHideAnimation" : ""}`}
                 justify="center"
               >
                 {techs.map((tech, index) => (
@@ -114,7 +120,7 @@ function ProjectContainer({
                 <a
                   className={`infoProjectLink ${
                     animateShowMore ? "infoProjectLinkShowAnimation" : ""
-                  }`}
+                  } ${animateShowLess ? "infoProjectLinkHideAnimation" : ""}`}
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -126,7 +132,7 @@ function ProjectContainer({
                 <a
                   className={`infoProjectLink ${
                     animateShowMore ? "infoProjectLinkShowAnimation" : ""
-                  }`}
+                  } ${animateShowLess ? "infoProjectLinkHideAnimation" : ""}`}
                   href={github}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -139,7 +145,7 @@ function ProjectContainer({
               <img
                 className={`infoProjectImage ${
                   animateShowMore ? "infoProjectImageShowAnimation" : ""
-                }`}
+                } ${animateShowLess ? "infoProjectImageHideAnimation" : ""}`}
                 src={require(`../../images/projects/${sideImage}`)}
                 alt=""
               />
