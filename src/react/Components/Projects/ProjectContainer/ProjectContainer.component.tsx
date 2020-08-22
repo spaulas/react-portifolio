@@ -1,7 +1,6 @@
 import { Col, Row, Tooltip } from "antd";
 import React, { ReactNode, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import LazyLoad from "react-lazyload";
 
 interface ProjectContainerProps {
   title: string;
@@ -50,8 +49,8 @@ function ProjectContainer({
   };
 
   return (
-    <LazyLoad height={"100%"} once>
-      <div
+    <Row style={{ height: "100vh" }} justify="center" align="middle">
+      <Col
         className={`mainProjectDisplay ${
           firstAnimation ? "mainProjectDisplayFirstAnimation" : ""
         }`}
@@ -84,7 +83,7 @@ function ProjectContainer({
             )}
           </span>
         </div>
-      </div>
+      </Col>
 
       {showInfo ? (
         <div
@@ -119,7 +118,11 @@ function ProjectContainer({
                 justify="center"
               >
                 {techs.map((tech, index) => (
-                  <Col key={`tech_${index}`} span={24 / techs.length}>
+                  <Col
+                    key={`tech_${index}`}
+                    span={24 / techs.length}
+                    className="techcol"
+                  >
                     <Tooltip title={tech.title}>
                       <img
                         className="infoProjectTech"
@@ -167,7 +170,7 @@ function ProjectContainer({
           </Row>
         </div>
       ) : null}
-    </LazyLoad>
+    </Row>
   );
 }
 

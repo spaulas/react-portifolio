@@ -34,11 +34,31 @@ function ProjectsPage() {
       github: "https://github.com/spaulas/react-solitaire",
       mainImage: "reactSolitaire_main.png",
       sideImage: "reactSolitaire_side.png"
+    },
+    {
+      rendered: false,
+      title: "PHP Social Network",
+      description: (
+        <FormattedMessage
+          id="project.phpSocialNetwork.description"
+          defaultMessage="Project Description"
+        />
+      ),
+      techs: [
+        { source: "php.png", title: "PHP" },
+        { source: "mySQL.png", title: "MySQL" },
+        { source: "css.png", title: "CSS" },
+        { source: "javascript.png", title: "Javascript" }
+      ],
+      link: "https://php-social-network.herokuapp.com/",
+      github: "https://github.com/spaulas/php-social-network",
+      mainImage: "phpSocialNetwork_main.png",
+      sideImage: "phpSocialNetwork_side.png"
     }
   ]);
 
   const shouldRender = () => {
-    const windowHeight = window.innerHeight / (projectsInfo.length + 1);
+    const windowHeight = (window.innerHeight * 2) / (projectsInfo.length + 1);
     const pageYOffset = window.pageYOffset;
     // if the first project is not rendered yet
     // and the page y offset has reached the half of the project page
@@ -46,9 +66,9 @@ function ProjectsPage() {
     const copyProjectInfo = [...projectsInfo];
 
     projectsInfo.forEach((project, index) => {
-      if (!project.rendered && pageYOffset > windowHeight * (index + 1.5)) {
+      if (!project.rendered && pageYOffset > windowHeight * (index + 1.2)) {
         // then it should be rendered
-        copyProjectInfo[index] = { ...copyProjectInfo[index], rendered: true };
+        copyProjectInfo[index].rendered = true;
       }
     });
     setProjectsInfo(copyProjectInfo);
@@ -62,7 +82,10 @@ function ProjectsPage() {
   }, []);
 
   return (
-    <div className={`projectsPage ${theme}`}>
+    <div
+      className={`projectsPage ${theme}`}
+      style={{ height: `${100 * projectsInfo.length + 5}vh` }}
+    >
       {projectsInfo.map((project, index) =>
         project.rendered ? (
           <ProjectContainer key={`project_${index}`} {...project} />

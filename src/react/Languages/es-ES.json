@@ -24,6 +24,7 @@
     "project.arrow": "Proyectos",
     "project.close": "Cerca",
     "project.github": "Repositorio de Github",
+    "project.phpSocialNetwork.description": "En este proyecto, es posible, después de iniciar sesión, intercambiar mensajes públicos o privados con tus amigos, puedes elegir a quién seguir y quién te sigue, mantener tu propio perfil y ver los perfiles de los demás miembros. Es un pequeño proyecto desarrollado con PHP y con base de datos propia.",
     "project.reactSolitaire.description": "En este proyecto, es posible no solo jugar al solitario (arrastrando y soltando o haciendo doble clic), sino también ver los puntajes y estadísticas anteriores de un jugador en línea (registrado en Firebase) o un jugador local. Las principales diferencias entre estos dos tipos de jugadores son la posibilidad que tiene el jugador online de guardar sus datos a través de diferentes dispositivos o sesiones y acceder a los 10 mejores puntajes de cada usuario registrado. También admite inglés, portugués, español y alemán.",
     "project.showMore": "Mostrar Más",
     "project.website": "Sitio Web"

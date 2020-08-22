@@ -459,9 +459,6 @@
 }
 
 .mainProjectDisplay {
-  position: absolute;
-  top: 25vh;
-  left: 10vw;
   height: 50vh;
   width: 80vw;
 
@@ -479,9 +476,10 @@
     position: absolute;
     top: 38vh;
     left: -5vw;
-    font-size: 75px;
+    font-size: 5.4em;
     color: @buttonActiveColor;
-    z-index: 2;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.2);
   }
 
   .mainProjectTitleFirstAnimation {
@@ -494,6 +492,7 @@
   }
 
   .mainProjectTitleAnimation {
+    top: 38vh;
     animation: projectTitleSlide 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -512,7 +511,7 @@
 
   @keyframes projectTitleSlide {
     0% {
-      top: 38vw;
+      top: 38vh;
     }
     100% {
       top: -2vh;
@@ -538,21 +537,20 @@
 
   .showMore {
     position: absolute;
-    font-size: 30px;
-    width: 300px;
+    font-size: 2em;
+    width: 20rem;
     border-bottom: 1px solid @buttonActiveColor;
     color: @buttonActiveColor;
     text-align: end;
     text-align: end;
     top: 52vh;
-    left: 65vw;
+    left: 60vw;
     cursor: pointer;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    z-index: 2;
   }
 
   .showMoreFirstAnimation {
@@ -581,7 +579,7 @@
   }
   @keyframes showMoreSlide {
     0% {
-      left: 65vw;
+      left: 54vw;
     }
     100% {
       left: 0;
@@ -600,30 +598,29 @@
       left: 0;
     }
     100% {
-      left: 65vw;
+      left: 60vw;
     }
   }
 
   @media screen and (max-width: 767px) {
-    top: 5vh;
-    left: 5vw;
-    height: 80vh;
+    top: -10vh;
+    left: 1vw;
+    height: 70vh;
     width: 90vw;
 
     .mainProjectTitle {
-      top: 70vh;
-      left: 5vw;
-      font-size: 36px;
+      top: 62.5vh;
+      font-size: 2.2em;
     }
 
     @keyframes titleDrop {
       0% {
         opacity: 0;
-        top: 66vh;
+        top: 58.5vh;
       }
       100% {
         opacity: 1;
-        top: 70vh;
+        top: 62.5vh;
       }
     }
 
@@ -637,27 +634,27 @@
         top: -2vh;
       }
       100% {
-        top: 70vh;
+        top: 62.5vh;
       }
     }
 
     .showMore {
-      font-size: 14px;
-      width: 120px;
-      top: 82vh;
-      left: 65vw;
+      font-size: 0.8em;
+      width: 8rem;
+      top: 75vh;
+      left: 60vw;
     }
 
     .showMoreFirstAnimation {
-      top: 78vh;
+      top: 71vh;
     }
     @keyframes showMoreDrop {
       0% {
-        top: 78vh;
+        top: 71vh;
         opacity: 0;
       }
       100% {
-        top: 82vh;
+        top: 75vh;
         opacity: 1;
       }
     }
@@ -729,9 +726,8 @@
 .infoProjectDisplay {
   height: 50vh;
   position: absolute;
-  top: 25vh;
   width: 80vw;
-  left: 10vw;
+  left: 9vw;
   border-radius: 5px;
 
   .closeRow {
@@ -768,7 +764,6 @@
     }
   }
 
-
   .descriptionContainerHideAnimation {
     animation: hideDescriptionContainer 1s;
     animation-iteration-count: 1;
@@ -793,7 +788,7 @@
   }
 
   .infoProjectDescription {
-    font-size: 16px;
+    font-size: 1.2em;
     color: @buttonActiveColor;
     padding: 10px;
   }
@@ -839,10 +834,10 @@
   }
 
   @media screen and (max-width: 767px) {
-    height: 80vh;
-    top: 5vh;
+    height: 70vh;
     width: 90vw;
     left: 5vw;
+    margin-top: -20vh;
 
     .descriptionContainer {
       height: 50vh;
@@ -851,8 +846,9 @@
       .descriptionRow {
         margin-top: -2vh;
         .infoProjectDescription {
-          font-size: 12px;
+          font-size: 0.9em;
           margin-top: 0;
+          width: 90vw;
         }
       }
     }
@@ -922,7 +918,7 @@
     position: absolute;
     top: 5vh;
     width: 94vw;
-    height: 30vh;
+    height: 20vh;
     left: -2vw;
   }
 }
@@ -1035,11 +1031,15 @@
   }
 }
 
+.techcol {
+  text-align: center;
+}
+
 .infoProjectTechRow {
   margin-top: 10px;
 
   .infoProjectTech {
-    height: 40px;
+    height: 2.5rem;
     margin: 5px;
   }
 }
@@ -1087,7 +1087,7 @@
 @media screen and (max-width: 767px) {
   .infoProjectTechRow {
     .infoProjectTech {
-      height: 25px;
+      height: 2rem;
     }
   }
   .infoProjectTechRowShowAnimation {
@@ -1101,7 +1101,7 @@
 
 .infoProjectLink {
   color: @hoverElemColor;
-  font-size: 24px;
+  font-size: 1.6em;
   margin: 5px;
 }
 .infoProjectLink:hover,
@@ -1151,7 +1151,7 @@
 
 @media screen and (max-width: 767px) {
   .infoProjectLink {
-    font-size: 14px;
+    font-size: 1em;
   }
   .infoProjectLinkShowAnimation {
     opacity: 1;

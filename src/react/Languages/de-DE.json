@@ -24,6 +24,7 @@
     "project.arrow": "Projekte",
     "project.close": "Schließen",
     "project.github": "Github Repository",
+    "project.phpSocialNetwork.description": "In diesem Projekt können Sie nach der Anmeldung öffentliche oder private Nachrichten mit Ihren Freunden austauschen. Sie können auswählen, wem Sie folgen möchten und wer Ihnen folgt, Ihr eigenes Profil behalten und die Profile der anderen Mitglieder anzeigen. Es ist ein kleines Projekt, das mit PHP und einer eigenen Datenbank entwickelt wurde.",
     "project.reactSolitaire.description": "In diesem Projekt ist es möglich, nicht nur Solitaire zu spielen (per Drag & Drop oder durch Doppelklicken), sondern auch die vorherigen Ergebnisse und Statistiken eines Online-Spielers (von Firebase abonniert) oder eines lokalen Spielers zu visualisieren. Die Hauptunterschiede zwischen diesen beiden Spielertypen sind die Möglichkeit für den Online-Spieler, seine Daten über verschiedene Geräte oder Sitzungen zu speichern und auf die Top 10 Highscores jedes registrierten Benutzers zuzugreifen. Es hat auch Unterstützung für Englisch, Portugiesisch, Spanisch und Deutsch.",
     "project.showMore": "Zeig Mehr",
     "project.website": "Webseite"
