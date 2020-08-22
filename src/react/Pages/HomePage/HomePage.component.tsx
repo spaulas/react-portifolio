@@ -26,7 +26,6 @@ function HomePage() {
 
   return (
     <div className={`homePage ${theme}`}>
-      <BackgroundInitials className={animation ? "showInitials" : ""} />
       <div className="overBackground">
         <Row className="topRow" align="middle">
           <LanguageSwitch />
@@ -37,7 +36,14 @@ function HomePage() {
             <AboutTitle />
           </Col>
           <Col span={21}>
-            <DeveloperTitle className={animation ? "showDeveloperName" : ""} />
+            <Row style={{ height: "100%" }} justify="start" align="middle">
+              <h1 className={`initials ${animation ? "showInitials" : ""}`}>
+                PS
+              </h1>
+              <DeveloperTitle
+                className={animation ? "showDeveloperName" : ""}
+              />
+            </Row>
           </Col>
           <Col span={2}>
             <Connections />

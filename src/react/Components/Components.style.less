@@ -1,35 +1,26 @@
-.backgroundInitials {
-  height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
+.initials {
+  font-size: 46em;
+  position: absolute;
+  color: @darkSecondaryColor;
+  margin-top: 10rem;
+}
 
+@media screen and (min-width: 768px) and (max-width: 1025px) {
   .initials {
-    width: fit-content;
-    font-size: 700px;
-    line-height: 700px;
-    color: @darkSecondaryColor;
-    padding-top: calc((100vh - 800px) / 4);
-    padding-left: calc(100vh - 710px);
-    margin: 0 !important;
+    font-size: 32rem;
+    margin-left: 1rem;
+    margin-top: 7rem;
   }
-
-  @media screen and (min-width: 768px) and (max-width: 1025px) {
-    .initials {
-      padding-left: 80px;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    .initials {
-      padding-left: 45px;
-      font-size: 300px;
-      line-height: 300px;
-      padding-top: 30%;
-    }
+}
+@media screen and (max-width: 767px) {
+  .initials {
+    font-size: 15em;
+    margin-top: 3rem;
   }
 }
 
 .showInitials {
-  padding-left: 0;
+  margin-left: -4rem;
   opacity: 0;
   animation: showInitialsAnimation 1s;
   animation-iteration-count: 1;
@@ -38,56 +29,61 @@
 
 @keyframes showInitialsAnimation {
   0% {
-    padding-left: 0;
+    margin-left: -4rem;
     opacity: 0;
   }
   100% {
-    padding-left: calc(100vh - 710px);
+    margin-left: 0;
     opacity: 1;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1025px) {
+  showInitials {
+    margin-left: -1rem;
+  }
   @keyframes showInitialsAnimation {
     0% {
-      padding-left: 0;
+      margin-left: -1rem;
       opacity: 0;
     }
     100% {
-      padding-left: 80px;
+      margin-left: 1rem;
       opacity: 1;
     }
   }
 }
 @media screen and (max-width: 767px) {
+  showInitials {
+    margin-left: -2rem;
+  }
   @keyframes showInitialsAnimation {
     0% {
-      padding-left: 0;
+      margin-left: -2rem;
       opacity: 0;
     }
     100% {
-      padding-left: 45px;
+      margin-left: 0;
       opacity: 1;
     }
   }
 }
 
 .lightMode {
-  height: 30px;
+  height: 2.5rem;
   cursor: pointer;
   opacity: 0.6;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 
   @media screen and (max-width: 767px) {
-    height: 20px;
+    height: 1.5rem;
   }
 }
 
 .developerTitleContainer {
-  width: fit-content;
-  padding-top: calc((100vh - 130px) / 2);
-  padding-left: calc((100vh - 430px) / 4);
+  margin-left: 5rem;
+  margin-top: 10rem;
 
   .developerName {
     font-size: 5em;
@@ -100,24 +96,22 @@
     color: @buttonActiveColor;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1025px) {
-    padding-left: calc((100vh - 430px) / 7);
-  }
   @media screen and (max-width: 767px) {
-    padding-left: calc((100vh - 430px) / 8);
+    margin-left: 2rem;
+    margin-top: 7rem;
     .developerName {
-      font-size: 36px;
-      line-height: 30px;
+      font-size: 3em;
+      line-height: 2.2rem;
     }
     .developerJob {
-      font-size: 22px;
-      line-height: 22px;
+      font-size: 1.5em;
+      line-height: 1.5rem;
     }
   }
 }
 
 .showDeveloperName {
-  padding-top: calc(((100vh - 130px) / 2) - 130px);
+  margin-top: 5rem;
   opacity: 0;
   animation: showDeveloperNameAnimation 0.5s;
   animation-iteration-count: 1;
@@ -127,12 +121,28 @@
 
 @keyframes showDeveloperNameAnimation {
   0% {
-    padding-top: calc(((100vh - 130px) / 2) - 130px);
     opacity: 0;
+    margin-top: 5rem;
   }
   100% {
-    padding-top: calc((100vh - 130px) / 2);
     opacity: 1;
+    margin-top: 10rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .showDeveloperName {
+    margin-top: 5rem;
+  }
+  @keyframes showDeveloperNameAnimation {
+    0% {
+      opacity: 0;
+      margin-top: 5rem;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 7rem;
+    }
   }
 }
 
@@ -145,8 +155,8 @@
   height: 100%;
 
   .connectionIcon {
-    width: 60%;
-    margin: 40px 0;
+    width: 5rem;
+    margin: 3rem 0;
     opacity: 0.6;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
@@ -154,7 +164,7 @@
   }
   @media screen and (max-width: 1025px) {
     .connectionIcon {
-      width: 100%;
+      width: 2rem;
     }
   }
 }
@@ -168,7 +178,7 @@
   animation-iteration-count: infinite;
 
   .arrowIcon {
-    width: 30px;
+    width: 2rem;
     opacity: 0.6;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
@@ -176,13 +186,13 @@
   }
 
   .arrowTitle {
-    font-size: 25px;
+    font-size: 1.8em;
     color: @buttonActiveColor;
   }
 
   @media screen and (max-width: 767px) {
     .arrowTitle {
-      font-size: 16px;
+      font-size: 1.2em;
     }
     .arrowIcon {
       width: 20px;
@@ -216,7 +226,7 @@
   height: 100%;
 
   .aboutTitle {
-    font-size: 25px;
+    font-size: 2em;
     color: @buttonActiveColor;
     width: max-content;
     cursor: pointer;
@@ -224,7 +234,7 @@
 
   @media screen and (max-width: 767px) {
     .aboutTitle {
-      font-size: 16px;
+      font-size: 1.2rem;
       margin-top: -30px;
     }
   }
@@ -1279,7 +1289,8 @@
 
 .languageSwitch {
   border: none !important;
-  margin-right: 20px;
+  margin-right: 1rem;
+  margin-top: -0.1rem;
   .ant-select-selector {
     background: transparent;
     border: none;
@@ -1290,8 +1301,8 @@
   }
 
   .flags {
-    font-size: 30px !important;
-    line-height: 30px !important;
+    font-size: 2.5rem !important;
+    line-height: 2.5rem !important;
     @media screen and (max-width: 767px) {
       font-size: 20px !important;
       line-height: 20px !important;
