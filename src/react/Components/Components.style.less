@@ -1,35 +1,26 @@
-.backgroundInitials {
-  height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
+.initials {
+  font-size: 46em;
+  position: absolute;
+  color: @darkSecondaryColor;
+  margin-top: 10rem;
+}
 
+@media screen and (min-width: 768px) and (max-width: 1025px) {
   .initials {
-    width: fit-content;
-    font-size: 700px;
-    line-height: 700px;
-    color: @darkSecondaryColor;
-    padding-top: calc((100vh - 800px) / 4);
-    padding-left: calc(100vh - 710px);
-    margin: 0 !important;
+    font-size: 32rem;
+    margin-left: 1rem;
+    margin-top: 7rem;
   }
-
-  @media screen and (min-width: 768px) and (max-width: 1025px) {
-    .initials {
-      padding-left: 80px;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    .initials {
-      padding-left: 45px;
-      font-size: 300px;
-      line-height: 300px;
-      padding-top: 30%;
-    }
+}
+@media screen and (max-width: 767px) {
+  .initials {
+    font-size: 15em;
+    margin-top: 3rem;
   }
 }
 
 .showInitials {
-  padding-left: 0;
+  margin-left: -4rem;
   opacity: 0;
   animation: showInitialsAnimation 1s;
   animation-iteration-count: 1;
@@ -38,86 +29,89 @@
 
 @keyframes showInitialsAnimation {
   0% {
-    padding-left: 0;
+    margin-left: -4rem;
     opacity: 0;
   }
   100% {
-    padding-left: calc(100vh - 710px);
+    margin-left: 0;
     opacity: 1;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1025px) {
+  showInitials {
+    margin-left: -1rem;
+  }
   @keyframes showInitialsAnimation {
     0% {
-      padding-left: 0;
+      margin-left: -1rem;
       opacity: 0;
     }
     100% {
-      padding-left: 80px;
+      margin-left: 1rem;
       opacity: 1;
     }
   }
 }
 @media screen and (max-width: 767px) {
+  showInitials {
+    margin-left: -2rem;
+  }
   @keyframes showInitialsAnimation {
     0% {
-      padding-left: 0;
+      margin-left: -2rem;
       opacity: 0;
     }
     100% {
-      padding-left: 45px;
+      margin-left: 0;
       opacity: 1;
     }
   }
 }
 
 .lightMode {
-  height: 30px;
+  height: 2.5rem;
   cursor: pointer;
   opacity: 0.6;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 
   @media screen and (max-width: 767px) {
-    height: 20px;
+    height: 1.5rem;
   }
 }
 
 .developerTitleContainer {
-  width: fit-content;
-  padding-top: calc((100vh - 130px) / 2);
-  padding-left: calc((100vh - 430px) / 4);
+  margin-left: 5rem;
+  margin-top: 10rem;
 
   .developerName {
-    font-size: 75px;
-    line-height: 50px;
+    font-size: 5em;
+    line-height: 1rem;
     color: @buttonActiveColor;
   }
   .developerJob {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 3em;
+    line-height: 2em;
     color: @buttonActiveColor;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1025px) {
-    padding-left: calc((100vh - 430px) / 7);
-  }
   @media screen and (max-width: 767px) {
-    padding-left: calc((100vh - 430px) / 8);
+    margin-left: 2rem;
+    margin-top: 7rem;
     .developerName {
-      font-size: 36px;
-      line-height: 30px;
+      font-size: 3em;
+      line-height: 2.2rem;
     }
     .developerJob {
-      font-size: 22px;
-      line-height: 22px;
+      font-size: 1.5em;
+      line-height: 1.5rem;
     }
   }
 }
 
 .showDeveloperName {
-  padding-top: calc(((100vh - 130px) / 2) - 130px);
+  margin-top: 5rem;
   opacity: 0;
   animation: showDeveloperNameAnimation 0.5s;
   animation-iteration-count: 1;
@@ -127,12 +121,28 @@
 
 @keyframes showDeveloperNameAnimation {
   0% {
-    padding-top: calc(((100vh - 130px) / 2) - 130px);
     opacity: 0;
+    margin-top: 5rem;
   }
   100% {
-    padding-top: calc((100vh - 130px) / 2);
     opacity: 1;
+    margin-top: 10rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .showDeveloperName {
+    margin-top: 5rem;
+  }
+  @keyframes showDeveloperNameAnimation {
+    0% {
+      opacity: 0;
+      margin-top: 5rem;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 7rem;
+    }
   }
 }
 
@@ -145,8 +155,8 @@
   height: 100%;
 
   .connectionIcon {
-    width: 60%;
-    margin: 40px 0;
+    width: 5rem;
+    margin: 3rem 0;
     opacity: 0.6;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
@@ -154,7 +164,7 @@
   }
   @media screen and (max-width: 1025px) {
     .connectionIcon {
-      width: 100%;
+      width: 2rem;
     }
   }
 }
@@ -168,7 +178,7 @@
   animation-iteration-count: infinite;
 
   .arrowIcon {
-    width: 30px;
+    width: 2rem;
     opacity: 0.6;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
@@ -176,13 +186,13 @@
   }
 
   .arrowTitle {
-    font-size: 25px;
+    font-size: 1.8em;
     color: @buttonActiveColor;
   }
 
   @media screen and (max-width: 767px) {
     .arrowTitle {
-      font-size: 16px;
+      font-size: 1.2em;
     }
     .arrowIcon {
       width: 20px;
@@ -216,7 +226,7 @@
   height: 100%;
 
   .aboutTitle {
-    font-size: 25px;
+    font-size: 2em;
     color: @buttonActiveColor;
     width: max-content;
     cursor: pointer;
@@ -224,7 +234,7 @@
 
   @media screen and (max-width: 767px) {
     .aboutTitle {
-      font-size: 16px;
+      font-size: 1.2rem;
       margin-top: -30px;
     }
   }
@@ -459,9 +469,6 @@
 }
 
 .mainProjectDisplay {
-  position: absolute;
-  top: 25vh;
-  left: 10vw;
   height: 50vh;
   width: 80vw;
 
@@ -477,15 +484,15 @@
 
   .mainProjectTitle {
     position: absolute;
-    top: 38vh;
-    left: -5vw;
-    font-size: 75px;
-    color: @buttonActiveColor;
-    z-index: 2;
+    top: 56vh;
+    left: -4rem;
+    font-size: 4.8em;
+    color: white;
+    z-index: 3;
   }
 
   .mainProjectTitleFirstAnimation {
-    top: 34vh;
+    top: 48vh;
     opacity: 0;
     animation: titleDrop 1s;
     animation-iteration-count: 1;
@@ -494,6 +501,7 @@
   }
 
   .mainProjectTitleAnimation {
+    top: 56vh;
     animation: projectTitleSlide 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -502,25 +510,25 @@
   @keyframes titleDrop {
     0% {
       opacity: 0;
-      top: 34vh;
+      top: 48vh;
     }
     100% {
       opacity: 1;
-      top: 38vh;
+      top: 56vh;
     }
   }
 
   @keyframes projectTitleSlide {
     0% {
-      top: 38vw;
+      top: 56vh;
     }
     100% {
-      top: -2vh;
+      top: -16vh;
     }
   }
 
   .mainProjectTitleBackAnimation {
-    top: -2vh;
+    top: -16vh;
     animation: projectTitleSlideBack 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -529,34 +537,33 @@
 
   @keyframes projectTitleSlideBack {
     0% {
-      top: -2vh;
+      top: -16vh;
     }
     100% {
-      top: 38vh;
+      top: 56vh;
     }
   }
 
   .showMore {
     position: absolute;
-    font-size: 30px;
-    width: 300px;
-    border-bottom: 1px solid @buttonActiveColor;
-    color: @buttonActiveColor;
+    font-size: 2em;
+    width: 14rem;
+    border-bottom: 1px solid white;
+    color: white;
     text-align: end;
     text-align: end;
-    top: 52vh;
-    left: 65vw;
+    top: 59.1vh;
+    left: 60vw;
     cursor: pointer;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    z-index: 2;
   }
 
   .showMoreFirstAnimation {
-    top: 48vh;
+    top: 55vh;
     opacity: 0;
     animation: showMoreDrop 0.5s;
     animation-iteration-count: 1;
@@ -565,11 +572,11 @@
   }
   @keyframes showMoreDrop {
     0% {
-      top: 48vh;
+      top: 55vh;
       opacity: 0;
     }
     100% {
-      top: 52vh;
+      top: 59.1vh;
       opacity: 1;
     }
   }
@@ -581,7 +588,7 @@
   }
   @keyframes showMoreSlide {
     0% {
-      left: 65vw;
+      left: 54vw;
     }
     100% {
       left: 0;
@@ -600,64 +607,113 @@
       left: 0;
     }
     100% {
-      left: 65vw;
+      left: 60vw;
     }
   }
 
-  @media screen and (max-width: 767px) {
-    top: 5vh;
-    left: 5vw;
-    height: 80vh;
-    width: 90vw;
-
+  @media screen and (min-width: 768px) and (max-width: 1025px) {
     .mainProjectTitle {
-      top: 70vh;
-      left: 5vw;
-      font-size: 36px;
+      top: 55vh;
+      font-size: 4em;
     }
 
     @keyframes titleDrop {
       0% {
         opacity: 0;
-        top: 66vh;
+        top: 53vh;
       }
       100% {
         opacity: 1;
-        top: 70vh;
+        top: 55vh;
+      }
+    }
+
+    @keyframes projectTitleSlide {
+      0% {
+        top: 55vh;
+      }
+      100% {
+        top: -13vh;
       }
     }
 
     .mainProjectTitleBackAnimation {
-      top: -2vh;
+      top: -13vh;
+    }
+
+    @keyframes projectTitleSlideBack {
+      0% {
+        top: -13vh;
+      }
+      100% {
+        top: 55vh;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    top: -10vh;
+    left: 1vw;
+    height: 55vh;
+    width: 90vw;
+
+    .mainProjectTitle {
+      top: 60vh;
+      font-size: 2.2em;
+      left: 0;
+    }
+
+    @keyframes projectTitleSlide {
+      0% {
+        top: 60vh;
+      }
+      100% {
+        top: -12vh;
+      }
+    }
+
+    @keyframes titleDrop {
+      0% {
+        opacity: 0;
+        top: 58.5vh;
+      }
+      100% {
+        opacity: 1;
+        top: 60vh;
+      }
+    }
+
+    .mainProjectTitleBackAnimation {
+      top: -12vh;
       animation-delay: 0.9s;
     }
 
     @keyframes projectTitleSlideBack {
       0% {
-        top: -2vh;
+        top: -12vh;
       }
       100% {
-        top: 70vh;
+        top: 60vh;
       }
     }
 
     .showMore {
-      font-size: 14px;
-      width: 120px;
-      top: 82vh;
-      left: 65vw;
+      font-size: 0.8em;
+      width: 6rem;
+      top: 61vh;
+      left: 70vw;
     }
 
     .showMoreFirstAnimation {
-      top: 78vh;
+      top: 63vh;
     }
     @keyframes showMoreDrop {
       0% {
-        top: 78vh;
+        top: 63vh;
         opacity: 0;
       }
       100% {
-        top: 82vh;
+        top: 61vh;
         opacity: 1;
       }
     }
@@ -681,7 +737,7 @@
     width: 0;
   }
   100% {
-    width: 80vw;
+    width: 81vw;
   }
 }
 
@@ -695,7 +751,7 @@
 
 @keyframes hideProjectInfoContainer {
   0% {
-    width: 80vw;
+    width: 81vw;
   }
   100% {
     width: 0;
@@ -704,7 +760,7 @@
 
 @media screen and (max-width: 767px) {
   .infoProjectDisplayHideAnimation {
-    width: 90vw;
+    width: 81vw;
     animation-delay: 0.6s;
   }
 
@@ -729,9 +785,8 @@
 .infoProjectDisplay {
   height: 50vh;
   position: absolute;
-  top: 25vh;
-  width: 80vw;
-  left: 10vw;
+  width: 81vw;
+  left: 9vw;
   border-radius: 5px;
 
   .closeRow {
@@ -748,9 +803,9 @@
   }
 
   .descriptionContainer {
-    height: 40vh;
+    height: 45vh;
     overflow: hidden;
-    margin-top: 10vh;
+    margin-top: 2vh;
   }
 
   .descriptionContainerShowAnimation {
@@ -767,7 +822,6 @@
       overflow-y: auto;
     }
   }
-
 
   .descriptionContainerHideAnimation {
     animation: hideDescriptionContainer 1s;
@@ -793,7 +847,7 @@
   }
 
   .infoProjectDescription {
-    font-size: 16px;
+    font-size: 1.6em;
     color: @buttonActiveColor;
     padding: 10px;
   }
@@ -839,20 +893,21 @@
   }
 
   @media screen and (max-width: 767px) {
-    height: 80vh;
-    top: 5vh;
+    height: 55vh;
     width: 90vw;
     left: 5vw;
+    margin-top: -20vh;
 
     .descriptionContainer {
-      height: 50vh;
+      height: 30vh;
       overflow-y: auto;
       margin-top: 6vh;
       .descriptionRow {
         margin-top: -2vh;
         .infoProjectDescription {
-          font-size: 12px;
+          font-size: 1em;
           margin-top: 0;
+          width: 90vw;
         }
       }
     }
@@ -866,7 +921,7 @@
     }
 
     .descriptionContainerShowAnimation {
-      margin-top: 2vh;
+      margin-top: -1vh;
       opacity: 0;
       animation: showDescriptionContainer 0.5s;
       animation-iteration-count: 1;
@@ -876,17 +931,17 @@
 
     @keyframes showDescriptionContainer {
       0% {
-        margin-top: 2vh;
+        margin-top: -1vh;
         opacity: 0;
       }
       100% {
-        margin-top: 6vh;
+        margin-top: 1vh;
         opacity: 1;
       }
     }
 
     .descriptionContainerHideAnimation {
-      margin-top: 6vh;
+      margin-top: 1vh;
       animation: hideDescriptionContainer 0.5s;
       animation-iteration-count: 1;
       animation-delay: 0.3s;
@@ -895,11 +950,11 @@
 
     @keyframes hideDescriptionContainer {
       0% {
-        margin-top: 6vh;
+        margin-top: 1vh;
         opacity: 1;
       }
       100% {
-        margin-top: 2vh;
+        margin-top: -1vh;
         opacity: 0;
       }
     }
@@ -908,27 +963,27 @@
 
 .infoProjectImage {
   width: 110%;
-  height: 75vh;
-  margin-top: -12.5vh;
+  height: 58vh;
+  margin-top: -4vh;
   border-radius: 5px;
   object-fit: cover;
 
   @media screen and (min-width: 768px) and (max-width: 1025px) {
-    height: 60vh;
-    margin-top: -5vh;
+    height: 55vh;
+    margin-top: -2.5vh;
   }
 
   @media screen and (max-width: 767px) {
     position: absolute;
-    top: 5vh;
-    width: 94vw;
-    height: 30vh;
-    left: -2vw;
+    top: 19vh;
+    width: 92vw;
+    height: 23vh;
+    left: -1vw;
   }
 }
 
 .infoProjectImageShowAnimation {
-  margin-top: -25vh;
+  margin-top: -8vh;
   opacity: 0;
   animation: showInfoProjectImage 0.5s;
   animation-iteration-count: 1;
@@ -938,27 +993,27 @@
 
 @keyframes showInfoProjectImage {
   0% {
-    margin-top: -25vh;
+    margin-top: -8vh;
     opacity: 0;
   }
   100% {
-    margin-top: -12.5vh;
+    margin-top: -4vh;
     opacity: 1;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1025px) {
   .infoProjectImageShowAnimation {
-    margin-top: -10vh;
+    margin-top: -5vh;
   }
 
   @keyframes showInfoProjectImage {
     0% {
-      margin-top: -10vh;
+      margin-top: -5vh;
       opacity: 0;
     }
     100% {
-      margin-top: -5vh;
+      margin-top: -2.5vh;
       opacity: 1;
     }
   }
@@ -966,24 +1021,24 @@
 
 @media screen and (max-width: 767px) {
   .infoProjectImageShowAnimation {
-    margin-top: -10vh;
+    margin-top: -19vh;
     animation-delay: 1s;
   }
 
   @keyframes showInfoProjectImage {
     0% {
-      margin-top: -10vh;
+      margin-top: -19vh;
       opacity: 0;
     }
     100% {
-      margin-top: -5vh;
+      margin-top: -17vh;
       opacity: 1;
     }
   }
 }
 
 .infoProjectImageHideAnimation {
-  margin-top: -12.5vh;
+  margin-top: -4vh;
   opacity: 1;
   animation: hideInfoProjectImage 0.5s;
   animation-iteration-count: 1;
@@ -992,11 +1047,11 @@
 
 @keyframes hideInfoProjectImage {
   0% {
-    margin-top: -12.5vh;
+    margin-top: -4vh;
     opacity: 1;
   }
   100% {
-    margin-top: -25vh;
+    margin-top: -8vh;
     opacity: 0;
   }
 }
@@ -1020,26 +1075,31 @@
 
 @media screen and (max-width: 767px) {
   .infoProjectImageHideAnimation {
-    margin-top: -5vh;
+    margin-top: -17vh;
   }
 
   @keyframes hideInfoProjectImage {
     0% {
-      margin-top: -5vh;
+      margin-top: -17vh;
       opacity: 1;
     }
     100% {
-      margin-top: -10vh;
+      margin-top: -19vh;
       opacity: 0;
     }
   }
 }
 
+.techcol {
+  text-align: center;
+}
+
 .infoProjectTechRow {
   margin-top: 10px;
+  margin-bottom: 10px;
 
   .infoProjectTech {
-    height: 40px;
+    height: 3rem;
     margin: 5px;
   }
 }
@@ -1087,7 +1147,7 @@
 @media screen and (max-width: 767px) {
   .infoProjectTechRow {
     .infoProjectTech {
-      height: 25px;
+      height: 2rem;
     }
   }
   .infoProjectTechRowShowAnimation {
@@ -1100,9 +1160,10 @@
 }
 
 .infoProjectLink {
-  color: @hoverElemColor;
-  font-size: 24px;
+  color: @buttonActiveColor;
+  font-size: 1.6em;
   margin: 5px;
+  border-bottom: 0.1rem solid @buttonActiveColor;
 }
 .infoProjectLink:hover,
 .infoProjectLink:active {
@@ -1151,7 +1212,7 @@
 
 @media screen and (max-width: 767px) {
   .infoProjectLink {
-    font-size: 14px;
+    font-size: 1em;
   }
   .infoProjectLinkShowAnimation {
     opacity: 1;
@@ -1228,7 +1289,8 @@
 
 .languageSwitch {
   border: none !important;
-  margin-right: 20px;
+  margin-right: 1rem;
+  margin-top: -0.1rem;
   .ant-select-selector {
     background: transparent;
     border: none;
@@ -1239,8 +1301,8 @@
   }
 
   .flags {
-    font-size: 30px !important;
-    line-height: 30px !important;
+    font-size: 2.5rem !important;
+    line-height: 2.5rem !important;
     @media screen and (max-width: 767px) {
       font-size: 20px !important;
       line-height: 20px !important;

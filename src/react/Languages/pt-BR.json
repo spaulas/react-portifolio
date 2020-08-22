@@ -24,6 +24,7 @@
     "project.arrow": "Projetos",
     "project.close": "Fechar",
     "project.github": "Repositório do Github",
+    "project.phpSocialNetwork.description": "Neste projeto é possível, após se registrar, trocar mensagens públicas ou privadas com seus amigos, você pode escolher quem seguir e quem está te seguindo, manter seu próprio perfil e ver os perfis dos outros membros. É um pequeno projeto desenvolvido em PHP e com base de dados própria.",
     "project.reactSolitaire.description": "Neste projeto, é possível não apenas jogar paciência (arrastando e soltando ou clicando duas vezes), mas também visualizar as pontuações e estatísticas anteriores de um jogador online (inscrito no Firebase) ou de um jogador local. As principais diferenças entre estes dois tipos de jogadores são a possibilidade do jogador online guardar os seus dados através de diferentes dispositivos ou sessões e aceder às 10 melhores pontuações de cada utilizador registado. Também oferece suporte para inglês, português, espanhol e alemão.",
     "project.showMore": "Mostrar Mais",
     "project.website": "Site"

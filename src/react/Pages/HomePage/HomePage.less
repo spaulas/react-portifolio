@@ -3,9 +3,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    margin: @limitVertical @limitHorizontal;
-    height: calc(100vh - @limitVertical * 2);
-    width: calc(100% - @limitHorizontal * 2);
+    padding: @limitVertical @limitHorizontal;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 
     .topRow {
       width: 100%;
@@ -14,12 +15,12 @@
     }
 
     .middleRow {
-      height: calc(100% - 30px - 100px);
+      height: calc(100% - 2rem - 6rem);
       width: 100%;
     }
 
     .bottomRow {
-      height: 100px;
+      height: 6rem;
       width: 100%;
     }
   }
@@ -27,10 +28,10 @@
   @media screen and (max-width: 767px) {
     .overBackground {
       .middleRow {
-        height: calc(100% - 30px - 50px);
+        height: calc(100% - 2rem - 3.5rem);
       }
       .bottomRow {
-        height: 50px;
+        height: 3.5rem;
       }
     }
   }
