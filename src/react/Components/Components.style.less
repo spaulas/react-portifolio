@@ -90,13 +90,13 @@
   padding-left: calc((100vh - 430px) / 4);
 
   .developerName {
-    font-size: 75px;
-    line-height: 50px;
+    font-size: 5em;
+    line-height: 1rem;
     color: @buttonActiveColor;
   }
   .developerJob {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 3em;
+    line-height: 2em;
     color: @buttonActiveColor;
   }
 
@@ -474,16 +474,15 @@
 
   .mainProjectTitle {
     position: absolute;
-    top: 38vh;
-    left: -5vw;
-    font-size: 5.4em;
-    color: @buttonActiveColor;
+    top: 56vh;
+    left: -4rem;
+    font-size: 4.8em;
+    color: white;
     z-index: 3;
-    background: rgba(0, 0, 0, 0.2);
   }
 
   .mainProjectTitleFirstAnimation {
-    top: 34vh;
+    top: 48vh;
     opacity: 0;
     animation: titleDrop 1s;
     animation-iteration-count: 1;
@@ -492,7 +491,7 @@
   }
 
   .mainProjectTitleAnimation {
-    top: 38vh;
+    top: 56vh;
     animation: projectTitleSlide 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -501,25 +500,25 @@
   @keyframes titleDrop {
     0% {
       opacity: 0;
-      top: 34vh;
+      top: 48vh;
     }
     100% {
       opacity: 1;
-      top: 38vh;
+      top: 56vh;
     }
   }
 
   @keyframes projectTitleSlide {
     0% {
-      top: 38vh;
+      top: 56vh;
     }
     100% {
-      top: -2vh;
+      top: -16vh;
     }
   }
 
   .mainProjectTitleBackAnimation {
-    top: -2vh;
+    top: -16vh;
     animation: projectTitleSlideBack 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -528,22 +527,22 @@
 
   @keyframes projectTitleSlideBack {
     0% {
-      top: -2vh;
+      top: -16vh;
     }
     100% {
-      top: 38vh;
+      top: 56vh;
     }
   }
 
   .showMore {
     position: absolute;
     font-size: 2em;
-    width: 20rem;
-    border-bottom: 1px solid @buttonActiveColor;
-    color: @buttonActiveColor;
+    width: 14rem;
+    border-bottom: 1px solid white;
+    color: white;
     text-align: end;
     text-align: end;
-    top: 52vh;
+    top: 59.1vh;
     left: 60vw;
     cursor: pointer;
     -webkit-transform: rotate(90deg);
@@ -554,7 +553,7 @@
   }
 
   .showMoreFirstAnimation {
-    top: 48vh;
+    top: 55vh;
     opacity: 0;
     animation: showMoreDrop 0.5s;
     animation-iteration-count: 1;
@@ -563,11 +562,11 @@
   }
   @keyframes showMoreDrop {
     0% {
-      top: 48vh;
+      top: 55vh;
       opacity: 0;
     }
     100% {
-      top: 52vh;
+      top: 59.1vh;
       opacity: 1;
     }
   }
@@ -602,15 +601,65 @@
     }
   }
 
+  @media screen and (min-width: 768px) and (max-width: 1025px) {
+    .mainProjectTitle {
+      top: 55vh;
+      font-size: 4em;
+    }
+
+    @keyframes titleDrop {
+      0% {
+        opacity: 0;
+        top: 53vh;
+      }
+      100% {
+        opacity: 1;
+        top: 55vh;
+      }
+    }
+
+    @keyframes projectTitleSlide {
+      0% {
+        top: 55vh;
+      }
+      100% {
+        top: -13vh;
+      }
+    }
+
+    .mainProjectTitleBackAnimation {
+      top: -13vh;
+    }
+
+    @keyframes projectTitleSlideBack {
+      0% {
+        top: -13vh;
+      }
+      100% {
+        top: 55vh;
+      }
+    }
+  }
+
   @media screen and (max-width: 767px) {
     top: -10vh;
     left: 1vw;
-    height: 70vh;
+    height: 55vh;
     width: 90vw;
 
     .mainProjectTitle {
-      top: 62.5vh;
+      top: 60vh;
       font-size: 2.2em;
+      left: 0;
+    }
+
+    @keyframes projectTitleSlide {
+      0% {
+        top: 60vh;
+      }
+      100% {
+        top: -12vh;
+      }
     }
 
     @keyframes titleDrop {
@@ -620,41 +669,41 @@
       }
       100% {
         opacity: 1;
-        top: 62.5vh;
+        top: 60vh;
       }
     }
 
     .mainProjectTitleBackAnimation {
-      top: -2vh;
+      top: -12vh;
       animation-delay: 0.9s;
     }
 
     @keyframes projectTitleSlideBack {
       0% {
-        top: -2vh;
+        top: -12vh;
       }
       100% {
-        top: 62.5vh;
+        top: 60vh;
       }
     }
 
     .showMore {
       font-size: 0.8em;
-      width: 8rem;
-      top: 75vh;
-      left: 60vw;
+      width: 6rem;
+      top: 61vh;
+      left: 70vw;
     }
 
     .showMoreFirstAnimation {
-      top: 71vh;
+      top: 63vh;
     }
     @keyframes showMoreDrop {
       0% {
-        top: 71vh;
+        top: 63vh;
         opacity: 0;
       }
       100% {
-        top: 75vh;
+        top: 61vh;
         opacity: 1;
       }
     }
@@ -678,7 +727,7 @@
     width: 0;
   }
   100% {
-    width: 80vw;
+    width: 81vw;
   }
 }
 
@@ -692,7 +741,7 @@
 
 @keyframes hideProjectInfoContainer {
   0% {
-    width: 80vw;
+    width: 81vw;
   }
   100% {
     width: 0;
@@ -701,7 +750,7 @@
 
 @media screen and (max-width: 767px) {
   .infoProjectDisplayHideAnimation {
-    width: 90vw;
+    width: 81vw;
     animation-delay: 0.6s;
   }
 
@@ -726,7 +775,7 @@
 .infoProjectDisplay {
   height: 50vh;
   position: absolute;
-  width: 80vw;
+  width: 81vw;
   left: 9vw;
   border-radius: 5px;
 
@@ -744,9 +793,9 @@
   }
 
   .descriptionContainer {
-    height: 40vh;
+    height: 45vh;
     overflow: hidden;
-    margin-top: 10vh;
+    margin-top: 2vh;
   }
 
   .descriptionContainerShowAnimation {
@@ -788,7 +837,7 @@
   }
 
   .infoProjectDescription {
-    font-size: 1.2em;
+    font-size: 1.6em;
     color: @buttonActiveColor;
     padding: 10px;
   }
@@ -834,19 +883,19 @@
   }
 
   @media screen and (max-width: 767px) {
-    height: 70vh;
+    height: 55vh;
     width: 90vw;
     left: 5vw;
     margin-top: -20vh;
 
     .descriptionContainer {
-      height: 50vh;
+      height: 30vh;
       overflow-y: auto;
       margin-top: 6vh;
       .descriptionRow {
         margin-top: -2vh;
         .infoProjectDescription {
-          font-size: 0.9em;
+          font-size: 1em;
           margin-top: 0;
           width: 90vw;
         }
@@ -862,7 +911,7 @@
     }
 
     .descriptionContainerShowAnimation {
-      margin-top: 2vh;
+      margin-top: -1vh;
       opacity: 0;
       animation: showDescriptionContainer 0.5s;
       animation-iteration-count: 1;
@@ -872,17 +921,17 @@
 
     @keyframes showDescriptionContainer {
       0% {
-        margin-top: 2vh;
+        margin-top: -1vh;
         opacity: 0;
       }
       100% {
-        margin-top: 6vh;
+        margin-top: 1vh;
         opacity: 1;
       }
     }
 
     .descriptionContainerHideAnimation {
-      margin-top: 6vh;
+      margin-top: 1vh;
       animation: hideDescriptionContainer 0.5s;
       animation-iteration-count: 1;
       animation-delay: 0.3s;
@@ -891,11 +940,11 @@
 
     @keyframes hideDescriptionContainer {
       0% {
-        margin-top: 6vh;
+        margin-top: 1vh;
         opacity: 1;
       }
       100% {
-        margin-top: 2vh;
+        margin-top: -1vh;
         opacity: 0;
       }
     }
@@ -904,27 +953,27 @@
 
 .infoProjectImage {
   width: 110%;
-  height: 75vh;
-  margin-top: -12.5vh;
+  height: 58vh;
+  margin-top: -4vh;
   border-radius: 5px;
   object-fit: cover;
 
   @media screen and (min-width: 768px) and (max-width: 1025px) {
-    height: 60vh;
-    margin-top: -5vh;
+    height: 55vh;
+    margin-top: -2.5vh;
   }
 
   @media screen and (max-width: 767px) {
     position: absolute;
-    top: 5vh;
-    width: 94vw;
-    height: 20vh;
-    left: -2vw;
+    top: 19vh;
+    width: 92vw;
+    height: 23vh;
+    left: -1vw;
   }
 }
 
 .infoProjectImageShowAnimation {
-  margin-top: -25vh;
+  margin-top: -8vh;
   opacity: 0;
   animation: showInfoProjectImage 0.5s;
   animation-iteration-count: 1;
@@ -934,27 +983,27 @@
 
 @keyframes showInfoProjectImage {
   0% {
-    margin-top: -25vh;
+    margin-top: -8vh;
     opacity: 0;
   }
   100% {
-    margin-top: -12.5vh;
+    margin-top: -4vh;
     opacity: 1;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1025px) {
   .infoProjectImageShowAnimation {
-    margin-top: -10vh;
+    margin-top: -5vh;
   }
 
   @keyframes showInfoProjectImage {
     0% {
-      margin-top: -10vh;
+      margin-top: -5vh;
       opacity: 0;
     }
     100% {
-      margin-top: -5vh;
+      margin-top: -2.5vh;
       opacity: 1;
     }
   }
@@ -962,24 +1011,24 @@
 
 @media screen and (max-width: 767px) {
   .infoProjectImageShowAnimation {
-    margin-top: -10vh;
+    margin-top: -19vh;
     animation-delay: 1s;
   }
 
   @keyframes showInfoProjectImage {
     0% {
-      margin-top: -10vh;
+      margin-top: -19vh;
       opacity: 0;
     }
     100% {
-      margin-top: -5vh;
+      margin-top: -17vh;
       opacity: 1;
     }
   }
 }
 
 .infoProjectImageHideAnimation {
-  margin-top: -12.5vh;
+  margin-top: -4vh;
   opacity: 1;
   animation: hideInfoProjectImage 0.5s;
   animation-iteration-count: 1;
@@ -988,11 +1037,11 @@
 
 @keyframes hideInfoProjectImage {
   0% {
-    margin-top: -12.5vh;
+    margin-top: -4vh;
     opacity: 1;
   }
   100% {
-    margin-top: -25vh;
+    margin-top: -8vh;
     opacity: 0;
   }
 }
@@ -1016,16 +1065,16 @@
 
 @media screen and (max-width: 767px) {
   .infoProjectImageHideAnimation {
-    margin-top: -5vh;
+    margin-top: -17vh;
   }
 
   @keyframes hideInfoProjectImage {
     0% {
-      margin-top: -5vh;
+      margin-top: -17vh;
       opacity: 1;
     }
     100% {
-      margin-top: -10vh;
+      margin-top: -19vh;
       opacity: 0;
     }
   }
@@ -1037,9 +1086,10 @@
 
 .infoProjectTechRow {
   margin-top: 10px;
+  margin-bottom: 10px;
 
   .infoProjectTech {
-    height: 2.5rem;
+    height: 3rem;
     margin: 5px;
   }
 }
@@ -1100,9 +1150,10 @@
 }
 
 .infoProjectLink {
-  color: @hoverElemColor;
+  color: @buttonActiveColor;
   font-size: 1.6em;
   margin: 5px;
+  border-bottom: 0.1rem solid @buttonActiveColor;
 }
 .infoProjectLink:hover,
 .infoProjectLink:active {
