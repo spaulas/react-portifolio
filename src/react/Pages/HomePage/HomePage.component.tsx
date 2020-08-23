@@ -2,7 +2,6 @@ import { Col, Row } from "antd";
 import React, { useEffect, useState } from "react";
 import AboutModal from "../../Components/AboutMeContainer/AboutModal/AboutModal.component";
 import AboutTitle from "../../Components/AboutMeContainer/AboutTitle/AboutTitle.component";
-import BackgroundInitials from "../../Components/Titles/BackgroundInitials/BackgroundInitials.component";
 import Connections from "../../Components/Links/Connections.component";
 import DeveloperTitle from "../../Components/Titles/DeveloperTitle/DeveloperTitle.component";
 import LanguageSwitch from "../../Components/Configurations/LanguageSwitch/LanguageSwitch.component";

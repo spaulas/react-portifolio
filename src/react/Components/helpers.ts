@@ -1,14 +1,16 @@
+import { ReactNode } from "react";
 export const checkName = (
   rule: object,
   value: any,
   callback: (message?: string) => void,
-  intl: any
+  invalidLengthMessage: ReactNode,
+  invalidNameMessage: ReactNode
 ) => {
   if (value.lenght < 3) {
-    callback(intl.formatMessage({ id: "contact.invalid.length" }));
+    callback(invalidLengthMessage as string);
   }
   if (value && validadeName(value)) {
-    callback(intl.formatMessage({ id: "contact.invalid.name" }));
+    callback(invalidNameMessage as string);
   } else {
     callback();
   }
@@ -40,10 +42,10 @@ export const checkEmail = (
   rule: object,
   value: string,
   callback: (message?: string) => void,
-  intl: any
+  invalidEmailMessage: ReactNode
 ) => {
   if (value && validateEmail(value)) {
-    callback(intl.formatMessage({ id: "contact.invalid.email" }));
+    callback(invalidEmailMessage as string);
   } else {
     callback();
   }
@@ -53,10 +55,10 @@ export const checkMessage = (
   rule: object,
   value: any,
   callback: (message?: string) => void,
-  intl: any
+  invalidLengthMessage: ReactNode
 ) => {
   if (value.lenght < 3) {
-    callback(intl.formatMessage({ id: "contact.invalid.length" }));
+    callback(invalidLengthMessage as string);
   } else {
     callback();
   }

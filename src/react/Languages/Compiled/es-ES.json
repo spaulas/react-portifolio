@@ -1,0 +1,212 @@
+{
+  "about.text01": [
+    {
+      "type": 0,
+      "value": "Soy Paula Santos, una desarrolladora front-end de"
+    }
+  ],
+  "about.text02": [
+    {
+      "type": 0,
+      "value": "años."
+    }
+  ],
+  "about.text03": [
+    {
+      "type": 0,
+      "value": "Actualmente trabajo en"
+    }
+  ],
+  "about.text04": [
+    {
+      "type": 0,
+      "value": ", una empresa portuguesa de ingeniería de comunicaciones fundada en 2000. Allí desarrollé mis habilidades como programador, comenzando con React y Redux-Saga y luego comenzando a implementar pruebas con Jest y Cypress. Todo el tiempo trabajando en un equipo multifuncional apoyado en la metodología Agile."
+    }
+  ],
+  "about.text05": [
+    {
+      "type": 0,
+      "value": "He estado trabajando en mi página de Github, creando nuevos proyectos para permitir que otras empresas se hagan una idea de mis habilidades como desarrollador. Y el propósito de este sitio es agrupar todos los proyectos."
+    }
+  ],
+  "about.text06": [
+    {
+      "type": 0,
+      "value": "Actualmente estoy buscando un trabajo remoto como desarrollador web o front-end. ¡Me he encontrado con tantas oportunidades laborales, todas repartidas por Europa con una mezcla de culturas que no puedo esperar para comenzar esta aventura!"
+    }
+  ],
+  "about.title": [
+    {
+      "type": 0,
+      "value": "Sobre Mi"
+    }
+  ],
+  "configurations.languages": [
+    {
+      "type": 0,
+      "value": "Cambiar idioma"
+    }
+  ],
+  "configurations.theme": [
+    {
+      "type": 0,
+      "value": "Cambiar de tema"
+    }
+  ],
+  "contact.email": [
+    {
+      "type": 0,
+      "value": "Correo Electronico"
+    }
+  ],
+  "contact.error.message1": [
+    {
+      "type": 0,
+      "value": "Algo pasó."
+    }
+  ],
+  "contact.error.message2": [
+    {
+      "type": 0,
+      "value": "Código de error: "
+    }
+  ],
+  "contact.error.message3": [
+    {
+      "type": 0,
+      "value": "Se recibió su correo electrónico, pero sucedió algo al intentar enviarle un correo electrónico de confirmación."
+    }
+  ],
+  "contact.invalid.email": [
+    {
+      "type": 0,
+      "value": "Correo electronico inválido"
+    }
+  ],
+  "contact.invalid.length": [
+    {
+      "type": 0,
+      "value": "Demasiado corto"
+    }
+  ],
+  "contact.invalid.name": [
+    {
+      "type": 0,
+      "value": "Nombre inválido"
+    }
+  ],
+  "contact.message": [
+    {
+      "type": 0,
+      "value": "Mensaje"
+    }
+  ],
+  "contact.name": [
+    {
+      "type": 0,
+      "value": "Nombre"
+    }
+  ],
+  "contact.required.email": [
+    {
+      "type": 0,
+      "value": "Correo electronico es requerido"
+    }
+  ],
+  "contact.required.message": [
+    {
+      "type": 0,
+      "value": "Mensaje es requerida"
+    }
+  ],
+  "contact.required.name": [
+    {
+      "type": 0,
+      "value": "Nombre es requerido"
+    }
+  ],
+  "contact.submit": [
+    {
+      "type": 0,
+      "value": "Enviar"
+    }
+  ],
+  "contact.success": [
+    {
+      "type": 0,
+      "value": "Mensaje enviado correctamente."
+    }
+  ],
+  "contact.title": [
+    {
+      "type": 0,
+      "value": "Contáctame"
+    }
+  ],
+  "developer.title": [
+    {
+      "type": 0,
+      "value": "Desarrollador Front-End"
+    }
+  ],
+  "link.aboutMe": [
+    {
+      "type": 0,
+      "value": "Conóceme un poco más"
+    }
+  ],
+  "link.repository": [
+    {
+      "type": 0,
+      "value": "Mira el código"
+    }
+  ],
+  "link.website": [
+    {
+      "type": 0,
+      "value": "Pruebe el proyecto implementado en línea"
+    }
+  ],
+  "project.arrow": [
+    {
+      "type": 0,
+      "value": "Proyectos"
+    }
+  ],
+  "project.close": [
+    {
+      "type": 0,
+      "value": "Cerca"
+    }
+  ],
+  "project.github": [
+    {
+      "type": 0,
+      "value": "Repositorio de Github"
+    }
+  ],
+  "project.phpSocialNetwork.description": [
+    {
+      "type": 0,
+      "value": "En este proyecto, es posible, después de iniciar sesión, intercambiar mensajes públicos o privados con tus amigos, puedes elegir a quién seguir y quién te sigue, mantener tu propio perfil y ver los perfiles de los demás miembros. Es un pequeño proyecto desarrollado con PHP y con base de datos propia."
+    }
+  ],
+  "project.reactSolitaire.description": [
+    {
+      "type": 0,
+      "value": "En este proyecto, es posible no solo jugar al solitario (arrastrando y soltando o haciendo doble clic), sino también ver los puntajes y estadísticas anteriores de un jugador en línea (registrado en Firebase) o un jugador local. Las principales diferencias entre estos dos tipos de jugadores son la posibilidad que tiene el jugador online de guardar sus datos a través de diferentes dispositivos o sesiones y acceder a los 10 mejores puntajes de cada usuario registrado. También admite inglés, portugués, español y alemán."
+    }
+  ],
+  "project.showMore": [
+    {
+      "type": 0,
+      "value": "Mostrar Más"
+    }
+  ],
+  "project.website": [
+    {
+      "type": 0,
+      "value": "Sitio Web"
+    }
+  ]
+}
