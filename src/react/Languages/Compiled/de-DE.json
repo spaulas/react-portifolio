@@ -1,0 +1,212 @@
+{
+  "about.text01": [
+    {
+      "type": 0,
+      "value": "Ich bin Paula Santos, eine"
+    }
+  ],
+  "about.text02": [
+    {
+      "type": 0,
+      "value": "-jährige Front-End-Entwicklerin."
+    }
+  ],
+  "about.text03": [
+    {
+      "type": 0,
+      "value": "Ich arbeite derzeit bei"
+    }
+  ],
+  "about.text04": [
+    {
+      "type": 0,
+      "value": ", ein portugiesisches Unternehmen für Kommunikationstechnik, das im Jahr 2000 gegründet wurde. Dort habe ich meine Fähigkeiten als Entwickler weiterentwickelt, angefangen bei React und Redux-Saga bis hin zur Implementierung von Tests mit Jest und Cypress. Während der gesamten Arbeit in einem funktionsübergreifenden Team, das mit der Agile-Methodik unterstützt wird."
+    }
+  ],
+  "about.text05": [
+    {
+      "type": 0,
+      "value": "Ich habe an meiner Github-Seite gearbeitet und neue Projekte erstellt, damit andere Unternehmen sich ein Bild von meinen Fähigkeiten als Entwickler machen können. Ziel dieser Website ist es, jedes Projekt zu gruppieren."
+    }
+  ],
+  "about.text06": [
+    {
+      "type": 0,
+      "value": "Ich suche derzeit einen Remote-Job als Web- oder Front-End-Entwickler. Ich bin auf so viele Stellenangebote gestoßen, die in ganz Europa mit einer solchen Mischung von Kulturen verstreut sind, dass ich es kaum erwarten kann, dieses Abenteuer zu beginnen!"
+    }
+  ],
+  "about.title": [
+    {
+      "type": 0,
+      "value": "Über Mich"
+    }
+  ],
+  "configurations.languages": [
+    {
+      "type": 0,
+      "value": "Sprache ändern"
+    }
+  ],
+  "configurations.theme": [
+    {
+      "type": 0,
+      "value": "Thema ändern"
+    }
+  ],
+  "contact.email": [
+    {
+      "type": 0,
+      "value": "E-Mail"
+    }
+  ],
+  "contact.error.message1": [
+    {
+      "type": 0,
+      "value": "Etwas passiert."
+    }
+  ],
+  "contact.error.message2": [
+    {
+      "type": 0,
+      "value": "Fehlercode: "
+    }
+  ],
+  "contact.error.message3": [
+    {
+      "type": 0,
+      "value": "Ihre E-Mail wurde empfangen, aber beim Versuch, Ihnen eine Bestätigungs-E-Mail zu senden, ist etwas passiert."
+    }
+  ],
+  "contact.invalid.email": [
+    {
+      "type": 0,
+      "value": "Ungültige E-Mail"
+    }
+  ],
+  "contact.invalid.length": [
+    {
+      "type": 0,
+      "value": "Zu kurz"
+    }
+  ],
+  "contact.invalid.name": [
+    {
+      "type": 0,
+      "value": "Ungültiger Name"
+    }
+  ],
+  "contact.message": [
+    {
+      "type": 0,
+      "value": "Botschaft"
+    }
+  ],
+  "contact.name": [
+    {
+      "type": 0,
+      "value": "Name"
+    }
+  ],
+  "contact.required.email": [
+    {
+      "type": 0,
+      "value": "E-Mail ist erforderlich"
+    }
+  ],
+  "contact.required.message": [
+    {
+      "type": 0,
+      "value": "Botschaft ist erforderlich"
+    }
+  ],
+  "contact.required.name": [
+    {
+      "type": 0,
+      "value": "Name ist erforderlich"
+    }
+  ],
+  "contact.submit": [
+    {
+      "type": 0,
+      "value": "Einreichen"
+    }
+  ],
+  "contact.success": [
+    {
+      "type": 0,
+      "value": "Mitteilung erfolgreich gesendet."
+    }
+  ],
+  "contact.title": [
+    {
+      "type": 0,
+      "value": "Kontaktiere Mich"
+    }
+  ],
+  "developer.title": [
+    {
+      "type": 0,
+      "value": "Frontend Entwickler"
+    }
+  ],
+  "link.aboutMe": [
+    {
+      "type": 0,
+      "value": "Kenne mich ein bisschen mehr"
+    }
+  ],
+  "link.repository": [
+    {
+      "type": 0,
+      "value": "Überprüfen Sie den Code"
+    }
+  ],
+  "link.website": [
+    {
+      "type": 0,
+      "value": "Probieren Sie das bereitgestellte Projekt online aus"
+    }
+  ],
+  "project.arrow": [
+    {
+      "type": 0,
+      "value": "Projekte"
+    }
+  ],
+  "project.close": [
+    {
+      "type": 0,
+      "value": "Schließen"
+    }
+  ],
+  "project.github": [
+    {
+      "type": 0,
+      "value": "Github Repository"
+    }
+  ],
+  "project.phpSocialNetwork.description": [
+    {
+      "type": 0,
+      "value": "In diesem Projekt können Sie nach der Anmeldung öffentliche oder private Nachrichten mit Ihren Freunden austauschen. Sie können auswählen, wem Sie folgen möchten und wer Ihnen folgt, Ihr eigenes Profil behalten und die Profile der anderen Mitglieder anzeigen. Es ist ein kleines Projekt, das mit PHP und einer eigenen Datenbank entwickelt wurde."
+    }
+  ],
+  "project.reactSolitaire.description": [
+    {
+      "type": 0,
+      "value": "In diesem Projekt ist es möglich, nicht nur Solitaire zu spielen (per Drag & Drop oder durch Doppelklicken), sondern auch die vorherigen Ergebnisse und Statistiken eines Online-Spielers (von Firebase abonniert) oder eines lokalen Spielers zu visualisieren. Die Hauptunterschiede zwischen diesen beiden Spielertypen sind die Möglichkeit für den Online-Spieler, seine Daten über verschiedene Geräte oder Sitzungen zu speichern und auf die Top 10 Highscores jedes registrierten Benutzers zuzugreifen. Es hat auch Unterstützung für Englisch, Portugiesisch, Spanisch und Deutsch."
+    }
+  ],
+  "project.showMore": [
+    {
+      "type": 0,
+      "value": "Zeig Mehr"
+    }
+  ],
+  "project.website": [
+    {
+      "type": 0,
+      "value": "Webseite"
+    }
+  ]
+}

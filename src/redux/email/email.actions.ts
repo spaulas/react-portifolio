@@ -1,16 +1,18 @@
 import { ValueOf } from "../../global";
 import EmailActionTypes from "./email.types";
 
-const sendEmail = () => ({
-  type: EmailActionTypes.SEND_EMAIL
+const sendEmail = (values: any) => ({
+  type: EmailActionTypes.SEND_EMAIL,
+  values
 });
 
 const sentEmailSuccess = () => ({
   type: EmailActionTypes.EMAIL_SUCCESS
 });
 
-const sentEmailFail = () => ({
-  type: EmailActionTypes.EMAIL_FAIL
+const sentEmailFail = (error: any) => ({
+  type: EmailActionTypes.EMAIL_FAIL,
+  error
 });
 
 const sendConfirmationEmail = () => ({

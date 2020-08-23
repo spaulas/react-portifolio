@@ -1,8 +1,9 @@
-import { Input, Form, Row, notification } from "antd";
+import { Input, Form, Row } from "antd";
 import { checkName, checkEmail, checkMessage } from "../../helpers";
 import { FormattedMessage } from "react-intl";
 import MenuButton from "../../Buttons/MenuButton.component";
 import React, { useEffect } from "react";
+import emailActions from "../../../../redux/email/email.actions";
 import { useDispatch } from "react-redux";
 import websiteActions from "../../../../redux/website/website.actions";
 
@@ -20,6 +21,7 @@ function ContactMe() {
 
   const onSubmit = (values: any) => {
     dispatch(websiteActions.setPageLoading());
+    dispatch(emailActions.sendEmail(values));
     sendFeedback(values);
   };
 
@@ -34,45 +36,11 @@ function ContactMe() {
     (window as any).emailjs
       .send("outlook", "portfolio", variables)
       .then((res: any) => {
-        notification.success({
-          message: <FormattedMessage id="contact.success" />,
-          duration: 5
-        });
-        dispatch(websiteActions.toggleAboutModalVisible());
-        dispatch(websiteActions.removePageLoading());
-        sendConfirmationEmail(variables);
+        dispatch(emailActions.sentEmailSuccess());
       })
       // Handle errors here however you like, or use a React error boundary
       .catch((err: any) => {
-        notification.error({
-          message: <FormattedMessage id="contact.error.message1" />,
-          description: err.status ? (
-            <span>
-              <FormattedMessage id="contact.error.message2" />
-              {err.status}
-            </span>
-          ) : null,
-          duration: 5
-        });
-        dispatch(websiteActions.removePageLoading());
-      });
-  };
-
-  const sendConfirmationEmail = (variables: any) => {
-    (window as any).emailjs
-      .send("outlook", "portfolio", variables)
-      // Handle errors here however you like, or use a React error boundary
-      .catch((err: any) => {
-        notification.error({
-          message: <FormattedMessage id="contact.error.message3" />,
-          description: err.status ? (
-            <span>
-              <FormattedMessage id="contact.error.message2" />
-              {err.status}
-            </span>
-          ) : null,
-          duration: 5
-        });
+        dispatch(emailActions.sentEmailFail(err));
       });
   };
 

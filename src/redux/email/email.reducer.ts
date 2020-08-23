@@ -5,11 +5,13 @@ import EmailActionTypes from "./email.types";
 interface InitialEmail {
   emailError?: boolean;
   confirmationEmailError?: boolean;
+  values: any;
 }
 
 const INITIAL_EMAIL: InitialEmail = {
   emailError: undefined,
-  confirmationEmailError: undefined
+  confirmationEmailError: undefined,
+  values: {}
 };
 
 const emailReducer = (state = INITIAL_EMAIL, action: ActionsCreators) => {
@@ -17,7 +19,8 @@ const emailReducer = (state = INITIAL_EMAIL, action: ActionsCreators) => {
     case EmailActionTypes.SEND_EMAIL:
       return {
         ...state,
-        emailError: undefined
+        emailError: undefined,
+        values: action.values
       };
     case EmailActionTypes.EMAIL_SUCCESS:
       return {
@@ -27,7 +30,8 @@ const emailReducer = (state = INITIAL_EMAIL, action: ActionsCreators) => {
     case EmailActionTypes.EMAIL_FAIL:
       return {
         ...state,
-        emailError: true
+        emailError: true,
+        emailErrorValue: action.error
       };
     case EmailActionTypes.SEND_CONFIRMATION_EMAIL:
       return {

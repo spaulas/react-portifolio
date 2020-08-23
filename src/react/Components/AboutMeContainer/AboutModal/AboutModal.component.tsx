@@ -1,41 +1,60 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Col, Modal, Row, Spin, notification } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import AboutMe from "../AboutMe/AboutMe.component";
 import ContactMe from "../ContactMe/ContactMe.component";
 import { FormattedMessage } from "react-intl";
-import React from "react";
+import React, { useEffect } from "react";
 import { RootReducerState } from "../../../../global";
 import websiteActions from "../../../../redux/website/website.actions";
 
 function AboutModal() {
   const dispatch = useDispatch();
 
-  const { visible, theme, pageLoading } = useSelector(
-    ({ Website }: RootReducerState) => ({
-      visible: Website.aboutModalVisible,
-      theme: Website.theme,
-      pageLoading: Website.pageLoading
-    })
-  );
+  const {
+    visible,
+    theme,
+    pageLoading,
+    emailError,
+    emailValues,
+    emailErrorValue
+  } = useSelector(({ Website, Email }: RootReducerState) => ({
+    visible: Website.aboutModalVisible,
+    theme: Website.theme,
+    pageLoading: Website.pageLoading,
+    emailError: Email.emailError,
+    emailValues: Email.values,
+    emailErrorValue: Email.emailErrorValue
+  }));
 
   const closeModal = () => {
     dispatch(websiteActions.toggleAboutModalVisible());
   };
 
-  const handleFirstMessageSuccess = (variables: any) => {
+  useEffect(() => {
+    if (pageLoading) {
+      if (emailError) {
+        handleFirstMessageSuccess();
+      } else if (emailError === false) {
+        handleFirstMessageFail(emailErrorValue);
+      }
+    }
+  }, [emailError]);
+
+  const handleFirstMessageSuccess = () => {
     notification.success({
       message: <FormattedMessage id="contact.success" />,
       duration: 5
     });
     dispatch(websiteActions.toggleAboutModalVisible());
     dispatch(websiteActions.removePageLoading());
-    sendConfirmationEmail(variables);
+    sendConfirmationEmail(emailValues);
   };
 
   const handleFirstMessageFail = (err: any) => {
     notification.error({
       message: <FormattedMessage id="contact.error.message1" />,
-      description: err.status ? (
+      description: err?.status ? (
         <span>
           <FormattedMessage id="contact.error.message2" />
           {err.status}
@@ -43,19 +62,7 @@ function AboutModal() {
       ) : null,
       duration: 5
     });
-  };
-
-  const handleSecondMessageFail = (err: any) => {
-    notification.error({
-      message: <FormattedMessage id="contact.error.message3" />,
-      description: err.status ? (
-        <span>
-          <FormattedMessage id="contact.error.message2" />
-          {err.status}
-        </span>
-      ) : null,
-      duration: 5
-    });
+    dispatch(websiteActions.removePageLoading());
   };
 
   const sendConfirmationEmail = (variables: any) => {
