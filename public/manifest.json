@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Paula Santos",
+  "name": "Portfolio | Paula Santos",
   "icons": [
     {
-      "src": "portfolio.svg",
+      "src": "portfolio.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/svg"
     },
     {
-      "src": "portfolio.svg",
+      "src": "portfolio.png",
       "type": "image/svg",
       "sizes": "192x192"
     },
     {
-      "src": "portfolio.svg",
+      "src": "portfolio.png",
       "type": "image/svg",
       "sizes": "512x512"
     }
