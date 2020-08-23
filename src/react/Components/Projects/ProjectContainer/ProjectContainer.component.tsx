@@ -134,28 +134,38 @@ function ProjectContainer({
                 ))}
               </Row>
               <Row justify="center">
-                <a
-                  className={`infoProjectLink ${
-                    animateShowMore ? "infoProjectLinkShowAnimation" : ""
-                  } ${animateShowLess ? "infoProjectLinkHideAnimation" : ""}`}
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Tooltip
+                  placement="top"
+                  title={<FormattedMessage id="link.website" />}
                 >
-                  <FormattedMessage id="project.website" />
-                </a>
+                  <a
+                    className={`infoProjectLink ${
+                      animateShowMore ? "infoProjectLinkShowAnimation" : ""
+                    } ${animateShowLess ? "infoProjectLinkHideAnimation" : ""}`}
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FormattedMessage id="project.website" />
+                  </a>
+                </Tooltip>
               </Row>
               <Row justify="center">
-                <a
-                  className={`infoProjectLink ${
-                    animateShowMore ? "infoProjectLinkShowAnimation" : ""
-                  } ${animateShowLess ? "infoProjectLinkHideAnimation" : ""}`}
-                  href={github}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Tooltip
+                  placement="top"
+                  title={<FormattedMessage id="link.repository" />}
                 >
-                  <FormattedMessage id="project.github" />
-                </a>
+                  <a
+                    className={`infoProjectLink ${
+                      animateShowMore ? "infoProjectLinkShowAnimation" : ""
+                    } ${animateShowLess ? "infoProjectLinkHideAnimation" : ""}`}
+                    href={github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FormattedMessage id="project.github" />
+                  </a>
+                </Tooltip>
               </Row>
             </Col>
             <Col xs={24} sm={24} md={10}>
