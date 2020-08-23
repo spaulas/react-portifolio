@@ -1,6 +1,6 @@
-import { FormattedMessage, useIntl } from "react-intl";
 import { Input, Form, Row, notification } from "antd";
 import { checkName, checkEmail, checkMessage } from "../../helpers";
+import { FormattedMessage } from "react-intl";
 import MenuButton from "../../Buttons/MenuButton.component";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -9,7 +9,6 @@ import websiteActions from "../../../../redux/website/website.actions";
 const { Item } = Form;
 
 function ContactMe() {
-  const intl = useIntl();
   const dispatch = useDispatch();
   const [form] = Form.useForm();
 
@@ -41,6 +40,7 @@ function ContactMe() {
         });
         dispatch(websiteActions.toggleAboutModalVisible());
         dispatch(websiteActions.removePageLoading());
+        sendConfirmationEmail(variables);
       })
       // Handle errors here however you like, or use a React error boundary
       .catch((err: any) => {
@@ -55,6 +55,24 @@ function ContactMe() {
           duration: 5
         });
         dispatch(websiteActions.removePageLoading());
+      });
+  };
+
+  const sendConfirmationEmail = (variables: any) => {
+    (window as any).emailjs
+      .send("outlook", "portfolio", variables)
+      // Handle errors here however you like, or use a React error boundary
+      .catch((err: any) => {
+        notification.error({
+          message: <FormattedMessage id="contact.error.message3" />,
+          description: err.status ? (
+            <span>
+              <FormattedMessage id="contact.error.message2" />
+              {err.status}
+            </span>
+          ) : null,
+          duration: 5
+        });
       });
   };
 
@@ -79,7 +97,14 @@ function ContactMe() {
                   rule: object,
                   value: string,
                   callback: (message?: string) => void
-                ) => checkName(rule, value, callback, intl)
+                ) =>
+                  checkName(
+                    rule,
+                    value,
+                    callback,
+                    <FormattedMessage id="contact.invalid.length" />,
+                    <FormattedMessage id="contact.invalid.name" />
+                  )
               }
             ]}
           >
@@ -105,7 +130,13 @@ function ContactMe() {
                   rule: object,
                   value: string,
                   callback: (message?: string) => void
-                ) => checkEmail(rule, value, callback, intl)
+                ) =>
+                  checkEmail(
+                    rule,
+                    value,
+                    callback,
+                    <FormattedMessage id="contact.invalid.email" />
+                  )
               }
             ]}
           >
@@ -131,7 +162,13 @@ function ContactMe() {
                   rule: object,
                   value: string,
                   callback: (message?: string) => void
-                ) => checkMessage(rule, value, callback, intl)
+                ) =>
+                  checkMessage(
+                    rule,
+                    value,
+                    callback,
+                    <FormattedMessage id="contact.invalid.length" />
+                  )
               }
             ]}
           >
