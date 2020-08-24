@@ -1,11 +1,12 @@
 /* eslint-disable indent */
 import { ActionsCreators } from "./email.actions";
 import EmailActionTypes from "./email.types";
+import { Store } from "antd/lib/form/interface";
 
 interface InitialEmail {
   emailError?: boolean;
   confirmationEmailError?: boolean;
-  values: any;
+  values: Store;
 }
 
 const INITIAL_EMAIL: InitialEmail = {

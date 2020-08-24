@@ -1,37 +1,36 @@
 import { ReactNode } from "react";
 export const checkName = (
   rule: object,
-  value: any,
-  callback: (message?: string) => void,
+  value: string,
   invalidLengthMessage: ReactNode,
   invalidNameMessage: ReactNode
 ) => {
-  if (value.lenght < 3) {
-    callback(invalidLengthMessage as string);
+  if (value?.length < 3) {
+    return Promise.reject(invalidLengthMessage);
   }
   if (value && validadeName(value)) {
-    callback(invalidNameMessage as string);
+    return Promise.reject(invalidNameMessage);
   } else {
-    callback();
+    return Promise.resolve();
   }
 };
 
-export const validadeName = (name: any) => {
-  const regex = /^[0-9A-Za-z!@#$%&*()_\-+={[}\]|:;"'<,>.?/\\~`]+[0-9A-Za-z!@#$%&*()_\-+={[}\]|:;"'<,>.?/\\~`]*$/g;
+export const validadeName = (name: string) => {
+  const regex = /^[a-z ,.'-]+$/g;
 
   if (typeof name === "object") {
-    const result = name.find((e: string) => !regex.test(e));
+    const result = (name as Array<string>).find((e: string) => !regex.test(e));
     return result ? true : false;
   }
 
   return !regex.test(name);
 };
 
-export const validateEmail = (email: any) => {
+export const validateEmail = (email: string) => {
   const regex = /^(([^<>()[\]\\.,;:\s@]+(\.[^<>()[\]\\.,;:\s@]+)*)|(.+))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   if (typeof email === "object") {
-    const result = email.find((e: string) => !regex.test(e));
+    const result = (email as Array<string>).find((e: string) => !regex.test(e));
     return result ? true : false;
   }
 
@@ -41,25 +40,23 @@ export const validateEmail = (email: any) => {
 export const checkEmail = (
   rule: object,
   value: string,
-  callback: (message?: string) => void,
   invalidEmailMessage: ReactNode
 ) => {
   if (value && validateEmail(value)) {
-    callback(invalidEmailMessage as string);
+    return Promise.reject(invalidEmailMessage);
   } else {
-    callback();
+    return Promise.resolve();
   }
 };
 
 export const checkMessage = (
   rule: object,
-  value: any,
-  callback: (message?: string) => void,
+  value: string,
   invalidLengthMessage: ReactNode
 ) => {
-  if (value.lenght < 3) {
-    callback(invalidLengthMessage as string);
+  if (value?.length < 3) {
+    return Promise.reject(invalidLengthMessage);
   } else {
-    callback();
+    return Promise.resolve();
   }
 };

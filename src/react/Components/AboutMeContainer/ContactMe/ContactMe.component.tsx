@@ -4,11 +4,24 @@ import { checkEmail, checkMessage, checkName } from "../../helpers";
 import { FormattedMessage } from "react-intl";
 import MenuButton from "../../Buttons/MenuButton.component";
 import ReactGA from "react-ga";
+import { Store } from "antd/lib/form/interface";
 import emailActions from "../../../../redux/email/email.actions";
 import { useDispatch } from "react-redux";
 import websiteActions from "../../../../redux/website/website.actions";
 
 const { Item } = Form;
+
+interface EmailJSWindow {
+  emailjs: {
+    send: (
+      email: string,
+      template: string,
+      variables: Store
+    ) => Promise<object>;
+  };
+}
+
+type NewWindow = Window & typeof globalThis & EmailJSWindow;
 
 function ContactMe() {
   const dispatch = useDispatch();
@@ -20,9 +33,7 @@ function ContactMe() {
   };
   useEffect(mountComponent, []);
 
-  const onSubmit = (values: any) => {
-    // eslint-disable-next-line no-console
-    console.log("SUBMIT = ", values);
+  const onSubmit = (values: Store) => {
     ReactGA.event({
       category: "Contact Me",
       action: "send message"
@@ -39,14 +50,14 @@ function ContactMe() {
     form.setFieldsValue({ [field]: value });
   };
 
-  const sendFeedback = (variables: any) => {
-    (window as any).emailjs
+  const sendFeedback = (variables: Store) => {
+    (window as NewWindow).emailjs
       .send("outlook", "portfolio", variables)
-      .then((res: any) => {
+      .then(() => {
         dispatch(emailActions.sentEmailSuccess());
       })
       // Handle errors here however you like, or use a React error boundary
-      .catch((err: any) => {
+      .catch((err: Error) => {
         dispatch(emailActions.sentEmailFail(err));
       });
   };
@@ -59,104 +70,89 @@ function ContactMe() {
         onFinish={onSubmit}
         form={form}
       >
-        <Row align="middle" justify="center">
-          <Item
-            fieldKey="name"
-            rules={[
-              {
-                required: true,
-                message: <FormattedMessage id="contact.required.name" />
-              },
-              {
-                validator: (
-                  rule: object,
-                  value: string,
-                  callback: (message?: string) => void
-                ) =>
-                  checkName(
-                    rule,
-                    value,
-                    callback,
-                    <FormattedMessage id="contact.invalid.length" />,
-                    <FormattedMessage id="contact.invalid.name" />
-                  )
-              }
-            ]}
-          >
+        <Item
+          name="name"
+          rules={[
+            {
+              required: true,
+              message: <FormattedMessage id="contact.required.name" />
+            },
+            {
+              validator: (rule: object, value: string) =>
+                checkName(
+                  rule,
+                  value,
+                  <FormattedMessage id="contact.invalid.length" />,
+                  <FormattedMessage id="contact.invalid.name" />
+                )
+            }
+          ]}
+        >
+          <Row align="middle" justify="center">
             <Input
               className="formInputAnimated formInput"
-              onChange={(e: any) => onChange(e, "name")}
+              onChange={e => onChange(e, "name")}
             />
             <label className="labelPlaceholder">
               <FormattedMessage id="contact.name" />
             </label>
-          </Item>
-        </Row>
-        <Row align="middle" justify="center">
-          <Item
-            fieldKey="email"
-            rules={[
-              {
-                required: true,
-                message: <FormattedMessage id="contact.required.email" />
-              },
-              {
-                validator: (
-                  rule: object,
-                  value: string,
-                  callback: (message?: string) => void
-                ) =>
-                  checkEmail(
-                    rule,
-                    value,
-                    callback,
-                    <FormattedMessage id="contact.invalid.email" />
-                  )
-              }
-            ]}
-          >
+          </Row>
+        </Item>
+        <Item
+          name="email"
+          rules={[
+            {
+              required: true,
+              message: <FormattedMessage id="contact.required.email" />
+            },
+            {
+              validator: (rule: object, value: string) =>
+                checkEmail(
+                  rule,
+                  value,
+                  <FormattedMessage id="contact.invalid.email" />
+                )
+            }
+          ]}
+        >
+          <Row align="middle" justify="center">
             <Input
               className="formInputAnimated formInput"
-              onChange={(e: any) => onChange(e, "email")}
+              onChange={e => onChange(e, "email")}
             />
             <label className="labelPlaceholder">
               <FormattedMessage id="contact.email" />
             </label>
-          </Item>
-        </Row>
-        <Row align="middle" justify="center">
-          <Item
-            fieldKey="message"
-            rules={[
-              {
-                required: true,
-                message: <FormattedMessage id="contact.required.message" />
-              },
-              {
-                validator: (
-                  rule: object,
-                  value: string,
-                  callback: (message?: string) => void
-                ) =>
-                  checkMessage(
-                    rule,
-                    value,
-                    callback,
-                    <FormattedMessage id="contact.invalid.length" />
-                  )
-              }
-            ]}
-          >
+          </Row>
+        </Item>
+        <Item
+          name="message"
+          rules={[
+            {
+              required: true,
+              message: <FormattedMessage id="contact.required.message" />
+            },
+            {
+              validator: (rule: object, value: string) =>
+                checkMessage(
+                  rule,
+                  value,
+                  <FormattedMessage id="contact.invalid.length" />
+                )
+            }
+          ]}
+        >
+          <Row align="middle" justify="center">
             <Input.TextArea
               rows={4}
               className="formInputAnimated formInput formMessage"
-              onChange={(e: any) => onChange(e, "message")}
+              onChange={e => onChange(e, "message")}
             />
             <label className="labelPlaceholder">
               <FormattedMessage id="contact.message" />
             </label>
-          </Item>
-        </Row>
+          </Row>
+        </Item>
 
         <Row align="middle" justify="center">
           <MenuButton

@@ -17,6 +17,10 @@ const ProjectsPage = React.lazy(() =>
   import("../Pages/ProjectsPage/ProjectsPage.component")
 );
 
+const AboutModal = React.lazy(() =>
+  import("../Components/AboutMeContainer/AboutModal/AboutModal.component")
+);
+
 ReactGA.initialize("UA-153456985-1");
 ReactGA.pageview("/");
 
@@ -31,6 +35,7 @@ function App() {
                 <Suspense fallback={<Spin spinning />}>
                   <HomePage />
                   <ProjectsPage />
+                  <AboutModal />
                 </Suspense>
               </Content>
             </Layout>
