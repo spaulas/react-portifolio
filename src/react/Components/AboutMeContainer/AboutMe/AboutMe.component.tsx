@@ -1,21 +1,18 @@
 import { Col, Row } from "antd";
 import React, { memo } from "react";
 import { FormattedMessage } from "react-intl";
-import LazyLoad from "react-lazyload";
 import moment from "moment";
 
 function AboutMe() {
   const age = moment().diff("1995-01-12", "years");
   return (
-    <Row id="aboutMeContainer">
+    <Row className="aboutMeContainer">
       <Col xs={24} sm={24} md={10}>
-        <LazyLoad>
-          <img
-            className="developerImage"
-            src={require("../../../../images/developer.png")}
-            alt=""
-          />
-        </LazyLoad>
+        <img
+          className="developerImage"
+          src={require("../../../../images/developer.png")}
+          alt=""
+        />
       </Col>
       <Col xs={24} sm={24} md={14} className="aboutMeTextContainer">
         <p>
