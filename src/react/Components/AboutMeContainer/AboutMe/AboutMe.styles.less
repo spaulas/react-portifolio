@@ -1,0 +1,47 @@
+.aboutMeContainer {
+  .developerImage {
+    height: 640px;
+    margin-top: -57px;
+    margin-left: -20px;
+    margin-bottom: -20px;
+    filter: saturate(1.1) sepia(0.3);
+  }
+
+  .aboutMeTextContainer {
+    padding-right: 20px;
+    font-size: 17px;
+    color: black;
+    height: 460px;
+    overflow-y: auto;
+
+    a {
+      color: @buttonActiveColor;
+      border-bottom: 0.1rem solid @buttonActiveColor;
+    }
+    a:hover,
+    a:active {
+      border-bottom: 0.1rem solid @hoverElemColor;
+      color: @hoverElemColor;
+    }
+  }
+
+  // tablet
+  @media screen and (min-width: 768px) and (max-width: 1025px) {
+    .developerImage {
+      height: 530px;
+      margin-top: 12px;
+    }
+  }
+
+  // mobile
+  @media screen and (max-width: 767px) {
+    .developerImage {
+      height: 410px;
+    }
+    .aboutTextContainer {
+      margin-top: 35px;
+      height: unset;
+      overflow: unset;
+    }
+  }
+}

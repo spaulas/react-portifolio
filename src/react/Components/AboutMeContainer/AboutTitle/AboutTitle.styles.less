@@ -1,0 +1,28 @@
+.aboutTitleContainer {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .aboutTitle {
+    font-size: 2em;
+    color: @buttonActiveColor;
+    width: max-content;
+    cursor: pointer;
+  }
+
+  // mobile
+  @media screen and (max-width: 767px) {
+    .aboutTitle {
+      font-size: 1.2rem;
+      margin-top: -30px;
+    }
+  }
+}

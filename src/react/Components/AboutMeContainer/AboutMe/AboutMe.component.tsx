@@ -7,17 +7,17 @@ import moment from "moment";
 function AboutMe() {
   const age = moment().diff("1995-01-12", "years");
   return (
-    <Row>
+    <Row id="aboutMeContainer">
       <Col xs={24} sm={24} md={10}>
         <LazyLoad>
           <img
-            className="developer"
+            className="developerImage"
             src={require("../../../../images/developer.png")}
             alt=""
           />
         </LazyLoad>
       </Col>
-      <Col xs={24} sm={24} md={14} className="aboutTextContainer">
+      <Col xs={24} sm={24} md={14} className="aboutMeTextContainer">
         <p>
           <FormattedMessage id="about.text01" /> {age}
           <FormattedMessage id="about.text02" />

@@ -3,7 +3,7 @@ import { Col, Modal, Row, Spin, notification } from "antd";
 import React, { memo, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AboutMe from "../AboutMe/AboutMe.component";
-import ContactMe from "../ContactMe/ContactMe.component";
+import ContactMeForm from "../ContactMeForm/ContactMeForm.component";
 import { RootReducerState } from "../../../../global";
 import { Store } from "antd/lib/form/interface";
 import { useIntl } from "react-intl";
@@ -113,7 +113,7 @@ function AboutModal() {
           </Col>
 
           <Col className="contactMeCol" xs={24} sm={24} md={10}>
-            <ContactMe />
+            <ContactMeForm />
           </Col>
         </Row>
       </Spin>

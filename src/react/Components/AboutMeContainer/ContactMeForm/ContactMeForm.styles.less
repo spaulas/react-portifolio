@@ -1,0 +1,101 @@
+.contactMeForm {
+  .formInputAnimated {
+    opacity: 0;
+    animation: buttonDrop 1s 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes buttonDrop {
+    0% {
+      height: 0;
+      opacity: 0;
+    }
+    100% {
+      height: 70px;
+      opacity: 1;
+    }
+  }
+
+  .formInput {
+    border-bottom: 1px solid @buttonActiveColor !important;
+    font-size: 17px;
+    text-align: center;
+    background: transparent;
+    border: none;
+    color: @buttonActiveColor;
+    outline: 0;
+    box-shadow: none;
+    z-index: 1;
+    width: 350px;
+  }
+
+  .labelPlaceholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: @hoverElemColor;
+    font-size: 17px;
+    transition: @smallTransitionTime;
+    z-index: 0;
+  }
+
+  .formInput:focus ~ label {
+    transform: unset;
+    color: @buttonActiveColor;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+  }
+
+  .formInput:not([value=""]) ~ label {
+    transform: unset;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    color: @buttonActiveColor;
+  }
+
+  .ant-form-item-has-error {
+    .formInput {
+      border-bottom: 1px solid red !important;
+
+      .anticon {
+        color: red;
+      }
+    }
+    .formInput ~ label {
+      color: red;
+    }
+    .formInput:focus ~ label {
+      top: 0;
+      left: 0;
+      font-size: 15px;
+      transform: unset;
+      color: red;
+    }
+  }
+
+  .formMessage {
+    height: 200px !important;
+    border: 1px solid @buttonActiveColor;
+    margin-top: 30px;
+  }
+
+  .submitButtonAnimated {
+    width: 350px;
+    opacity: 0;
+    animation: buttonDrop 1s 1;
+    animation-fill-mode: forwards;
+  }
+
+  // mobile
+  @media screen and (max-width: 767px) {
+    .formInput {
+      width: 270px;
+    }
+    .submitButtonAnimated {
+      width: 270px;
+    }
+  }
+}

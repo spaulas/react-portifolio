@@ -23,7 +23,7 @@ interface EmailJSWindow {
 
 type NewWindow = Window & typeof globalThis & EmailJSWindow;
 
-function ContactMe() {
+function ContactMeForm() {
   const dispatch = useDispatch();
   const [form] = Form.useForm();
 
@@ -66,7 +66,7 @@ function ContactMe() {
     <>
       <Form
         name="loginForm"
-        className="contactMe"
+        className="contactMeForm"
         onFinish={onSubmit}
         form={form}
       >
@@ -172,4 +172,4 @@ function ContactMe() {
   );
 }
 
-export default memo(ContactMe);
+export default memo(ContactMeForm);
