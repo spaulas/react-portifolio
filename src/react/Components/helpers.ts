@@ -16,7 +16,7 @@ export const checkName = (
 };
 
 export const validadeName = (name: string) => {
-  const regex = /^[a-z ,.'-]+$/g;
+  const regex = /^[-'a-zA-Z ,.'-À-ÖØ-öø-ÿ]+$/g;
 
   if (typeof name === "object") {
     const result = (name as Array<string>).find((e: string) => !regex.test(e));

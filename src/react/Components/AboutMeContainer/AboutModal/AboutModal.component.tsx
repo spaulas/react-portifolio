@@ -30,14 +30,12 @@ function AboutModal() {
     theme,
     pageLoading,
     emailError,
-    emailValues,
     emailErrorValue
   } = useSelector(({ Website, Email }: RootReducerState) => ({
     visible: Website.aboutModalVisible,
     theme: Website.theme,
     pageLoading: Website.pageLoading,
     emailError: Email.emailError,
-    emailValues: Email.values,
     emailErrorValue: Email.emailErrorValue
   }));
 
@@ -62,7 +60,6 @@ function AboutModal() {
     });
     dispatch(websiteActions.toggleAboutModalVisible());
     dispatch(websiteActions.removePageLoading());
-    sendConfirmationEmail(emailValues);
   };
 
   const handleFirstMessageFail = (err: Error & { status: number }) => {
@@ -77,24 +74,6 @@ function AboutModal() {
       duration: 5
     });
     dispatch(websiteActions.removePageLoading());
-  };
-
-  const sendConfirmationEmail = (variables: Store) => {
-    (window as NewWindow).emailjs
-      .send("outlook", "portfolio", variables)
-      // Handle errors here however you like, or use a React error boundary
-      .catch((err: Error & { status: number }) => {
-        notification.error({
-          message: intl.formatMessage({ id: "contact.error.message3" }),
-          description: err.status ? (
-            <span>
-              {intl.formatMessage({ id: "contact.error.message2" })}
-              {err.status}
-            </span>
-          ) : null,
-          duration: 5
-        });
-      });
   };
 
   return visible ? (

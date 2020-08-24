@@ -11,7 +11,6 @@
     "contact.email": {"defaultMessage": "E-Mail", "description": "email"},
     "contact.error.message1": {"defaultMessage": "Etwas passiert.", "description": "email not sent error message 1"},
     "contact.error.message2": {"defaultMessage": "Fehlercode: ", "description": "email not sent error message 2"},
-    "contact.error.message3": {"defaultMessage": "Ihre E-Mail wurde empfangen, aber beim Versuch, Ihnen eine Bestätigungs-E-Mail zu senden, ist etwas passiert.", "description": "email not sent error message 3"},
     "contact.message": {"defaultMessage": "Botschaft", "description": "message"},
     "contact.name": {"defaultMessage": "Name", "description": "name"},
     "contact.invalid.email": {"defaultMessage": "Ungültige E-Mail", "description": "invalid email error"},
