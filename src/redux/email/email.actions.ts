@@ -1,7 +1,8 @@
 import EmailActionTypes from "./email.types";
+import { Store } from "antd/lib/form/interface";
 import { ValueOf } from "../../global";
 
-const sendEmail = (values: any) => ({
+const sendEmail = (values: Store) => ({
   type: EmailActionTypes.SEND_EMAIL,
   values
 });
@@ -10,7 +11,7 @@ const sentEmailSuccess = () => ({
   type: EmailActionTypes.EMAIL_SUCCESS
 });
 
-const sentEmailFail = (error: any) => ({
+const sentEmailFail = (error: Error) => ({
   type: EmailActionTypes.EMAIL_FAIL,
   error
 });

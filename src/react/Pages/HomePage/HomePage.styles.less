@@ -1,0 +1,146 @@
+.homePage {
+  .overBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: @limitVertical @limitHorizontal;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    .topRow {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .middleRow {
+      height: calc(100% - 2rem - 6rem);
+      width: 100%;
+
+      .initials {
+        font-size: 46em;
+        position: absolute;
+        color: @darkSecondaryColor;
+        margin-top: 10rem;
+      }
+
+      .showInitials {
+        margin-left: -4rem;
+        opacity: 0;
+        animation: showInitialsAnimation 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes showInitialsAnimation {
+        0% {
+          margin-left: -4rem;
+          opacity: 0;
+        }
+        100% {
+          margin-left: 0;
+          opacity: 1;
+        }
+      }
+
+      .showDeveloperName {
+        margin-top: 5rem;
+        opacity: 0;
+        animation: showDeveloperNameAnimation 0.5s;
+        animation-iteration-count: 1;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes showDeveloperNameAnimation {
+        0% {
+          opacity: 0;
+          margin-top: 5rem;
+        }
+        100% {
+          opacity: 1;
+          margin-top: 10rem;
+        }
+      }
+    }
+
+    .bottomRow {
+      height: 6rem;
+      width: 100%;
+    }
+  }
+
+  // tablet
+  @media screen and (min-width: 768px) and (max-width: 1025px) {
+    .overBackground {
+      .middleRow {
+        .initials {
+          font-size: 32rem;
+          margin-left: 1rem;
+          margin-top: 7rem;
+        }
+
+        .showInitials {
+          margin-left: -1rem;
+        }
+
+        @keyframes showInitialsAnimation {
+          0% {
+            margin-left: -1rem;
+            opacity: 0;
+          }
+          100% {
+            margin-left: 1rem;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  // mobile
+  @media screen and (max-width: 767px) {
+    .overBackground {
+      .middleRow {
+        height: calc(100% - 2rem - 3.5rem);
+
+        .initials {
+          font-size: 15em;
+          margin-top: 3rem;
+        }
+
+        .showInitials {
+          margin-left: -2rem;
+        }
+        @keyframes showInitialsAnimation {
+          0% {
+            margin-left: -2rem;
+            opacity: 0;
+          }
+          100% {
+            margin-left: 0;
+            opacity: 1;
+          }
+        }
+
+        .showDeveloperName {
+          margin-top: 5rem;
+        }
+        @keyframes showDeveloperNameAnimation {
+          0% {
+            opacity: 0;
+            margin-top: 5rem;
+          }
+          100% {
+            opacity: 1;
+            margin-top: 7rem;
+          }
+        }
+      }
+      .bottomRow {
+        height: 3.5rem;
+      }
+    }
+  }
+}

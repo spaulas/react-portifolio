@@ -60,8 +60,7 @@ function ProjectContainer({
 
   return (
     <LazyLoad>
-      {/* eslint-disable-next-line react/forbid-component-props */}
-      <Row style={{ height: "100vh" }} justify="center" align="middle">
+      <Row className="projectContainer" justify="center" align="middle">
         <Col
           className={`mainProjectDisplay ${
             firstAnimation ? "mainProjectDisplayFirstAnimation" : ""

@@ -1,0 +1,24 @@
+.connectionsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .connectionIcon {
+    width: 5rem;
+    margin: 3rem 0;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    cursor: pointer;
+  }
+
+  // tablet + mobile
+  @media screen and (max-width: 1025px) {
+    .connectionIcon {
+      width: 2rem;
+    }
+  }
+}

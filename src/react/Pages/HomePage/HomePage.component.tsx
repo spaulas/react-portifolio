@@ -4,9 +4,6 @@ import React, { memo, useEffect, useState } from "react";
 import { RootReducerState } from "../../../global";
 import { useSelector } from "react-redux";
 
-const AboutModal = React.lazy(() =>
-  import("../../Components/AboutMeContainer/AboutModal/AboutModal.component")
-);
 const AboutTitle = React.lazy(() =>
   import("../../Components/AboutMeContainer/AboutTitle/AboutTitle.component")
 );
@@ -75,7 +72,6 @@ function HomePage() {
           <ProjectsArrow />
         </Row>
       </div>
-      <AboutModal />
     </div>
   );
 }
