@@ -1,35 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4bbb858e384d1eb1820c34b7bb306cdf",
+    "revision": "7a4b370b64b0047d961c8c40a772ed19",
     "url": "/react-portifolio/index.html"
   },
   {
-    "revision": "4a51af9bd815fe08e5c6",
+    "revision": "647bb675f108ce9dbe3f",
     "url": "/react-portifolio/static/css/main.5ecd60fb.chunk.css"
   },
   {
-    "revision": "13a69eba95b89f900da2",
-    "url": "/react-portifolio/static/js/2.a3b5c2c3.chunk.js"
+    "revision": "05474fd01af2224cd801",
+    "url": "/react-portifolio/static/js/2.f19b2316.chunk.js"
   },
   {
-    "revision": "6c35f6efa93ae0410236",
-    "url": "/react-portifolio/static/js/3.148087dc.chunk.js"
+    "revision": "2be7edbe59df24fbc705",
+    "url": "/react-portifolio/static/js/3.d98a409e.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/react-portifolio/static/js/3.148087dc.chunk.js.LICENSE.txt"
+    "url": "/react-portifolio/static/js/3.d98a409e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "18a12175f0da8035a9a4",
-    "url": "/react-portifolio/static/js/4.50c09ca6.chunk.js"
+    "revision": "027fd63d2d3aefa633bf",
+    "url": "/react-portifolio/static/js/4.2e5d5476.chunk.js"
   },
   {
-    "revision": "4a51af9bd815fe08e5c6",
-    "url": "/react-portifolio/static/js/main.afb8a380.chunk.js"
+    "revision": "647bb675f108ce9dbe3f",
+    "url": "/react-portifolio/static/js/main.18f05d62.chunk.js"
   },
   {
-    "revision": "4afcad98e3113d8cdbec",
-    "url": "/react-portifolio/static/js/runtime-main.0050bc63.js"
+    "revision": "b057fc4b43a79400931f",
+    "url": "/react-portifolio/static/js/runtime-main.b35c5e50.js"
   },
   {
     "revision": "a4b068ee8a8bdb4d976648992bb1db90",
@@ -68,12 +68,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-portifolio/static/media/linkedin.3c8afea5.svg"
   },
   {
+    "revision": "49cffdd27a82ef4d0feef0cf7ec43631",
+    "url": "/react-portifolio/static/media/mySQL.49cffdd2.png"
+  },
+  {
+    "revision": "5bd7d39e5ba3444067196224c074e1e1",
+    "url": "/react-portifolio/static/media/php.5bd7d39e.png"
+  },
+  {
+    "revision": "f78b00147042b279abc73f6ce419a91a",
+    "url": "/react-portifolio/static/media/phpSocialNetwork_main.f78b0014.png"
+  },
+  {
+    "revision": "5ca62bca0a9032397ead7cd8fd1acda8",
+    "url": "/react-portifolio/static/media/phpSocialNetwork_side (copy).5ca62bca.png"
+  },
+  {
+    "revision": "9ab8a7ccb73ca4abb2ad612b2b185b0b",
+    "url": "/react-portifolio/static/media/phpSocialNetwork_side.9ab8a7cc.png"
+  },
+  {
     "revision": "f27e1551d1b2fe6cffef00ba9b08d332",
     "url": "/react-portifolio/static/media/reactSolitaire_main.f27e1551.png"
   },
   {
-    "revision": "4b300f9529deb7afb51891963d08701e",
-    "url": "/react-portifolio/static/media/reactSolitaire_side.4b300f95.png"
+    "revision": "b20006357662b5eb927d07f569270190",
+    "url": "/react-portifolio/static/media/reactSolitaire_side.b2000635.png"
   },
   {
     "revision": "aa0a337603611296524a666b62a9ff23",
