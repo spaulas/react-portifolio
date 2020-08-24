@@ -9,7 +9,7 @@ function DeveloperTitle({ className = "" }: DeveloperTitleProps) {
   return (
     <div className={`developerTitleContainer ${className}`}>
       <h1 className="developerName">Paula Santos</h1>
-      <h3 className="developerJob"><FormattedMessage id="developer.title" /></h3>
+      <h2 className="developerJob"><FormattedMessage id="developer.title" /></h2>
     </div>
   );
 }

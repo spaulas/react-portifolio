@@ -1,4 +1,5 @@
 import { FormattedMessage } from "react-intl";
+import LazyLoad from "react-lazyload";
 import React from "react";
 
 function ProjectsArrow() {
@@ -12,12 +13,14 @@ function ProjectsArrow() {
       <span className="arrowTitle">
         <FormattedMessage id="project.arrow" />
       </span>
-      <img
-        className="arrowIcon"
-        src={require("../../../../images/icons/arrowDown.svg")}
-        alt=""
-        onClick={goDown}
-      />
+      <LazyLoad>
+        <img
+          className="arrowIcon"
+          src={require("../../../../images/icons/arrowDown.svg")}
+          alt=""
+          onClick={goDown}
+        />
+      </LazyLoad>
     </div>
   );
 }

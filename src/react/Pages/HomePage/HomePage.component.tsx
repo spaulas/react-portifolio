@@ -1,14 +1,36 @@
 import { Col, Row } from "antd";
 import React, { useEffect, useState } from "react";
-import AboutModal from "../../Components/AboutMeContainer/AboutModal/AboutModal.component";
-import AboutTitle from "../../Components/AboutMeContainer/AboutTitle/AboutTitle.component";
-import Connections from "../../Components/Links/Connections.component";
-import DeveloperTitle from "../../Components/Titles/DeveloperTitle/DeveloperTitle.component";
-import LanguageSwitch from "../../Components/Configurations/LanguageSwitch/LanguageSwitch.component";
-import LightMode from "../../Components/Configurations/LightMode/LightMode.component";
-import ProjectsArrow from "../../Components/Projects/ProjectsArrow/ProjectsArrow.component";
 import { RootReducerState } from "../../../global";
 import { useSelector } from "react-redux";
+
+const AboutModal = React.lazy(() =>
+  import("../../Components/AboutMeContainer/AboutModal/AboutModal.component")
+);
+const AboutTitle = React.lazy(() =>
+  import("../../Components/AboutMeContainer/AboutTitle/AboutTitle.component")
+);
+
+const Connections = React.lazy(() =>
+  import("../../Components/Links/Connections.component")
+);
+
+const DeveloperTitle = React.lazy(() =>
+  import("../../Components/Titles/DeveloperTitle/DeveloperTitle.component")
+);
+
+const LanguageSwitch = React.lazy(() =>
+  import(
+    "../../Components/Configurations/LanguageSwitch/LanguageSwitch.component"
+  )
+);
+
+const LightMode = React.lazy(() =>
+  import("../../Components/Configurations/LightMode/LightMode.component")
+);
+
+const ProjectsArrow = React.lazy(() =>
+  import("../../Components/Projects/ProjectsArrow/ProjectsArrow.component")
+);
 
 function HomePage() {
   const { theme } = useSelector(({ Website }: RootReducerState) => ({
