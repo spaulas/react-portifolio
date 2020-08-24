@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import AboutMe from "../AboutMe/AboutMe.component";
 import ContactMe from "../ContactMe/ContactMe.component";
 import { FormattedMessage } from "react-intl";
+import LazyLoad from "react-lazyload";
 import React, { useEffect } from "react";
 import { RootReducerState } from "../../../../global";
 import websiteActions from "../../../../redux/website/website.actions";
@@ -84,26 +85,28 @@ function AboutModal() {
   };
 
   return visible ? (
-    <Modal
-      visible
-      onCancel={closeModal}
-      footer={null}
-      width={"80%"}
-      wrapClassName="react-portifolio"
-      maskClosable={false}
-    >
-      <Spin spinning={pageLoading}>
-        <Row className={`aboutModalContainer ${theme}`}>
-          <Col className="aboutMeCol" xs={24} sm={24} md={14}>
-            <AboutMe />
-          </Col>
+    <LazyLoad>
+      <Modal
+        visible
+        onCancel={closeModal}
+        footer={null}
+        width={"80%"}
+        wrapClassName="react-portifolio"
+        maskClosable={false}
+      >
+        <Spin spinning={pageLoading}>
+          <Row className={`aboutModalContainer ${theme}`}>
+            <Col className="aboutMeCol" xs={24} sm={24} md={14}>
+              <AboutMe />
+            </Col>
 
-          <Col className="contactMeCol" xs={24} sm={24} md={10}>
-            <ContactMe />
-          </Col>
-        </Row>
-      </Spin>
-    </Modal>
+            <Col className="contactMeCol" xs={24} sm={24} md={10}>
+              <ContactMe />
+            </Col>
+          </Row>
+        </Spin>
+      </Modal>
+    </LazyLoad>
   ) : null;
 }
 

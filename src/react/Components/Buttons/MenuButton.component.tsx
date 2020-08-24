@@ -19,6 +19,9 @@ function MenuButton({
   return (
     <Row className="buttonSpaceRow" align="middle" justify="center">
       <div
+        tabIndex={0}
+        role="button"
+        aria-roledescription="animatedButton"
         className={`animatedButton divButton ${className}`}
         onClick={onClick}
       >

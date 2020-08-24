@@ -1,5 +1,4 @@
 import { FormattedMessage } from "react-intl";
-import LazyLoad from "react-lazyload";
 import React from "react";
 import { Tooltip } from "antd";
 import { useDispatch } from "react-redux";
@@ -13,19 +12,17 @@ function LightMode() {
   };
 
   return (
-    <LazyLoad>
-      <Tooltip
-        placement="bottomLeft"
-        title={<FormattedMessage id="configurations.theme" />}
-      >
-        <img
-          className="lightMode"
-          src={require("../../../../images/icons/lightMode.svg")}
-          alt=""
-          onClick={toggleTheme}
-        />
-      </Tooltip>
-    </LazyLoad>
+    <Tooltip
+      placement="bottomLeft"
+      title={<FormattedMessage id="configurations.theme" />}
+    >
+      <img
+        className="lightMode"
+        src={require("../../../../images/icons/lightMode.svg")}
+        alt=""
+        onClick={toggleTheme}
+      />
+    </Tooltip>
   );
 }
 

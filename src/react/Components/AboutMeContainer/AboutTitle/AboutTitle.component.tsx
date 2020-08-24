@@ -14,7 +14,12 @@ function AboutTitle() {
   return (
     <div className="aboutContainer">
       <Tooltip placement="right" title={<FormattedMessage id="link.aboutMe" />}>
-        <span className="aboutTitle" onClick={showModal}>
+        <span
+          tabIndex={0}
+          role="button"
+          className="aboutTitle"
+          onClick={showModal}
+        >
           <FormattedMessage id="about.title" />
         </span>
       </Tooltip>

@@ -5,7 +5,6 @@ import ReactCountryFlag from "react-country-flag";
 import { RootReducerState } from "../../../../global";
 import websiteActions from "../../../../redux/website/website.actions";
 import { FormattedMessage } from "react-intl";
-import LazyLoad from "react-lazyload";
 
 const { Option } = Select;
 
@@ -21,32 +20,30 @@ function LanguageSwitch() {
   };
 
   return (
-    <LazyLoad>
-      <Tooltip
-        placement="leftBottom"
-        title={<FormattedMessage id="configurations.languages" />}
+    <Tooltip
+      placement="leftBottom"
+      title={<FormattedMessage id="configurations.languages" />}
+    >
+      <Select
+        defaultValue="en-US"
+        className="languageSwitch"
+        value={language}
+        onChange={changeLanguage}
       >
-        <Select
-          defaultValue="en-US"
-          className="languageSwitch"
-          value={language}
-          onChange={changeLanguage}
-        >
-          <Option value="en-US">
-            <ReactCountryFlag className="flags" countryCode="GB" />
-          </Option>
-          <Option value="pt-BR">
-            <ReactCountryFlag className="flags" countryCode="BR" />
-          </Option>
-          <Option value="de-DE">
-            <ReactCountryFlag className="flags" countryCode="DE" />
-          </Option>
-          <Option value="es-ES">
-            <ReactCountryFlag className="flags" countryCode="ES" />
-          </Option>
-        </Select>
-      </Tooltip>
-    </LazyLoad>
+        <Option value="en-US">
+          <ReactCountryFlag className="flags" countryCode="GB" />
+        </Option>
+        <Option value="pt-BR">
+          <ReactCountryFlag className="flags" countryCode="BR" />
+        </Option>
+        <Option value="de-DE">
+          <ReactCountryFlag className="flags" countryCode="DE" />
+        </Option>
+        <Option value="es-ES">
+          <ReactCountryFlag className="flags" countryCode="ES" />
+        </Option>
+      </Select>
+    </Tooltip>
   );
 }
 
