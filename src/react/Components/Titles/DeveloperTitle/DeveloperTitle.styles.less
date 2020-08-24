@@ -1,0 +1,29 @@
+.developerTitleContainer {
+  margin-left: 5rem;
+  margin-top: 10rem;
+
+  .developerName {
+    font-size: 5em;
+    line-height: 1rem;
+    color: @buttonActiveColor;
+  }
+  .developerJob {
+    font-size: 3em;
+    line-height: 2em;
+    color: @buttonActiveColor;
+  }
+
+  // mobile
+  @media screen and (max-width: 767px) {
+    margin-left: 1.3rem;
+    margin-top: 7rem;
+    .developerName {
+      font-size: 3em;
+      line-height: 2.2rem;
+    }
+    .developerJob {
+      font-size: 1.5em;
+      line-height: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.projectsArrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: arrowUpDown 1s;
+  animation-iteration-count: infinite;
+
+  .arrowIcon {
+    width: 2rem;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    cursor: pointer;
+  }
+
+  .arrowTitle {
+    font-size: 1.8em;
+    color: @buttonActiveColor;
+  }
+
+  @media screen and (max-width: 767px) {
+    .arrowTitle {
+      font-size: 1.2em;
+    }
+    .arrowIcon {
+      width: 20px;
+    }
+  }
+}
+
+@keyframes arrowUpDown {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -20px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
