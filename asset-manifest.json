@@ -6,8 +6,8 @@
     "static/js/1.3eb0c829.chunk.js.map": "/react-portifolio/static/js/1.3eb0c829.chunk.js.map",
     "main.js": "/react-portifolio/static/js/main.92463cdf.chunk.js",
     "main.js.map": "/react-portifolio/static/js/main.92463cdf.chunk.js.map",
-    "runtime-main.js": "/react-portifolio/static/js/runtime-main.40831a55.js",
-    "runtime-main.js.map": "/react-portifolio/static/js/runtime-main.40831a55.js.map",
+    "runtime-main.js": "/react-portifolio/static/js/runtime-main.aab28070.js",
+    "runtime-main.js.map": "/react-portifolio/static/js/runtime-main.aab28070.js.map",
     "static/js/4.b4c433ef.chunk.js": "/react-portifolio/static/js/4.b4c433ef.chunk.js",
     "static/js/4.b4c433ef.chunk.js.map": "/react-portifolio/static/js/4.b4c433ef.chunk.js.map",
     "static/js/5.a3ba0d5a.chunk.js": "/react-portifolio/static/js/5.a3ba0d5a.chunk.js",
@@ -32,10 +32,10 @@
     "static/js/14.f8e0ae7b.chunk.js.map": "/react-portifolio/static/js/14.f8e0ae7b.chunk.js.map",
     "static/js/15.d4dde621.chunk.js": "/react-portifolio/static/js/15.d4dde621.chunk.js",
     "static/js/15.d4dde621.chunk.js.map": "/react-portifolio/static/js/15.d4dde621.chunk.js.map",
-    "static/js/16.45e03a32.chunk.js": "/react-portifolio/static/js/16.45e03a32.chunk.js",
-    "static/js/16.45e03a32.chunk.js.map": "/react-portifolio/static/js/16.45e03a32.chunk.js.map",
+    "static/js/16.d4355287.chunk.js": "/react-portifolio/static/js/16.d4355287.chunk.js",
+    "static/js/16.d4355287.chunk.js.map": "/react-portifolio/static/js/16.d4355287.chunk.js.map",
     "index.html": "/react-portifolio/index.html",
-    "precache-manifest.8fe0edc88e4fcc5cf0ef2d1219f5ede7.js": "/react-portifolio/precache-manifest.8fe0edc88e4fcc5cf0ef2d1219f5ede7.js",
+    "precache-manifest.69000f7cbfd6c244abd5b43804496812.js": "/react-portifolio/precache-manifest.69000f7cbfd6c244abd5b43804496812.js",
     "service-worker.js": "/react-portifolio/service-worker.js",
     "static/js/5.a3ba0d5a.chunk.js.LICENSE.txt": "/react-portifolio/static/js/5.a3ba0d5a.chunk.js.LICENSE.txt",
     "static/media/Manrope-ExtraLight.ttf": "/react-portifolio/static/media/Manrope-ExtraLight.a4b068ee.ttf",
@@ -55,7 +55,7 @@
     "static/media/redux.svg": "/react-portifolio/static/media/redux.aa0a3376.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.40831a55.js",
+    "static/js/runtime-main.aab28070.js",
     "static/js/5.a3ba0d5a.chunk.js",
     "static/js/main.92463cdf.chunk.js"
   ]
