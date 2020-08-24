@@ -4,8 +4,8 @@
     "static/js/0.b3a4fb68.chunk.js.map": "/react-portifolio/static/js/0.b3a4fb68.chunk.js.map",
     "static/js/1.493dd011.chunk.js": "/react-portifolio/static/js/1.493dd011.chunk.js",
     "static/js/1.493dd011.chunk.js.map": "/react-portifolio/static/js/1.493dd011.chunk.js.map",
-    "main.js": "/react-portifolio/static/js/main.832d901c.chunk.js",
-    "main.js.map": "/react-portifolio/static/js/main.832d901c.chunk.js.map",
+    "main.js": "/react-portifolio/static/js/main.4c2cefc0.chunk.js",
+    "main.js.map": "/react-portifolio/static/js/main.4c2cefc0.chunk.js.map",
     "runtime-main.js": "/react-portifolio/static/js/runtime-main.eeabc38e.js",
     "runtime-main.js.map": "/react-portifolio/static/js/runtime-main.eeabc38e.js.map",
     "static/js/4.bc3a9425.chunk.js": "/react-portifolio/static/js/4.bc3a9425.chunk.js",
@@ -35,7 +35,7 @@
     "static/js/16.1e909fef.chunk.js": "/react-portifolio/static/js/16.1e909fef.chunk.js",
     "static/js/16.1e909fef.chunk.js.map": "/react-portifolio/static/js/16.1e909fef.chunk.js.map",
     "index.html": "/react-portifolio/index.html",
-    "precache-manifest.78318ae0108e622956d3bbca8ba97af5.js": "/react-portifolio/precache-manifest.78318ae0108e622956d3bbca8ba97af5.js",
+    "precache-manifest.975165e3d6ccbca69eb441ff8d6a84bc.js": "/react-portifolio/precache-manifest.975165e3d6ccbca69eb441ff8d6a84bc.js",
     "service-worker.js": "/react-portifolio/service-worker.js",
     "static/js/5.a3ba0d5a.chunk.js.LICENSE.txt": "/react-portifolio/static/js/5.a3ba0d5a.chunk.js.LICENSE.txt",
     "static/media/Manrope-ExtraLight.ttf": "/react-portifolio/static/media/Manrope-ExtraLight.a4b068ee.ttf",
@@ -57,6 +57,6 @@
   "entrypoints": [
     "static/js/runtime-main.eeabc38e.js",
     "static/js/5.a3ba0d5a.chunk.js",
-    "static/js/main.832d901c.chunk.js"
+    "static/js/main.4c2cefc0.chunk.js"
   ]
 }
