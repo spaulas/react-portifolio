@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Col, Modal, Row, Spin, notification } from "antd";
+import React, { memo, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AboutMe from "../AboutMe/AboutMe.component";
 import ContactMe from "../ContactMe/ContactMe.component";
 import { FormattedMessage } from "react-intl";
 import LazyLoad from "react-lazyload";
-import React, { useEffect } from "react";
 import { RootReducerState } from "../../../../global";
 import websiteActions from "../../../../redux/website/website.actions";
 
@@ -110,4 +110,4 @@ function AboutModal() {
   ) : null;
 }
 
-export default AboutModal;
+export default memo(AboutModal);

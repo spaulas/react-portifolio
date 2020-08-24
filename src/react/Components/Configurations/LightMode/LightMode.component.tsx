@@ -1,5 +1,5 @@
+import React, { memo } from "react";
 import { FormattedMessage } from "react-intl";
-import React from "react";
 import { Tooltip } from "antd";
 import { useDispatch } from "react-redux";
 import websiteActions from "../../../../redux/website/website.actions";
@@ -26,4 +26,4 @@ function LightMode() {
   );
 }
 
-export default LightMode;
+export default memo(LightMode);

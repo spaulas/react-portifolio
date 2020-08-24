@@ -1,8 +1,9 @@
-import { Input, Form, Row } from "antd";
-import { checkName, checkEmail, checkMessage } from "../../helpers";
+import { Form, Input, Row } from "antd";
+import React, { memo, useEffect } from "react";
+import { checkEmail, checkMessage, checkName } from "../../helpers";
 import { FormattedMessage } from "react-intl";
 import MenuButton from "../../Buttons/MenuButton.component";
-import React, { useEffect } from "react";
+import ReactGA from "react-ga";
 import emailActions from "../../../../redux/email/email.actions";
 import { useDispatch } from "react-redux";
 import websiteActions from "../../../../redux/website/website.actions";
@@ -20,6 +21,12 @@ function ContactMe() {
   useEffect(mountComponent, []);
 
   const onSubmit = (values: any) => {
+    // eslint-disable-next-line no-console
+    console.log("SUBMIT = ", values);
+    ReactGA.event({
+      category: "Contact Me",
+      action: "send message"
+    });
     dispatch(websiteActions.setPageLoading());
     dispatch(emailActions.sendEmail(values));
     sendFeedback(values);
@@ -54,7 +61,7 @@ function ContactMe() {
       >
         <Row align="middle" justify="center">
           <Item
-            name="name"
+            fieldKey="name"
             rules={[
               {
                 required: true,
@@ -87,7 +94,7 @@ function ContactMe() {
         </Row>
         <Row align="middle" justify="center">
           <Item
-            name="email"
+            fieldKey="email"
             rules={[
               {
                 required: true,
@@ -119,7 +126,7 @@ function ContactMe() {
         </Row>
         <Row align="middle" justify="center">
           <Item
-            name="message"
+            fieldKey="message"
             rules={[
               {
                 required: true,
@@ -169,4 +176,4 @@ function ContactMe() {
   );
 }
 
-export default ContactMe;
+export default memo(ContactMe);

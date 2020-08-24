@@ -1,4 +1,6 @@
-/* eslint-disable max-lines */
+/* eslint-disable max-lines */ 
+/* eslint-disable strict */
+/* eslint-disable no-undef */
 /* eslint-disable @typescript-eslint/camelcase */
 /* eslint-disable indent */
 /* eslint-disable @typescript-eslint/no-var-requires */

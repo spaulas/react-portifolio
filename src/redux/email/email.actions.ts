@@ -1,5 +1,5 @@
-import { ValueOf } from "../../global";
 import EmailActionTypes from "./email.types";
+import { ValueOf } from "../../global";
 
 const sendEmail = (values: any) => ({
   type: EmailActionTypes.SEND_EMAIL,

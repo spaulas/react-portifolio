@@ -1,11 +1,11 @@
 import { Col, Row } from "antd";
+import React, { memo } from "react";
 import { FormattedMessage } from "react-intl";
-import React from "react";
-import moment from "moment";
 import LazyLoad from "react-lazyload";
+import moment from "moment";
 
 function AboutMe() {
-  var age = moment().diff("1995-01-12", "years");
+  const age = moment().diff("1995-01-12", "years");
   return (
     <Row>
       <Col xs={24} sm={24} md={10}>
@@ -44,4 +44,4 @@ function AboutMe() {
   );
 }
 
-export default AboutMe;
+export default memo(AboutMe);

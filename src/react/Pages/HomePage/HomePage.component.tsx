@@ -1,5 +1,6 @@
+/* eslint-disable react/forbid-component-props */
 import { Col, Row } from "antd";
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { RootReducerState } from "../../../global";
 import { useSelector } from "react-redux";
 
@@ -79,4 +80,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default memo(HomePage);

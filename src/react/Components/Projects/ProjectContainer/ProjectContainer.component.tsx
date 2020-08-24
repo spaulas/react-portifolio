@@ -1,7 +1,8 @@
 import { Col, Row, Tooltip } from "antd";
-import React, { ReactNode, useEffect, useState } from "react";
-import LazyLoad from "react-lazyload";
+import React, { ReactNode, memo, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
+import LazyLoad from "react-lazyload";
+import ReactGA from "react-ga";
 
 interface ProjectContainerProps {
   title: string;
@@ -35,12 +36,20 @@ function ProjectContainer({
 
   const handleClick = () => {
     if (showInfo) {
+      ReactGA.event({
+        category: "Animation",
+        action: "show less"
+      });
       setAnimateShowMore(false);
       setAnimateShowLess(true);
       setTimeout(() => {
         setShowInfo(false);
       }, 2000);
     } else {
+      ReactGA.event({
+        category: "Animation",
+        action: "show more"
+      });
       setAnimateShowLess(false);
       setAnimateShowMore(true);
       setTimeout(() => {
@@ -51,6 +60,7 @@ function ProjectContainer({
 
   return (
     <LazyLoad>
+      {/* eslint-disable-next-line react/forbid-component-props */}
       <Row style={{ height: "100vh" }} justify="center" align="middle">
         <Col
           className={`mainProjectDisplay ${
@@ -159,6 +169,12 @@ function ProjectContainer({
                       href={link}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() =>
+                        ReactGA.event({
+                          category: `Project: ${title}`,
+                          action: "open website"
+                        })
+                      }
                     >
                       <FormattedMessage id="project.website" />
                     </a>
@@ -178,6 +194,12 @@ function ProjectContainer({
                       href={github}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() =>
+                        ReactGA.event({
+                          category: `Project: ${title}`,
+                          action: "open github"
+                        })
+                      }
                     >
                       <FormattedMessage id="project.github" />
                     </a>
@@ -201,4 +223,4 @@ function ProjectContainer({
   );
 }
 
-export default ProjectContainer;
+export default memo(ProjectContainer);

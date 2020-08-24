@@ -1,10 +1,10 @@
+import React, { memo } from "react";
 import { Select, Tooltip } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import React from "react";
+import { FormattedMessage } from "react-intl";
 import ReactCountryFlag from "react-country-flag";
 import { RootReducerState } from "../../../../global";
 import websiteActions from "../../../../redux/website/website.actions";
-import { FormattedMessage } from "react-intl";
 
 const { Option } = Select;
 
@@ -47,4 +47,4 @@ function LanguageSwitch() {
   );
 }
 
-export default LanguageSwitch;
+export default memo(LanguageSwitch);

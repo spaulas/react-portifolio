@@ -1,5 +1,6 @@
+import React, { memo } from "react";
 import { FormattedMessage } from "react-intl";
-import React from "react";
+import ReactGA from "react-ga";
 import { Tooltip } from "antd";
 import { useDispatch } from "react-redux";
 import websiteActions from "../../../../redux/website/website.actions";
@@ -8,6 +9,7 @@ function AboutTitle() {
   const dispatch = useDispatch();
 
   const showModal = () => {
+    ReactGA.event({ category: "About Me", action: "open about me modal" });
     dispatch(websiteActions.toggleAboutModalVisible());
   };
 
@@ -27,4 +29,4 @@ function AboutTitle() {
   );
 }
 
-export default AboutTitle;
+export default memo(AboutTitle);

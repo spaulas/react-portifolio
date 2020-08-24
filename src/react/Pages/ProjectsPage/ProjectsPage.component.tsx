@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable react/forbid-dom-props */
+import React, { memo, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import ProjectContainer from "../../Components/Projects/ProjectContainer/ProjectContainer.component";
 import { RootReducerState } from "../../../global";
@@ -84,7 +85,7 @@ function ProjectsPage() {
   return (
     <div
       className={`projectsPage ${theme}`}
-      style={{ height: `${100 * projectsInfo.length + 5}vh` }}
+      style={{ height: `${100 * projectsInfo.length}vh` }}
     >
       {projectsInfo.map((project, index) =>
         project.rendered ? (
@@ -95,4 +96,4 @@ function ProjectsPage() {
   );
 }
 
-export default ProjectsPage;
+export default memo(ProjectsPage);

@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, memo } from "react";
 import { ExplicitAny } from "../../../global";
 import { Row } from "antd";
 
@@ -31,4 +31,4 @@ function MenuButton({
   );
 }
 
-export default MenuButton;
+export default memo(MenuButton);

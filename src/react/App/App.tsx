@@ -5,6 +5,7 @@ import { persistor, store } from "../../redux/store";
 import IntlProvider from "../HocComponents/IntlProvider.component";
 import { PersistGate } from "redux-persist/integration/react";
 import { Provider } from "react-redux";
+import ReactGA from "react-ga";
 
 const { Content } = Layout;
 
@@ -15,6 +16,9 @@ const HomePage = React.lazy(() =>
 const ProjectsPage = React.lazy(() =>
   import("../Pages/ProjectsPage/ProjectsPage.component")
 );
+
+ReactGA.initialize("UA-153456985-1");
+ReactGA.pageview("/");
 
 function App() {
   return (

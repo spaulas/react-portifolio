@@ -1,5 +1,5 @@
+import React, { memo } from "react";
 import { FormattedMessage } from "react-intl";
-import React from "react";
 
 function ProjectsArrow() {
   const goDown = () => {
@@ -24,4 +24,4 @@ function ProjectsArrow() {
   );
 }
 
-export default ProjectsArrow;
+export default memo(ProjectsArrow);

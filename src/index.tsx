@@ -4,9 +4,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // Recent bug detected but not fixed yet, updates at:
+  // https://github.com/JedWatson/react-select/issues/4094
+  // <React.StrictMode>
+  <App />,
+  // </React.StrictMode>,
   document.getElementById("root")
 );
 
