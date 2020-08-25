@@ -3,10 +3,16 @@ import React, { memo } from "react";
 import { FormattedMessage } from "react-intl";
 import moment from "moment";
 
+/**
+ *  About Me component contains developer image and about texts
+ */
 function AboutMe() {
+  // calculate current age
   const age = moment().diff("1995-01-12", "years");
+
   return (
     <Row className="aboutMeContainer">
+      {/* developer image column */}
       <Col xs={24} sm={24} md={10}>
         <img
           className="developerImage"
@@ -14,6 +20,7 @@ function AboutMe() {
           alt=""
         />
       </Col>
+      {/* about me paragraphs column */}
       <Col xs={24} sm={24} md={14} className="aboutMeTextContainer">
         <p>
           <FormattedMessage id="about.text01" /> {age}
