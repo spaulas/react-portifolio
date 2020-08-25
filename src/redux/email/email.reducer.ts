@@ -5,13 +5,11 @@ import { Store } from "antd/lib/form/interface";
 
 interface InitialEmail {
   emailError?: boolean;
-  confirmationEmailError?: boolean;
   values: Store;
 }
 
 const INITIAL_EMAIL: InitialEmail = {
   emailError: undefined,
-  confirmationEmailError: undefined,
   values: {}
 };
 
@@ -31,23 +29,7 @@ const emailReducer = (state = INITIAL_EMAIL, action: ActionsCreators) => {
     case EmailActionTypes.EMAIL_FAIL:
       return {
         ...state,
-        emailError: true,
-        emailErrorValue: action.error
-      };
-    case EmailActionTypes.SEND_CONFIRMATION_EMAIL:
-      return {
-        ...state,
-        confirmationEmailError: undefined
-      };
-    case EmailActionTypes.CONFIRMATION_EMAIL_SUCCESS:
-      return {
-        ...state,
-        confirmationEmailError: false
-      };
-    case EmailActionTypes.CONFIRMATION_EMAIL_FAIL:
-      return {
-        ...state,
-        confirmationEmailError: true
+        emailError: true
       };
 
     default:

@@ -1,6 +1,6 @@
 import { Form, Input, Row } from "antd";
 import React, { memo, useEffect } from "react";
-import { checkEmail, checkMessage, checkName } from "../../helpers";
+import { checkEmail, checkMessage, checkName } from "./helpers";
 import { FormattedMessage } from "react-intl";
 import MenuButton from "../../Buttons/MenuButton.component";
 import ReactGA from "react-ga";

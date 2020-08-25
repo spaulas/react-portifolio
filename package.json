@@ -100,7 +100,8 @@
     "stylelint": "stylelint ./src/**/*.{css,less,scss,sass}",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
-    "compile": "formatjs compile"
+    "compile": "formatjs compile",
+    "coverage": "yarn test -- --coverage --watchAll=false"
   },
   "eslintConfig": {
     "extends": "react-app"

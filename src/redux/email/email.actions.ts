@@ -16,27 +16,12 @@ const sentEmailFail = (error: Error) => ({
   error
 });
 
-const sendConfirmationEmail = () => ({
-  type: EmailActionTypes.SEND_CONFIRMATION_EMAIL
-});
-
-const sentConfirmationEmailSuccess = () => ({
-  type: EmailActionTypes.CONFIRMATION_EMAIL_SUCCESS
-});
-
-const sentConfirmationEmailFail = () => ({
-  type: EmailActionTypes.CONFIRMATION_EMAIL_FAIL
-});
-
 // ********************************************************
 
 const actionsCreators = Object.freeze({
   sendEmail,
   sentEmailSuccess,
-  sentEmailFail,
-  sendConfirmationEmail,
-  sentConfirmationEmailSuccess,
-  sentConfirmationEmailFail
+  sentEmailFail
 });
 
 export type ActionsCreators = ReturnType<ValueOf<typeof actionsCreators>>;

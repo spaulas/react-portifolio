@@ -13,7 +13,7 @@ const Connections = React.lazy(() =>
 );
 
 const DeveloperTitle = React.lazy(() =>
-  import("../../Components/Titles/DeveloperTitle/DeveloperTitle.component")
+  import("../../Components/Titles/DeveloperTitle.component")
 );
 
 const LanguageSwitch = React.lazy(() =>
