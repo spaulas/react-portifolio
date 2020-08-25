@@ -10,7 +10,7 @@ import React from "react";
 
 configure({ adapter: new Adapter() });
 
-describe("[unit] <App/>", () => {
+describe("[UNIT] <App/>", () => {
   const wrapper = shallow(<App />);
 
   const initializeMock = jest.spyOn(ReactGA, "initialize");

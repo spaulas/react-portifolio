@@ -6,7 +6,7 @@ import moment from "moment";
 
 configure({ adapter: new Adapter() });
 
-describe("[unit] <AboutMe/>", () => {
+describe("[UNIT] <AboutMe/>", () => {
   const wrapper = shallow(<AboutMe />);
   const age = moment().diff("1995-01-12", "years");
 
