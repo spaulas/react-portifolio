@@ -19,8 +19,8 @@
 <h3 align="left">Set up</h3>
 
 ```
-npm install
-npm start
+yarn
+yarn start
 ```
 
 <h3 align="left">Tech Stack</h3>
@@ -107,3 +107,15 @@ emailjs.send( 'outlook', 'feedback', params );
 ```
 
 <p>Just pay attention to the images and the description translation id.</p>
+
+<br/>
+<h3 align="left">Github Actions</h3>
+<p>In this project, it is used the Github Actions to garantee the code follows the eslint rules, passes all tests and builds correctly. The steps are:</p>
+
+```
+yarn
+yarn run eslint
+yarn test
+yarn run deploy
+```
+
