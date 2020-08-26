@@ -1,7 +1,8 @@
 <h1 align="center">React Portfolio</h1>
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/spaulas/react-portifolio?logo=javascript&style=for-the-badge">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/spaulas/react-portifolio?logo=typescript&style=for-the-badge">
   <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/spaulas/react-portifolio?style=for-the-badge">
+  <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/spaulas/react-portifolio/MasterDeployCI?style=for-the-badge">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/spaulas/react-portifolio?style=for-the-badge">
   <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/spaulas/react-portifolio?style=for-the-badge">
   <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/spaulas/react-portifolio?style=for-the-badge">
@@ -14,14 +15,14 @@
 
 <p>Portfolio implemented by scratch on react.</p>
 <p>This project's goal is to group every project I make in my github. Displaying all the necessary info for each project. It is also possible to know a bit more about me and to contact me. It has support for english, portuguese, spanish and german.</p>
-
+<br />
 <h3 align="left">Set up</h3>
 
 ```
-npm install
-npm start
+yarn
+yarn start
 ```
-
+<br />
 <h3 align="left">Tech Stack</h3>
 <img align="left" alt="HTML5" height="30px" src="https://images.vexels.com/media/users/3/166383/isolated/preview/6024bc5746d7436c727825dc4fc23c22-html-programming-language-icon-by-vexels.png" />
 <img align="left" alt="CSS3" height="30px" src="https://3.bp.blogspot.com/-oRSUw_TmO9o/XIb61m88fcI/AAAAAAAAIq0/vnxl2zzsXEQsnHI2fH4GjKu_ZT0urRo4wCK4BGAYYCw/s1600/icon%2Bcss%2B3.png" />
@@ -31,10 +32,14 @@ npm start
 <img align="left" alt="Redux" height="32px" src="https://cdn.worldvectorlogo.com/logos/redux.svg" />
 <img align="left" alt="Antd" height="30px" src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" />
 <img align="left" alt="Less" height="23px" src="https://prepros.io/img/home/less.png" />
+<img align="left" alt="Jest" height="40px" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/5894313931548218185-512.png" />
 <img align="left" alt="EmailJS" height="30px" src="https://i.ibb.co/KspLNkt/logo.png" /> 
 <img align="left" alt="Visual Studio Code" height="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png" />
 <img align="left" alt="Git" height="25px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png" />
 <br/>
+<br />
+<br />
+<br />
 <h3 align="left">EmailJS</h3>
 <p>Since this is a frontend project, there was no need to complicate therefore I look for a tool that could send emails for me.</p>
 <p>The base flow of the process is the following:</p>
@@ -55,13 +60,16 @@ emailjs.send( 'outlook', 'feedback', params );
 </ul>
 
 <img align="left" alt="contactModal" width="100%" src="https://i.ibb.co/9HxzGQn/send-Message-Modal.png" />
-</br>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
 <h3 align="left">Projects Display</h3>
 <p>All the projects are bellow the initial view, each with a dedicated container of information.</p>
 <p>At first, it is only displayed the main image with the title of the project.</p>
 
 <img align="left" alt="initialDisplay" width="100%" src="https://i.ibb.co/KVW7YGb/initial-Banner.png" />
-</br>
+
+
 <p>After clicking on "Show More", it is possible to see more information:
 <ul>
   <li>a small description of the project;</li>
@@ -72,7 +80,6 @@ emailjs.send( 'outlook', 'feedback', params );
 </ul>
 
 <img align="left" alt="infoDisplay" width="100%" src="https://i.ibb.co/yY5Wq9Y/projectinside.png" />
-<br/>
 <p>To add more projects, it is rather simple. Just add another object to the array of projects as follows:</p>
 
 ```
@@ -106,3 +113,21 @@ emailjs.send( 'outlook', 'feedback', params );
 ```
 
 <p>Just pay attention to the images and the description translation id.</p>
+
+<br/>
+<h3 align="left">Github Actions</h3>
+<p>In this project, it is used the Github Actions to garantee the code follows the eslint rules, passes all tests and builds correctly. The steps are:</p>
+
+```
+yarn
+yarn run eslint
+yarn test
+yarn run deploy
+```
+
+<br/>
+<h3 align="left">Google Analytics</h3>
+<p>Since this is my portfolio project, I decided to implement Google Analytics to have an idea of who is accessing my website, how and where.</p>
+
+
+<img align="center" alt="googleAnalytics" width="100%" src="https://i.ibb.co/jb6WM8V/google-Analytics.png" />
