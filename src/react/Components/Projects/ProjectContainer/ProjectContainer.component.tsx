@@ -181,7 +181,7 @@ function ProjectContainer({
                 </Row>
                 <Row justify="center">
                   <Tooltip
-                    placement="top"
+                    placement="bottom"
                     title={<FormattedMessage id="link.repository" />}
                   >
                     <a
