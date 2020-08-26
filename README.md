@@ -1,7 +1,8 @@
 <h1 align="center">React Portfolio</h1>
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/spaulas/react-portifolio?logo=javascript&style=for-the-badge">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/spaulas/react-portifolio?logo=typescript&style=for-the-badge">
   <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/spaulas/react-portifolio?style=for-the-badge">
+  <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/spaulas/react-portifolio/MasterDeployCI?style=for-the-badge">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/spaulas/react-portifolio?style=for-the-badge">
   <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/spaulas/react-portifolio?style=for-the-badge">
   <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/spaulas/react-portifolio?style=for-the-badge">
