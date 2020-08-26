@@ -32,6 +32,7 @@ yarn start
 <img align="left" alt="Redux" height="32px" src="https://cdn.worldvectorlogo.com/logos/redux.svg" />
 <img align="left" alt="Antd" height="30px" src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" />
 <img align="left" alt="Less" height="23px" src="https://prepros.io/img/home/less.png" />
+<img alt="Jest" height="40px" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/5894313931548218185-512.png" />&nbsp;&nbsp;
 <img align="left" alt="EmailJS" height="30px" src="https://i.ibb.co/KspLNkt/logo.png" /> 
 <img align="left" alt="Visual Studio Code" height="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png" />
 <img align="left" alt="Git" height="25px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png" />
@@ -119,3 +120,9 @@ yarn test
 yarn run deploy
 ```
 
+<br/>
+<h3 align="left">Google Analytics</h3>
+<p>Since this is my portfolio project, I decided to implement Google Analytics to have an idea of who is accessing my website, how and where.</p>
+
+
+<img align="center" alt="googleAnalytics" width="100%" src="https://i.ibb.co/jb6WM8V/google-Analytics.png" />
