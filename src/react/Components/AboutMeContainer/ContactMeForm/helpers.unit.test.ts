@@ -5,8 +5,8 @@ import {
   validateEmail,
   validateName
 } from "./helpers";
-import { configure, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
+import { configure } from "enzyme";
 
 configure({ adapter: new Adapter() });
 
@@ -59,9 +59,9 @@ describe("[UNIT] helpers", () => {
   });
 
   it("checkMessage function", () => {
-    let result = checkEmail([], "test message", "invalid length");
+    let result = checkMessage([], "test message", "invalid length");
     expect(result).toStrictEqual(Promise.resolve());
-    result = checkEmail([], "t", "invalid length");
+    result = checkMessage([], "t", "invalid length");
     expect(result).toStrictEqual(Promise.reject("invalid length"));
   });
 });
