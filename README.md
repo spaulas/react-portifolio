@@ -61,7 +61,7 @@ emailjs.send( 'outlook', 'feedback', params );
 
 <img align="left" alt="contactModal" width="100%" src="https://i.ibb.co/9HxzGQn/send-Message-Modal.png" />
 
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
 <h3 align="left">Projects Display</h3>
 <p>All the projects are bellow the initial view, each with a dedicated container of information.</p>
