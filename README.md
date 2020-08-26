@@ -15,14 +15,14 @@
 
 <p>Portfolio implemented by scratch on react.</p>
 <p>This project's goal is to group every project I make in my github. Displaying all the necessary info for each project. It is also possible to know a bit more about me and to contact me. It has support for english, portuguese, spanish and german.</p>
-
+<br />
 <h3 align="left">Set up</h3>
 
 ```
 yarn
 yarn start
 ```
-
+<br />
 <h3 align="left">Tech Stack</h3>
 <img align="left" alt="HTML5" height="30px" src="https://images.vexels.com/media/users/3/166383/isolated/preview/6024bc5746d7436c727825dc4fc23c22-html-programming-language-icon-by-vexels.png" />
 <img align="left" alt="CSS3" height="30px" src="https://3.bp.blogspot.com/-oRSUw_TmO9o/XIb61m88fcI/AAAAAAAAIq0/vnxl2zzsXEQsnHI2fH4GjKu_ZT0urRo4wCK4BGAYYCw/s1600/icon%2Bcss%2B3.png" />
@@ -37,6 +37,9 @@ yarn start
 <img align="left" alt="Visual Studio Code" height="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png" />
 <img align="left" alt="Git" height="25px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png" />
 <br/>
+<br />
+<br />
+<br />
 <h3 align="left">EmailJS</h3>
 <p>Since this is a frontend project, there was no need to complicate therefore I look for a tool that could send emails for me.</p>
 <p>The base flow of the process is the following:</p>
@@ -57,13 +60,16 @@ emailjs.send( 'outlook', 'feedback', params );
 </ul>
 
 <img align="left" alt="contactModal" width="100%" src="https://i.ibb.co/9HxzGQn/send-Message-Modal.png" />
-</br>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
 <h3 align="left">Projects Display</h3>
 <p>All the projects are bellow the initial view, each with a dedicated container of information.</p>
 <p>At first, it is only displayed the main image with the title of the project.</p>
 
 <img align="left" alt="initialDisplay" width="100%" src="https://i.ibb.co/KVW7YGb/initial-Banner.png" />
-</br>
+
+
 <p>After clicking on "Show More", it is possible to see more information:
 <ul>
   <li>a small description of the project;</li>
@@ -74,7 +80,6 @@ emailjs.send( 'outlook', 'feedback', params );
 </ul>
 
 <img align="left" alt="infoDisplay" width="100%" src="https://i.ibb.co/yY5Wq9Y/projectinside.png" />
-<br/>
 <p>To add more projects, it is rather simple. Just add another object to the array of projects as follows:</p>
 
 ```
