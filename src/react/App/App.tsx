@@ -12,15 +12,14 @@ const { Content } = Layout;
 const HomePage = React.lazy(() =>
   import("../Pages/HomePage/HomePage.component")
 );
-
 const ProjectsPage = React.lazy(() =>
   import("../Pages/ProjectsPage/ProjectsPage.component")
 );
-
 const AboutModal = React.lazy(() =>
   import("../Components/AboutMeContainer/AboutModal/AboutModal.component")
 );
 
+// initialize React Google Analytics at the "/" path
 ReactGA.initialize("UA-153456985-1");
 ReactGA.pageview("/");
 

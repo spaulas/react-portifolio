@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+
 export const checkName = (
   rule: object,
   value: string,
@@ -8,14 +9,14 @@ export const checkName = (
   if (value?.length < 3) {
     return Promise.reject(invalidLengthMessage);
   }
-  if (value && validadeName(value)) {
+  if (value && validateName(value)) {
     return Promise.reject(invalidNameMessage);
   } else {
     return Promise.resolve();
   }
 };
 
-export const validadeName = (name: string) => {
+export const validateName = (name: string) => {
   const regex = /^[-'a-zA-Z ,.'-À-ÖØ-öø-ÿ]+$/g;
 
   if (typeof name === "object") {

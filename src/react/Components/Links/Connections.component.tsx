@@ -5,7 +5,7 @@ import { Tooltip } from "antd";
 function Connections() {
   return (
     <div className="connectionsContainer">
-      <Tooltip placement="right" title="Linkedin">
+      <Tooltip placement="left" title="Linkedin">
         <img
           className="connectionIcon"
           src={require("../../../images/icons/linkedin.svg")}
