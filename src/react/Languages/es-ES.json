@@ -1,36 +1,212 @@
 {
-    "about.title": {"defaultMessage": "Sobre Mi", "description": "opens the about me modal"},
-    "about.text01": {"defaultMessage": "Soy Paula Santos, una desarrolladora front-end de", "description": "about me text 1"},
-    "about.text02": {"defaultMessage": "años.", "description": "bout me text 2"},
-    "about.text03": {"defaultMessage": "Actualmente trabajo en", "description": "bout me text 3"},
-    "about.text04": {"defaultMessage": ", una empresa portuguesa de ingeniería de comunicaciones fundada en 2000. Allí desarrollé mis habilidades como programador, comenzando con React y Redux-Saga y luego comenzando a implementar pruebas con Jest y Cypress. Todo el tiempo trabajando en un equipo multifuncional apoyado en la metodología Agile.", "description": "bout me text 4"},
-    "about.text05": {"defaultMessage": "He estado trabajando en mi página de Github, creando nuevos proyectos para permitir que otras empresas se hagan una idea de mis habilidades como desarrollador. Y el propósito de este sitio es agrupar todos los proyectos.", "description": "bout me text 5"},
-    "about.text06": {"defaultMessage": "Actualmente estoy buscando un trabajo remoto como desarrollador web o front-end. ¡Me he encontrado con tantas oportunidades laborales, todas repartidas por Europa con una mezcla de culturas que no puedo esperar para comenzar esta aventura!", "description": "bout me text 6"},
-    "configurations.languages": {"defaultMessage": "Cambiar idioma", "description": "tooltip for the language switch"},
-    "configurations.theme": {"defaultMessage": "Cambiar de tema", "description": "tooltip for the theme switch"},
-    "contact.email": {"defaultMessage": "Correo Electronico", "description": "email"},
-    "contact.error.message1": {"defaultMessage": "Algo pasó.", "description": "email not sent error message 1"},
-    "contact.error.message2": {"defaultMessage": "Código de error: ", "description": "email not sent error message 2"},
-    "contact.message": {"defaultMessage": "Mensaje", "description": "message"},
-    "contact.name": {"defaultMessage": "Nombre", "description": "name"},
-    "contact.invalid.email": {"defaultMessage": "Correo electronico inválido", "description": "invalid email error"},
-    "contact.invalid.length": {"defaultMessage": "Demasiado corto", "description": "field too short error"},
-    "contact.invalid.name": {"defaultMessage": "Nombre inválido", "description": "invalid name error"},
-    "contact.required.email": {"defaultMessage": "Correo electronico es requerido", "description": "email required error"},
-    "contact.required.message": {"defaultMessage": "Mensaje es requerida", "description": "message required error"},
-    "contact.required.name": {"defaultMessage": "Nombre es requerido", "description": "name required error"},
-    "contact.submit": {"defaultMessage": "Enviar", "description": "submit action"},
-    "contact.success": {"defaultMessage": "Mensaje enviado correctamente.", "description": "success notification"},
-    "contact.title": {"defaultMessage": "Contáctame", "description": "contact me title"},
-    "developer.title": {"defaultMessage": "Desarrollador Front-End", "description": "job title"},
-    "link.aboutMe": {"defaultMessage": "Conóceme un poco más", "description": "opens the modal"},
-    "link.repository": {"defaultMessage": "Mira el código", "description": "go to github"},
-    "link.website": {"defaultMessage": "Pruebe el proyecto implementado en línea", "description": "go to website"},
-    "project.arrow": {"defaultMessage": "Proyectos", "description": "arrow to projects"},
-    "project.close": {"defaultMessage": "Cerca", "description": "close project's info view"},
-    "project.github": {"defaultMessage": "Repositorio de Github", "description": "see project's github repository"},
-    "project.phpSocialNetwork.description": {"defaultMessage": "En este proyecto, es posible, después de iniciar sesión, intercambiar mensajes públicos o privados con tus amigos, puedes elegir a quién seguir y quién te sigue, mantener tu propio perfil y ver los perfiles de los demás miembros. Es un pequeño proyecto desarrollado con PHP y con base de datos propia.", "description": "php social network project description"},
-    "project.reactSolitaire.description": {"defaultMessage": "En este proyecto, es posible no solo jugar al solitario (arrastrando y soltando o haciendo doble clic), sino también ver los puntajes y estadísticas anteriores de un jugador en línea (registrado en Firebase) o un jugador local. Las principales diferencias entre estos dos tipos de jugadores son la posibilidad que tiene el jugador online de guardar sus datos a través de diferentes dispositivos o sesiones y acceder a los 10 mejores puntajes de cada usuario registrado. También admite inglés, portugués, español y alemán.", "description": "react solitaire project description"},
-    "project.showMore": {"defaultMessage": "Mostrar Más", "description": "show more info about the project"},
-    "project.website": {"defaultMessage": "Sitio Web", "description": "go to the deployed website"}
+  "about.text01": [
+    {
+      "type": 0,
+      "value": "Soy Paula Santos, una desarrolladora front-end de"
+    }
+  ],
+  "about.text02": [
+    {
+      "type": 0,
+      "value": "años."
+    }
+  ],
+  "about.text03": [
+    {
+      "type": 0,
+      "value": "Actualmente trabajo en"
+    }
+  ],
+  "about.text04": [
+    {
+      "type": 0,
+      "value": ", una empresa portuguesa de ingeniería de comunicaciones fundada en 2000. Allí desarrollé mis habilidades como programador, comenzando con React y Redux-Saga y luego comenzando a implementar pruebas con Jest y Cypress. Todo el tiempo trabajando en un equipo multifuncional apoyado en la metodología Agile."
+    }
+  ],
+  "about.text05": [
+    {
+      "type": 0,
+      "value": "He estado trabajando en mi página de Github, creando nuevos proyectos para permitir que otras empresas se hagan una idea de mis habilidades como desarrolladora. Y el propósito de este sitio es agrupar todos los proyectos."
+    }
+  ],
+  "about.text06": [
+    {
+      "type": 0,
+      "value": "Actualmente estoy buscando un nuevo trabajo como desarrolladora web o front-end, ¡y no puedo esperar para comenzar esta aventura!"
+    }
+  ],
+  "about.title": [
+    {
+      "type": 0,
+      "value": "Sobre Mi"
+    }
+  ],
+  "configurations.languages": [
+    {
+      "type": 0,
+      "value": "Cambiar idioma"
+    }
+  ],
+  "configurations.theme": [
+    {
+      "type": 0,
+      "value": "Cambiar de tema"
+    }
+  ],
+  "contact.email": [
+    {
+      "type": 0,
+      "value": "Correo Electronico"
+    }
+  ],
+  "contact.error.message1": [
+    {
+      "type": 0,
+      "value": "Algo pasó."
+    }
+  ],
+  "contact.error.message2": [
+    {
+      "type": 0,
+      "value": "Código de error: "
+    }
+  ],
+  "contact.error.message3": [
+    {
+      "type": 0,
+      "value": "Se recibió su correo electrónico, pero sucedió algo al intentar enviarle un correo electrónico de confirmación."
+    }
+  ],
+  "contact.invalid.email": [
+    {
+      "type": 0,
+      "value": "Correo electronico inválido"
+    }
+  ],
+  "contact.invalid.length": [
+    {
+      "type": 0,
+      "value": "Demasiado corto"
+    }
+  ],
+  "contact.invalid.name": [
+    {
+      "type": 0,
+      "value": "Nombre inválido"
+    }
+  ],
+  "contact.message": [
+    {
+      "type": 0,
+      "value": "Mensaje"
+    }
+  ],
+  "contact.name": [
+    {
+      "type": 0,
+      "value": "Nombre"
+    }
+  ],
+  "contact.required.email": [
+    {
+      "type": 0,
+      "value": "Correo electronico es requerido"
+    }
+  ],
+  "contact.required.message": [
+    {
+      "type": 0,
+      "value": "Mensaje es requerida"
+    }
+  ],
+  "contact.required.name": [
+    {
+      "type": 0,
+      "value": "Nombre es requerido"
+    }
+  ],
+  "contact.submit": [
+    {
+      "type": 0,
+      "value": "Enviar"
+    }
+  ],
+  "contact.success": [
+    {
+      "type": 0,
+      "value": "Mensaje enviado correctamente."
+    }
+  ],
+  "contact.title": [
+    {
+      "type": 0,
+      "value": "Contáctame"
+    }
+  ],
+  "developer.title": [
+    {
+      "type": 0,
+      "value": "Desarrolladora Front-End"
+    }
+  ],
+  "link.aboutMe": [
+    {
+      "type": 0,
+      "value": "Conóceme un poco más"
+    }
+  ],
+  "link.repository": [
+    {
+      "type": 0,
+      "value": "Mira el código"
+    }
+  ],
+  "link.website": [
+    {
+      "type": 0,
+      "value": "Pruebe el proyecto implementado en línea"
+    }
+  ],
+  "project.arrow": [
+    {
+      "type": 0,
+      "value": "Proyectos"
+    }
+  ],
+  "project.close": [
+    {
+      "type": 0,
+      "value": "Cerca"
+    }
+  ],
+  "project.github": [
+    {
+      "type": 0,
+      "value": "Repositorio de Github"
+    }
+  ],
+  "project.phpSocialNetwork.description": [
+    {
+      "type": 0,
+      "value": "En este proyecto, es posible, después de iniciar sesión, intercambiar mensajes públicos o privados con tus amigos, puedes elegir a quién seguir y quién te sigue, mantener tu propio perfil y ver los perfiles de los demás miembros. Es un pequeño proyecto desarrollado con PHP y con base de datos propia."
+    }
+  ],
+  "project.reactSolitaire.description": [
+    {
+      "type": 0,
+      "value": "En este proyecto, es posible no solo jugar al solitario (arrastrando y soltando o haciendo doble clic), sino también ver los puntajes y estadísticas anteriores de un jugador en línea (registrado en Firebase) o un jugador local. Las principales diferencias entre estos dos tipos de jugadores son la posibilidad que tiene el jugador online de guardar sus datos a través de diferentes dispositivos o sesiones y acceder a los 10 mejores puntajes de cada usuario registrado. También admite inglés, portugués, español y alemán."
+    }
+  ],
+  "project.showMore": [
+    {
+      "type": 0,
+      "value": "Mostrar Más"
+    }
+  ],
+  "project.website": [
+    {
+      "type": 0,
+      "value": "Sitio Web"
+    }
+  ]
 }

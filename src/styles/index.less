@@ -7,6 +7,17 @@
   font-family: @fontFamily;
   font-weight: 200;
 
+  h1,
+  h2,
+  span,
+  a,
+  p {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+  }
+
   @import (once) "../react/Pages/HomePage/HomePage.styles.less";
   @import (once) "../react/Pages/ProjectsPage/ProjectsPage.styles.less";
   @import (once)
@@ -27,8 +38,7 @@
     "../react/Components/Projects/ProjectsArrow/ProjectsArrow.styles.less";
   @import (once)
     "../react/Components/Projects/ProjectContainer/ProjectsContainer.styles.less";
-  @import (once)
-    "../react/Components/Titles/DeveloperTitle.styles.less";
+  @import (once) "../react/Components/Titles/DeveloperTitle.styles.less";
 
   .ant-modal {
     min-width: 1200px;
