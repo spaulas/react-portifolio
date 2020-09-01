@@ -4,7 +4,7 @@ import { configure, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import { IntlProvider } from "react-intl";
 import TranslatorIntlProvider from "./IntlProvider.component";
-import enUSIntl from "../Languages/Compiled/en-US.json";
+import enUSIntl from "../Languages/en-US.json";
 
 configure({ adapter: new Adapter() });
 
