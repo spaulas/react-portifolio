@@ -1,4 +1,4 @@
-import { Form, Input, Row } from "antd";
+import { Form, Input, Row, Tooltip } from "antd";
 import React, { memo, useEffect } from "react";
 import { checkEmail, checkMessage, checkName } from "./helpers";
 import { FormattedMessage } from "react-intl";
@@ -154,16 +154,22 @@ function ContactMeForm() {
           </Row>
         </Item>
 
-        <Row align="middle" justify="center">
-          <MenuButton
-            onClick={() => form.submit()}
-            className="submitButtonAnimated"
-          >
-            <span>
-              <FormattedMessage id="contact.submit" />
-            </span>
-          </MenuButton>
-        </Row>
+        <Tooltip
+          placement="top"
+          title={<FormattedMessage id="contact.disabled" />}
+        >
+          <Row align="middle" justify="center">
+            <MenuButton
+              disabled
+              onClick={() => form.submit()}
+              className="submitButtonAnimated"
+            >
+              <span>
+                <FormattedMessage id="contact.submit" />
+              </span>
+            </MenuButton>
+          </Row>
+        </Tooltip>
       </Form>
       <span className="contactMeBehind">
         <FormattedMessage id="contact.title" />

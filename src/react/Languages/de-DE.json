@@ -53,6 +53,12 @@
       "value": "Thema ändern"
     }
   ],
+  "contact.disabled": [
+    {
+      "type": 0,
+      "value": "Es tut mir leid, aber es ist nicht möglich, E-Mails zu senden"
+    }
+  ],
   "contact.email": [
     {
       "type": 0,

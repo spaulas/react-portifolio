@@ -53,6 +53,12 @@
       "value": "Mudar tema"
     }
   ],
+  "contact.disabled": [
+    {
+      "type": 0,
+      "value": "Sinto muito mas não é possível enviar e-mails"
+    }
+  ],
   "contact.email": [
     {
       "type": 0,

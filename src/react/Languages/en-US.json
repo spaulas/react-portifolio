@@ -53,6 +53,12 @@
       "value": "Change theme"
     }
   ],
+  "contact.disabled": [
+    {
+      "type": 0,
+      "value": "I am sorry but currently it is not possible to send emails"
+    }
+  ],
   "contact.email": [
     {
       "type": 0,

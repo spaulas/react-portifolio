@@ -9,11 +9,13 @@ import { Row } from "antd";
 interface MenuButtonProps {
   className?: string;
   onClick: ExplicitAny;
+  disabled?: boolean;
 }
 
 function MenuButton({
   className,
   onClick,
+  disabled,
   children
 }: PropsWithChildren<MenuButtonProps>) {
   return (
@@ -23,7 +25,7 @@ function MenuButton({
         role="button"
         aria-roledescription="animatedButton"
         className={`animatedButton divButton ${className}`}
-        onClick={onClick}
+        onClick={disabled ? null : onClick}
       >
         {children}
       </div>

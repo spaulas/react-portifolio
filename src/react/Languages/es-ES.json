@@ -53,6 +53,12 @@
       "value": "Cambiar de tema"
     }
   ],
+  "contact.disabled": [
+    {
+      "type": 0,
+      "value": "Lo siento pero no es posible enviar correos electrónicos"
+    }
+  ],
   "contact.email": [
     {
       "type": 0,
